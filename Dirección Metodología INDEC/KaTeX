@@ -1,0 +1,20 @@
+
+
+https://katex.org/
+
+Here's a sample formula you can use to give it a try:
+f(x) = \int_{-\infty}^\infty
+    \hat f(\xi)\,e^{2 \pi i \xi x}
+    \,d\xi
+
+KaTeX
+All math typesetting is made possible thanks to the KaTeX open source project. For a full list of supported TeX functions please see this page in the KaTeX docs:
+https://khan.github.io/KaTeX/docs/supported.html
+
+Inline math
+It's also possible to include math inline as part of a text block. To do this, you'll need to wrap your formula with one of the following delimiters:
+- \( inline math here \)
+- \[ display math here \]
+- $$ display math here $$
+
+The \( \) wrapper renders your math inline with no line break, while \[ \] and $$ $$ both show math in "display" mode on its own line.
