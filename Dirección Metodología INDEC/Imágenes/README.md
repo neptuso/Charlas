@@ -1,0 +1,1 @@
+directorio para las imágenes
