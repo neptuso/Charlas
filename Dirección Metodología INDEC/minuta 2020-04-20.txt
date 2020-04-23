@@ -1,0 +1,28 @@
+Manu
+Vero
+Hernán
+
+1. distribución 
+	5' presentación
+	10' h
+	10' m
+	10' v
+	5' cierre
+
+2. herramientas:
+
+	slides.com + editor (colaborativo?)
+	https://slides.com/hernanalperin/mandarina-indec#/
+
+	reveal.js (herramienta de transición de slides)
+
+	ejemplo de Manu:
+	https://github.com/manureta/slides-201304-foss4gba/blob/gh-pages/geoinquietos/index.html
+	h->2do: ver cómo se usa/adapta eso
+
+	mvh->2do: pensar otras herramientas colaborativas (provistas por INDEC?)
+
+3. crear sitio en github para la presentación
+	h: subir las cosas que están en https://slides.com/hernanalperin/mandarina-indec#/
+
+	
