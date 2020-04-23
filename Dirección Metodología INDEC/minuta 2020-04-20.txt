@@ -37,4 +37,42 @@ Hernán
 3. crear sitio en github para la presentación
 	h: subir las cosas que están en https://slides.com/hernanalperin/mandarina-indec#/
 
+
+------------------------------------------
+
+otros:
+
+Representación
+
+mzas NNN  (secuencial 000 - 999 , en orden de recorrido? o de simple numeración en el mapa de fracción estilo víbora)
+lados n (numeración secuencial 1 - Infinito, desde max N, max O y sentido agujas del reloj u hombro derecho)
+
+segmentos NN (01 - 25 (supuesto máximo, si no (!) Error: redimensionar segmento)
+
+v->2do: subir .png a repo github
+
+-------------------------------------------
+
+y otros más
+
+Vero, menciona que está trabajando con coberturas de Stgo. Estero 86
+Faja 4
+e0462
+e0531
+e0359
+
+sumar la C1 y mandarlas a Hernán via mail INDEC para ver cómo segmentan?
+
+v tiene imágenes de la prueba piloto de Humahuca para mostrar en la presentación
+pero que ahora (habló con Sil...) habría que hacer cambios?
+
+v: pregunta a h si está (la vista) o la forma de generar la descripción para los mapar de radio y segmento
+h: está en mi quilombo de la 701, que podría encontrar si me diesen acceso a Roca,
+   si es importante puedo bucear el la BD a través de la red indec
+   
+   
+
+
+
+
 	
