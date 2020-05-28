@@ -1,2 +1,0 @@
-# Charlas
-Presentaciones del Grupo

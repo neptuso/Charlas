@@ -1,0 +1,1349 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/indec.css">
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+<div class="theme-font-montserrat theme-color-white-blue" style="width: 100%; height: 100%;">
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <div class="sl-block" data-block-type="image" data-name="image-3d0ef2" style="width: 806.4px; height: 346.847px; left: 80px; top: 294.577px; min-width: 1px; min-height: 1px;">
+                    <div class="sl-block-content" style="z-index: 10;"><img data-natural-width="1016" data-natural-height="437" style="" alt="indec" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/713971/images/7278297/indec.png"></div>
+                </div>
+
+            </section>
+            <section class="stack">
+                <section>
+                    <div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 70px; height: auto;">
+                        <div class="sl-block-content" style="z-index: 10;" dir="ui">
+                            <h2>
+                                <span style="color:#0000FF">Censo Nacional de<br>Población, Hogares y Viviendas<br>Ronda 2020</span><br>
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 420px; height: auto;">
+                        <div class="sl-block-content" style="z-index: 11;" dir="ui">
+                            <h2><span style="color:#006400;">Herramientas de Segmentación</span></h2>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 189px; height: auto;">
+                        <div class="sl-block-content" style="z-index: 10;">
+                            <h2>Resumen</h2>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="width: 806px; left: 74px; top: 263px; height: auto;">
+                        <div class="sl-block-content" style="z-index: 11;" dir="ui">
+                            <ul>
+                                <li>Introducción</li>
+                                <li>Algoritmos de segmentación
+                                    <ul>
+                                        <li>Describir el problema</li>
+                                        <li>Formular matemáticamente</li>
+                                        <li>Presentar heurísticas</li>
+                                    </ul>
+                                </li>
+                                <li>Interfaz Web</li>
+                                <li>Salida gráfica</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section class="stack">
+                <section>
+                    <div class="sl-block" data-block-type="text" data-name="text-c6a05c" style="height: auto; width: 600px; left: 180px; top: 24px;">
+                        <div class="sl-block-content" style="z-index: 10;">
+                            <p><span style="font-size:1.2em">Introducción</span></p>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-430ca9" style="height: auto; width: 600px; left: 180px; top: 164px;">
+                        <div class="sl-block-content" style="z-index: 11;">
+                            <ul>
+                                <li>Presentación del problema
+                                    <ul>
+                                        <li>
+                                            <p>Segmentación</p>
+                                        </li>
+                                        <li>
+                                            <p>Historia</p>
+                                        </li>
+                                        <li>
+                                            <p>Antecedentes</p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Lineas de acción
+                                    <ul>
+                                        <li>
+                                            <p>Algoritmos</p>
+                                        </li>
+                                        <li>
+                                            <p>Interfaz web</p>
+                                        </li>
+                                        <li>
+                                            <p>Salidas gráficas</p>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 889px; left: 0px; top: 122.299px;" data-name="text-02fcbc">
+                        <div class="sl-block-content" style="z-index: 13;">
+                            <h3>¿Cuál será el recorrido de cada censista?</h3>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="width: 440.889px; left: 19.5555px; top: 192.618px; height: auto;" data-name="text-27fee8">
+                        <div class="sl-block-content" style="z-index: 12; text-align: left;">
+                            <ul>
+                                <li><span style="font-size:1.4em"><strong>Armar recorridos</strong></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="width: 809px; left: 80px; top: 33px; height: auto;" data-name="text-7efbc9">
+                        <div class="sl-block-content" style="text-align: left; z-index: 10;">
+                            <h2>Descripción del Problema</h2>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="image" style="width: 703.602px; height: 527.701px; left: 256.398px; top: 172.299px; min-width: 1px; min-height: 1px;" data-name="image-8b286d">
+                        <div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1800" data-natural-height="1350" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/713971/images/3832471/manuales.jpg"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-d3287d" style="height: auto; width: 363.197px; left: 19.5555px; top: 261.276px;">
+                        <div class="sl-block-content" style="z-index: 14;">
+                            <p style="text-align: left;">para 500.000 censistas para que cubran todas las viviendas del territorio siguiendo las reglas definidas en el</p>
+
+                            <p style="text-align:left"><strong>MANUAL del SEGMENTADOR</strong></p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="text" data-name="text-0a937b" style="height: auto; width: 675.997px; left: 0px; top: 40px;">
+                        <div class="sl-block-content" style="z-index: 12;">
+                            <ul>
+                                <li><strong><span style="font-size:1.4em">generar mapas y listados</span></strong></li>
+                            </ul>
+
+                            <p>para realizar el operativo censal</p>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="image" style="width: 536.011px; height: 346.725px; left: 15.1777px; top: 280px;" data-name="image-4c108a">
+                        <div class="sl-block-style" style="z-index: 10; transform: rotate(33deg);">
+                            <div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="2087" data-natural-height="1350" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/713971/images/3814547/radio_coloreado_con_segmentos.jpg"></div>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="image" style="width: 530.168px; height: 424.26px; left: 437.542px; top: 117.871px;" data-name="image-f062c2">
+                        <div class="sl-block-style" style="z-index: 11; transform: rotate(-20deg);">
+                            <div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1687" data-natural-height="1350" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/713971/images/3830698/manual_croquis_y_desde_hasta.jpg"></div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="text" style="width: 806px; left: 105.637px; top: 33px; height: auto;">
+                        <div class="sl-block-content" style="z-index: 10;">
+                            <h2>Historia Censo 2010 (ver!)</h2>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="width: 942.781px; left: 17.2194px; top: 210px; height: auto;">
+                        <div class="sl-block-content" style="z-index: 11;">
+                            <ul>
+                                <li>CABA: desarrollo propio (?)</li>
+                                <li>Neuquén y Rio Negro: software desarrollado en (?) sin documentación, ni acceso al código, ni al desarrollador</li>
+                                <li>Otras provincias: software NQN + segmentación manual</li>
+                                <li>Provincia de BsAs: 3 pilares
+                                    <ul>
+                                        <li>tercerización a empresa privada IMPRONTA<br>
+                                            entregando de listados y cartografía quedando el código en propiedad de la empresa</li>
+                                        <li>Instituto de Cálculo FCEyN<br>
+                                            planteo matemático: Tesis de Doctorado</li>
+                                        <li>uso de CPLEX (R) con licencia de IBM</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-9a50df" style="height: auto; width: 600px; left: 200px; top: 128.656px;">
+                        <div class="sl-block-content" style="z-index: 12;">
+                            <p>Direcciones Provinciales de Estadística</p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" data-name="text-c6a05c" style="height: auto; width: 600px; left: 180px; top: 24px;">
+                    <div class="sl-block-content" style="z-index: 10;">
+                        <p><span style="font-size:36px">Algoritmos de segmentación</span></p>
+                    </div>
+                </div>
+                <div class="sl-block" data-block-type="text" data-name="text-430ca9" style="height: auto; width: 600px; left: 180px; top: 164px;">
+                    <div class="sl-block-content" style="z-index: 11;">
+                        <ul>
+                            <li>Describir el problema</li>
+                            <li>Formular matemáticamente</li>
+                            <li>Presentar heurísticas</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="stack">
+                <section>
+                    <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 19px; height: auto;">
+                        <div class="sl-block-content" style="z-index: 10; font-size: 200%;">
+                            <h3>El problema</h3>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-222705" style="height: auto; width: 904px; left: 32px; top: 116px;">
+                        <div class="sl-block-content" style="z-index: 11; text-align: left;">
+                            <p><span>cubrir completamente una zona geográfica (llamada </span><em><strong><span style="color:rgb(0, 128, 0)">radio</span></strong></em><span>)</span><br>
+                                mediante conjuntos de viviendas<span>&nbsp;</span><span>para ser asignados a censistas </span></p>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-a63ef8" style="height: auto; width: 850px; left: 55px; top: 334.5px;">
+                        <div class="sl-block-content" style="z-index: 12; text-align: center;">
+                            <p>los segmentos tendrán al menos las siguentes restricciones</p>
+
+                            <ol>
+                                <li>tener una continuidad geográfica</li>
+                                <li>contener una cantidad determinada de viviendas</li>
+                                <li>inducir un recorrido</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-423d69" style="height: auto; width: 928px; left: 32px; top: 539px;">
+                        <div class="sl-block-content" style="z-index: 13;">
+                            <p>Al conjunto de segmentos que cubren un radio lo llamaremos <em><strong><span style="color:#008000">segmentación</span></strong></em></p>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-38fe9a" style="height: auto; width: 911px; left: 8px; top: 241px;">
+                        <div class="sl-block-content" style="z-index: 14;">
+                            <p>A estos conjuntos de viviendas los llamaremos <em><strong><span style="color:#008000">segmentos</span></strong></em><br>
+                                y la cantidad de viviendas de un segmento será su <span style="color:#008000"><strong><em>carga</em></strong></span>&nbsp;</p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="text" style="width: 806px; left: 74px; top: 70px; height: auto;">
+                        <div class="sl-block-content" style="z-index: 10;">
+                            <h2>Distintos tipos de localidades o aglomerados</h2>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="width: 806px; left: 74px; top: 408px; height: auto;">
+                        <div class="sl-block-content" style="z-index: 11;">
+                            <ol>
+                                <li>pocas viviendas por manzana</li>
+                                <li>pocas viviendas por lado de manzana</li>
+                                <li>muchas viviendas por lado de manzana</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-f8a297" style="height: auto; width: 851px; left: 80px; top: 272px;">
+                        <div class="sl-block-content" style="z-index: 12;">
+                            <p>dada una cantidad deseada de viviendas por segmento<br>
+                                pueden darse los siguientes casos</p>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-6c0380" style="height: auto; width: 600px; left: 170px; top: 560px;">
+                        <div class="sl-block-content" style="z-index: 13;">
+                            <p>Supongamos que se desean tener segmentos de 20 viviendas</p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" data-name="image-fe3e10" style="width: 806.4px; height: 388.416px; left: 76.8px; top: 155.792px; min-width: 1px; min-height: 1px;">
+                        <div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1200" data-natural-height="578" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/713971/images/7280006/4_manzanas.png"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-36a136" style="height: auto; width: 800px; left: 54.8px; top: 101px;">
+                        <div class="sl-block-content" style="z-index: 11;">
+                            <p>caso 1. ejemplo: pocas viviendas por manzana</p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" data-name="image-da73ab" style="width: 806.4px; height: 388.416px; left: 73.6px; top: 140px; min-width: 1px; min-height: 1px;">
+                        <div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1200" data-natural-height="578" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/713971/images/7280014/4_manzanas_con_viviendas_20_10_5_5_segmentadas.png"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-805fdf" style="height: auto; width: 600px; left: 120px; top: 56px;">
+                        <div class="sl-block-content" style="z-index: 11;">
+                            <p>hay casos donde se puede segmentar a <strong><span style="color:#0000FF">manzana completa</span></strong></p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" data-name="image-b0d051" style="width: 806.4px; height: 388.416px; left: 76.8px; top: 155.792px; min-width: 1px; min-height: 1px;">
+                        <div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1200" data-natural-height="578" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/713971/images/7280015/4_manzanas_con_viviendas_10_10_10_10.png"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-5bc884" style="height: auto; width: 600px; left: 100px; top: 38.792px;">
+                        <div class="sl-block-content" style="z-index: 11;">
+                            <p>hay casos donde<br>
+                                es posible encontrar varias segmentaciones posibles</p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" data-name="image-7f58cb" style="width: 806.4px; height: 515px; left: 76.8px; top: 94px; min-width: 1px; min-height: 1px;">
+                        <div class="sl-block-content" style="z-index: 10;" data-maintain-ar="false"><img data-natural-width="1200" data-natural-height="578" style="" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/713971/images/7280032/4_manzanas_con_viviendas_10_10_10_10_segmentadas_derecha_izquierda.png"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-4d837f" style="height: auto; width: 265px; left: 240px; top: 70px;">
+                        <div class="sl-block-content" style="z-index: 12;">
+                            <p>Segmentación <span style="color:#FF0000">R</span><span style="color:#00FF00">V</span></p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" data-name="image-293f05" style="width: 806.4px; height: 518px; left: 76.8px; top: 89.5px; min-width: 1px; min-height: 1px;">
+                        <div class="sl-block-content" style="z-index: 10;" data-maintain-ar="false"><img style="" data-natural-width="1200" data-natural-height="578" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/713971/images/7280033/4_manzanas_con_viviendas_10_10_10_10_segmentadas_arriba_abajo.png"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-4d837f" style="height: auto; width: 264px; left: 240px; top: 70px;">
+                        <div class="sl-block-content" style="z-index: 11;">
+                            <p>Segmentación <span style="color:#0000FF">A</span><span style="color:#8B4513">M</span></p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" data-name="image-d499c9" style="width: 806.4px; height: 519px; left: 88.6px; top: 134px; min-width: 1px; min-height: 1px;">
+                        <div class="sl-block-content" style="z-index: 10;" data-maintain-ar="false"><img style="" data-natural-width="1200" data-natural-height="578" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/713971/images/7280034/4_manzanas_con_viviendas_10_10_10_10_segmentadas_derecha_izquierda_con_canal.png"></div>
+                    </div>
+
+                    <div class="sl-block" data-block-type="text" data-name="text-42c331" style="height: auto; width: 856px; left: 27.2px; top: 20.5px;">
+                        <div class="sl-block-content" style="z-index: 12;">
+                            <p>También hay que considerar límites naturales,<br>
+                                una <em>restricción</em> no mencionada previamente<br>
+                                dado que no estaba aun incorporada a la cartografía<br>
+                                &nbsp;</p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" data-name="image-b84374" style="width: 806.4px; height: 518px; left: 76.8px; top: 109px; min-width: 1px; min-height: 1px;">
+                        <div class="sl-block-content" style="z-index: 10;" data-maintain-ar="false"><img data-natural-width="1200" data-natural-height="578" style="" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/713971/images/7280035/4_manzanas_con_viviendas_10_10_10_10_segmentadas_arriba_abajo_con_canal.png"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-ced9d4" style="height: auto; width: 600px; left: 120px; top: 70px;">
+                        <div class="sl-block-content" style="z-index: 11;">
+                            <p>eso determina que <span style="color:#0000FF">B</span><span style="color:#DAA520">M</span> se prefiera a <span style="color:#FF0000">R</span><span style="color:#00FF00">V</span></p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" data-name="image-eac6e4" style="width: 806.4px; height: 518px; left: 76.8px; top: 91px; min-width: 1px; min-height: 1px;">
+                        <div class="sl-block-content" style="z-index: 10;" data-maintain-ar="false"><img style="" data-natural-width="1200" data-natural-height="578" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/713971/images/7280037/4_manzanas_con_viviendas_12_10_11_7_equilibrio.png"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-104c46" style="height: auto; width: 818.2px; left: 53.9px; top: 31px;">
+                        <div class="sl-block-content" style="z-index: 11;">
+                            <p>Hay casos donde no es posible<br>
+                                asignar la misma cantidad de viviendas a cada segmento</p>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-2da7a1" style="height: auto; width: 600px; left: 163px; top: 589.5px;">
+                        <div class="sl-block-content" style="z-index: 12;">
+                            <p>En estos casos se puede preferis la más equilibrada: <span style="color:#FF0000">R</span><span style="color:#00FF00">V</span> &gt; <span style="color:#800080">P</span><span style="color:#FF8C00">M</span></p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" data-name="image-c18e45" style="width: 806.4px; height: 518px; left: 85.2px; top: 81.5px; min-width: 1px; min-height: 1px;">
+                        <div class="sl-block-content" style="z-index: 10;" data-maintain-ar="false"><img style="" data-natural-width="1200" data-natural-height="578" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/713971/images/7280040/2_manzanas_30_10.png"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-d4ba1f" style="height: auto; width: 881px; left: 74.5px; top: 42.5px;">
+                        <div class="sl-block-content" style="z-index: 11;">
+                            <p>Hay casos donde<br>
+                                es necesario dividir las manzanas en lados</p>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-2a743b" style="height: auto; width: 803.2px; left: 113.4px; top: 497px;">
+                        <div class="sl-block-content" style="z-index: 12;">
+                            <p>si hay pocas viviendas por lado de manzana<br>
+                                se pueden usar lados completos, y p<span>uede haber varias maneras de segmentar,</span></p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" data-name="image-8f7b38" style="width: 806.4px; height: 388.416px; left: 76.8px; top: 155.792px; min-width: 1px; min-height: 1px;">
+                        <div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1200" data-natural-height="578" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/713971/images/7280070/2_manzanas_30_10_segmentadas_a_lados_disconexo_opuesto.png"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-1be1c1" style="height: auto; width: 710px; left: 76.8px; top: 101px;">
+                        <div class="sl-block-content" style="z-index: 11;">
+                            <p>&nbsp;pero <span>¿cómo se respetan las restricciones?</span></p>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-18892b" style="height: auto; width: 710px; left: 125px; top: 579.5px;">
+                        <div class="sl-block-content" style="z-index: 12;" dir="ui">
+                            <p>los segmentos deben tener <em>continuidad geográfica</em></p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" data-name="image-9230bc" style="width: 806.4px; height: 518px; left: 76.8px; top: 91px; min-width: 1px; min-height: 1px;">
+                        <div class="sl-block-content" style="z-index: 10;" data-maintain-ar="false"><img style="" data-natural-width="1200" data-natural-height="578" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/713971/images/7280066/2_manzanas_30_10_segmentadas_a_lados_disconexo.png"></div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" data-name="image-348629" style="width: 806.4px; height: 518px; left: 76.8px; top: 91px; min-width: 1px; min-height: 1px;">
+                        <div class="sl-block-content" style="z-index: 10;" data-maintain-ar="false"><img style="" data-natural-width="1200" data-natural-height="578" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/713971/images/7280060/2_manzanas_30_10_segmentadas_a_lados_por_calle_y_dobla.png"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-c7f07b" style="height: auto; width: 683.2px; left: 116.8px; top: 37px;">
+                        <div class="sl-block-content" style="z-index: 11;">
+                            <p>si se considera la cantidad de viviendas por lado</p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" data-name="image-4be69a" style="width: 806.4px; height: 518px; left: 76.8px; top: 91px; min-width: 1px; min-height: 1px;">
+                        <div class="sl-block-content" style="z-index: 10;" data-maintain-ar="false"><img data-natural-width="1200" data-natural-height="578" style="" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/713971/images/7280054/2_manzanas_30_10_segmentadas_a_lados_por_calle.png"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-c62a39" style="height: auto; width: 600px; left: 160px; top: 31px;">
+                        <div class="sl-block-content" style="z-index: 11;">
+                            <p>se puede tomar en cuenta balancear la cantida de lados por segmento</p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" data-name="image-e7f15c" style="width: 806.4px; height: 518px; left: 76.8px; top: 128.5px; min-width: 1px; min-height: 1px;">
+                        <div class="sl-block-content" style="z-index: 10;" data-maintain-ar="false"><img style="" data-natural-width="1200" data-natural-height="578" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/713971/images/7280042/2_manzanas_30_10_segmentadas_a_lados.png"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-c38ec4" style="height: auto; width: 600px; left: 171px; top: 70px;">
+                        <div class="sl-block-content" style="z-index: 11;">
+                            <p>o el grado de contigüedad geográfica</p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="text" data-name="text-ae82e3" style="height: auto; width: 600px; left: 190px; top: 101px;">
+                        <div class="sl-block-content" style="z-index: 10;">
+                            <p>¿cuál sería la segmentación preferida?</p>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-a07958" style="height: auto; width: 600px; left: 160px; top: 280px;">
+                        <div class="sl-block-content" style="z-index: 11;">
+                            <p>considerar:</p>
+
+                            <ol>
+                                <li>continuidad</li>
+                                <li>recorrido factible</li>
+                                <li>preferencia de contigüedad</li>
+                            </ol>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" data-name="image-d23f09" style="width: 806.4px; height: 518px; left: 76.8px; top: 91px; min-width: 1px; min-height: 1px;">
+                        <div class="sl-block-content" style="z-index: 10;" data-maintain-ar="false"><img style="" data-natural-width="1200" data-natural-height="578" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/713971/images/7280077/reglas_de_recorrido.png"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-0bd3d9" style="height: auto; width: 600px; left: 160px; top: 71.5px;">
+                        <div class="sl-block-content" style="z-index: 11;">
+                            <p>Como debe armarse un recorrido</p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" data-name="image-b0732d" style="width: 594.667px; height: 446px; left: 182.666px; top: 210px; min-width: 1px; min-height: 1px;">
+                        <div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="800" data-natural-height="600" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/713971/images/7278322/manzana_a_segmentar_independiente_lucida_handwriting_20.png"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-9f1d7d" style="height: auto; width: 600px; left: 160px; top: 56px;">
+                        <div class="sl-block-content" style="z-index: 11;">
+                            <p>Hay casos donde<br>
+                                es necesario dividir lados usando un recorrido (el listado de viviendas)</p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" data-name="image-799319" style="width: 597.333px; height: 448px; left: 160px; top: 196px; min-width: 1px; min-height: 1px;">
+                        <div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="800" data-natural-height="600" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/713971/images/7278336/manzana_a_segmentar_independiente_segmentado.png"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-b4a771" style="height: auto; width: 775px; left: 80px; top: 101px;">
+                        <div class="sl-block-content" style="z-index: 11;">
+                            <p>¿cuál sería la mejor solución en esta situación?</p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section class="stack">
+                <section>
+                    <div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 45px; height: auto;">
+                        <div class="sl-block-content" style="z-index: 10;">
+                            <h3>La formulación matemática</h3>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-d27b66" style="height: auto; width: 864.338px; left: 58.8454px; top: 129.597px;">
+                        <div class="sl-block-content" style="z-index: 11;">
+                            <p>La idea es escribir este problema en forma matemática para generar una especificación clara y completa y así poder crear y usar algoritmos para resolverlo</p>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; width: 835.008px; left: 80px; top: 256.251px;" data-name="text-41c830">
+                        <div class="sl-block-content" style="z-index: 12; text-align: left;">
+                            <p>Minimizar un costo o función objetivo,<br>
+                                sujeto a restricciones,<br>
+                                para una variable definida en cierto espacio</p>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-fbbe22" style="height: auto; width: 768.515px; left: 95.7425px; top: 591px;">
+                        <div class="sl-block-content" style="z-index: 13;">
+                            <p>un inconveniente muy importante es que no hay una definición precisa del problema</p>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="math" data-name="math-f6b3f8" style="width: auto; height: auto; left: 308.854px; top: 416px;">
+                        <div class="sl-block-content notranslate" style="z-index: 15; font-size: 80%;">
+                            <div class="math-input">\begin{array}{ll}
+                                \mathrm{Min} &amp; f(x) \\
+                                \mathrm{s. a.} &amp; g(x) = 0\\
+                                &amp; x \in \Z^n
+                                \end{array}</div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="text" data-name="text-7fac7e" style="height: auto; width: 841.208px; left: 72.062px; top: 85.5px;">
+                        <div class="sl-block-content" style="z-index: 10;">
+                            <p>¿Cuál es la función objetivo?</p>
+
+                            <ol>
+                                <li>minimizar la cantidad de segmentos, i.e. menos censistas</li>
+                                <li>que los segmentos sean equilibrados, que no haya grandes diferencias de carga entre censistas</li>
+                                <li>minimizar la cantidad de manzanas por segmentos
+                                    <ul>
+                                        <li>la máxima cantidad de manzanas de un segmentos</li>
+                                        <li>la suma de manzanas&nbsp;</li>
+                                    </ul>
+                                </li>
+                                <li>minimizar la carga máxima</li>
+                                <li>que la longitud de los segmentos sea mímima</li>
+                                <li>maximizar la contigüidad de los segmentos</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-2a4ba2" style="height: auto; width: 600px; left: 144.755px; top: 31px;">
+                        <div class="sl-block-content" style="z-index: 11;">
+                            <p>Pero...</p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="text" data-name="text-7fac7e" style="height: auto; width: 841.208px; left: 72.062px; top: 85.5px;">
+                        <div class="sl-block-content" style="z-index: 10;" dir="ui">
+                            <p>¿Cuáles son las restricciones?</p>
+                            <ol>
+                                <li>no se puede cruzar un límite natural<br>
+                                </li>
+                                <li>no puede&nbsp;haber más de una cantidad de segmentos</li>
+                                <li>debe haber continuidad&nbsp; de los elementos</li>
+                                <li>debe haber contigüedad entre lados</li>
+                                <li>hay una carga máxima</li>
+                                <li>hay una distancia máxima</li>
+                                <li>debe respetarse la regla del hombro derecho</li>
+                                <li>debe existir un recorrido (que el censista no tenga que recorrer nuevamente una zona ya censado ni una que no debe censar)</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-f868f7" style="height: auto; width: 600px; left: 129.335px; top: 31px;">
+                        <div class="sl-block-content" style="z-index: 11;">
+                            <p>Y ...</p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="text" data-name="text-7fac7e" style="height: auto; width: 841.208px; left: 68.758px; top: 70px;">
+                        <div class="sl-block-content" style="z-index: 10;" dir="ui">
+                            <p>¿El espacio de búsqueda?</p>
+
+                            <p>variables que definenen y relacionan</p>
+
+                            <ol>
+                                <li>viviendas</li>
+                                <li>lados</li>
+                                <li>manzanas</li>
+                                <li>segmentos</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-f868f7" style="height: auto; width: 600px; left: 129.335px; top: 31px;">
+                        <div class="sl-block-content" style="z-index: 11;">
+                            <p>Y ...</p>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="math" data-name="math-28cbc5" style="width: auto; height: auto; left: 257.374px; top: 350px;">
+                        <div class="sl-block-content notranslate" style="z-index: 12; font-size: 70%;">
+                            <div class="math-input">x_{ij} = \begin{cases}
+                                1 &amp;\text{si la vivienda }i \\
+                                &amp;\text{está en el segmento }j \\
+                                0 &amp;\text{si no}
+                                \end{cases}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-3e2fc4" style="height: auto; width: 600px; left: 189.362px; top: 521px;">
+                        <div class="sl-block-content" style="z-index: 13;">
+                            <p>idem para lados y manzanas</p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="text" style="width: 806px; left: 31.8387px; top: 46.8312px; height: auto;">
+                        <div class="sl-block-content" style="z-index: 10; text-align: left;">
+                            <h3>Optimización Global<br>
+                                de una función multiobjetivo<br>
+                                en un espacio reticulado<br>
+                                (no continuo, o discreto)&nbsp;</h3>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="math" data-name="math-093e7b" style="width: auto; height: auto; left: 15.3915px; top: 294px;">
+                        <div class="sl-block-content notranslate" style="z-index: 11; font-size: 70%;">
+                            <div class="math-input">\begin{array}{l}
+                                f(x) = \lambda_1 f_1(x) + \lambda_2 f_2(x) + \dots + \lambda_k f_k(x)
+                                \\
+                                \text{donde } f_i(x)
+                                \text{ es la }i\text{-ésima función de costo}
+                                \\
+                                \text{y } \lambda_i \text{ es el }i\text{-ésimo ponderador},
+                                \\
+                                \\
+                                \text{el conjunto de restricciones }
+                                g_j(x)\\
+                                \text{generan un espacio no necesariamente lineal ni convexo, y}
+                                \\
+                                \\
+                                \text{la variable }x\text{ es multidimensional y toma valores discretos}
+                                \end{array}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="text" style="width: 919.842px; left: 20.079px; top: 140px; height: auto;">
+                        <div class="sl-block-content" style="z-index: 10; text-align: left;">
+                            <p>Sin embargo,</p>
+
+                            <ul>
+                                <li>si consideramos sólo las restricciones de adyacencia, y</li>
+                                <li>el resto las incorporamos con penalidades en la función de costo,</li>
+                            </ul>
+
+                            <p>el espacio de búsqueda forma<br>
+                                un reticulado o grafo conectado:<br>
+                                desde cualquier segmentación se puede llegar a cualquier otra siguiendo los pasos que vamos a describir<br>
+                                &nbsp;</p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" data-name="image-aa2735" style="width: 960px; height: 507.622px; left: -32.0883px; top: 122.378px; min-width: 1px; min-height: 1px;">
+                        <div class="sl-block-content" style="z-index: 10;" data-maintain-ar="false"><img style="" data-natural-width="1200" data-natural-height="578" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/713971/images/7280092/avatar_h_h.png"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; width: 535.425px; left: 344.575px; top: 31px;" data-name="text-41c830">
+                        <div class="sl-block-content" style="z-index: 11; text-align: left;" dir="ui">
+                            <p>Minimizar un costo: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <em>f(</em><b>x</b><em>)</em><br>sujeto a restricciones: &nbsp; &nbsp;&nbsp; &nbsp; <em>g(</em><strong>x</strong><em>)</em> = 0<em> </em></p>
+                        </div>
+                    </div>
+
+                    <div class="sl-block" data-block-type="text" style="height: auto; width: 535.425px; left: 344.575px; top: 132.063px;" data-name="text-6af10d">
+                        <div class="sl-block-content" style="z-index: 12; text-align: left;">
+                            <p><span style="font-size:0.7em"><strong>x<em> </em></strong>es una <strong>matriz </strong>que representa una posible solución al problema<br>
+                                    <em><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </strong></em><strong>x</strong><em><strong> </strong>= x<span style="font-size:0.5em">11</span>, x<span style="font-size:0.5em">12</span>, x<span style="font-size:0.5em">13</span>,&nbsp; ..., x<span style="font-size:0.5em">1m</span></em><br>
+                                    donde<em>&nbsp; &nbsp;&nbsp; x<span style="font-size:0.5em">ik</span> = 1 sii</em> la vivienda <em>i </em>está en el segmento<em> k</em></span></p>
+                        </div>
+                    </div>
+
+                    <div class="sl-block" data-block-type="text" style="height: auto; width: 341.702px; left: 0px; top: 58px;" data-name="text-713022">
+                        <div class="sl-block-content" style="z-index: 13;">
+                            <p><span style="color:#008000"><span style="font-size:1.4em">Descripción<br>
+                                        Matemática del<br>
+                                        Problema</span></span></p>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; width: 669.185px; left: 277.695px; top: 350px;" data-name="text-523b4d">
+                        <div class="sl-block-content" style="z-index: 14; text-align: left;">
+                            <p>el <strong>costo</strong> es una función <span style="color:#0000CD">multiobjetivo</span><br>
+                                <em>f(</em><strong>x</strong><em>) = a<span style="font-size:0.5em">1</span>f<span style="font-size:0.5em">1</span>(</em><strong>x</strong><em>) + a<span style="font-size:0.5em">2</span>f<span style="font-size:0.5em">2</span>(</em><strong>x</strong><em>) + a<span style="font-size:0.5em">3</span>f<span style="font-size:0.5em">3</span>(</em><strong>x</strong><em>)&nbsp; ... + a<span style="font-size:0.5em">p</span>f<span style="font-size:0.5em">p</span>(</em><strong>x</strong>)<br>
+                                <span style="font-size:0.7em">cada <em>ai</em>&nbsp;es un ponderador que representa la importancia de cada función objetivo antes mencionada y puede incluir restricciones no estructurales usando ponderadores muy altos</span></p>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; width: 682.793px; left: 240px; top: 573.117px;" data-name="text-504408">
+                        <div class="sl-block-content" style="z-index: 15; text-align: left;" dir="ui">
+                            <p><span style="font-size:0.7em">las <strong>restricciones </strong>se representan con una cantidad <em>m</em> de ecuaciones<br>
+                                    <em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; gj(<strong>x</strong>)</em> = 0 siendo <em>j = 1, 2, 3, ... m</em></span></p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section class="stack">
+                <section>
+                    <div class="sl-block" data-block-type="text" style="width: 899px; left: 30.5px; top: 70px; height: auto;">
+                        <div class="sl-block-content" style="z-index: 10; text-align: center;" dir="ui">
+                            <h1>Las heurísticas</h1>
+
+                            <p>se considera <em><strong><span style="color:#008000">elemento</span></strong></em> a una unidad del segmento<br>
+                                que se mantiene unida en una segmentación:<br>
+                                manzana, lado, piso</p>
+
+                            <h3>cambios atómicos en una segmentación</h3>
+
+                            <ol>
+                                <li>Extraer (elemento de segmento)</li>
+                                <li>Transferir (elemento a segmento adyacente)</li>
+                                <li>Fusionar (segmentos adyacentes)</li>
+                                <li>Dividir elemento en elementos más simples
+                                    <ul>
+                                        <li>​manzana en lados</li>
+                                        <li>recorrido o manzana independiente en pisos de edificio,<br>
+                                            es decir, dividir listado en secuencia de listados</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" data-name="image-b86ea0" style="width: 500px; height: 478px; left: 230px; top: 111px; min-width: 1px; min-height: 1px;">
+                        <div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="500" data-natural-height="478" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/713971/images/7314202/3x3.png"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; width: 447.788px; left: 336.106px; top: 190.603px;" data-name="text-7e8ab1">
+                        <div class="sl-block-content" style="z-index: 11; text-align: justify;">
+                            <p>1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 3</p>
+
+                            <p>&nbsp;</p>
+
+                            <p>&nbsp;</p>
+
+                            <p>4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 6</p>
+
+                            <p>&nbsp;</p>
+
+                            <p>&nbsp;</p>
+
+                            <p>7 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 8 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 9</p>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 166.163px; top: 50.5px;" data-name="text-82ab23">
+                        <div class="sl-block-content" style="z-index: 13;">
+                            <h3>Ejemplo de 3x3 manzanas</h3>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" data-name="image-1a710f" style="width: 500px; height: 478px; left: 230px; top: 111px; min-width: 1px; min-height: 1px;">
+                        <div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="500" data-natural-height="478" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/713971/images/7314196/3x3_segmentado.png"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; width: 447.788px; left: 336.106px; top: 190.603px;" data-name="text-7e8ab1">
+                        <div class="sl-block-content" style="z-index: 11; text-align: justify;">
+                            <p>1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 3</p>
+
+                            <p>&nbsp;</p>
+
+                            <p>&nbsp;</p>
+
+                            <p>4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 6</p>
+
+                            <p>&nbsp;</p>
+
+                            <p>&nbsp;</p>
+
+                            <p>7 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 8 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 9</p>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 166.163px; top: 50.5px;" data-name="text-82ab23">
+                        <div class="sl-block-content" style="z-index: 12;">
+                            <h3>Dividido en 3 segmentos</h3>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" data-name="image-5b22cd" style="width: 500px; height: 478px; left: 230px; top: 111px; min-width: 1px; min-height: 1px;">
+                        <div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="500" data-natural-height="478" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/713971/images/7314197/3x3_segmentado_a_exraer.png"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; width: 447.788px; left: 336.106px; top: 190.603px;" data-name="text-7e8ab1">
+                        <div class="sl-block-content" style="z-index: 11; text-align: justify;">
+                            <p>1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 3</p>
+
+                            <p>&nbsp;</p>
+
+                            <p>&nbsp;</p>
+
+                            <p>4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 6</p>
+
+                            <p>&nbsp;</p>
+
+                            <p>&nbsp;</p>
+
+                            <p>7 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 8 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 9</p>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 166.163px; top: 50.5px;" data-name="text-82ab23">
+                        <div class="sl-block-content" style="z-index: 12;">
+                            <h3>Selecciona manzana 5</h3>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" data-name="image-9b4228" style="width: 500px; height: 478px; left: 230px; top: 111px; min-width: 1px; min-height: 1px;">
+                        <div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="500" data-natural-height="478" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/713971/images/7314194/3x3_segmentado_extraido.png"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; width: 447.788px; left: 336.106px; top: 190.603px;" data-name="text-7e8ab1">
+                        <div class="sl-block-content" style="z-index: 11; text-align: justify;">
+                            <p>1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 3</p>
+
+                            <p>&nbsp;</p>
+
+                            <p>&nbsp;</p>
+
+                            <p>4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 6</p>
+
+                            <p>&nbsp;</p>
+
+                            <p>&nbsp;</p>
+
+                            <p>7 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 8 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 9</p>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 167.316px; top: 39px;" data-name="text-82ab23">
+                        <div class="sl-block-content" style="z-index: 12;">
+                            <h3>Extrae manzana 5<br>
+                                se crea un nuevo segmento</h3>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" data-name="image-c40792" style="width: 500px; height: 478px; left: 230px; top: 111px; min-width: 1px; min-height: 1px;">
+                        <div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="500" data-natural-height="478" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/713971/images/7314195/3x3_segmentado_a_exraer_rompiendo.png"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; width: 447.788px; left: 336.106px; top: 190.603px;" data-name="text-7e8ab1">
+                        <div class="sl-block-content" style="z-index: 11; text-align: justify;">
+                            <p>1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 3</p>
+
+                            <p>&nbsp;</p>
+
+                            <p>&nbsp;</p>
+
+                            <p>4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 6</p>
+
+                            <p>&nbsp;</p>
+
+                            <p>&nbsp;</p>
+
+                            <p>7 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 8 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 9</p>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 166.163px; top: 50.5px;" data-name="text-82ab23">
+                        <div class="sl-block-content" style="z-index: 12;">
+                            <h3>Selecciona manzana 2</h3>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" data-name="image-7a6ac2" style="width: 500px; height: 478px; left: 230px; top: 111px; min-width: 1px; min-height: 1px;">
+                        <div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="500" data-natural-height="478" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/713971/images/7314192/3x3_segmentado_a_exraer_roto.png"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; width: 447.788px; left: 336.106px; top: 190.603px;" data-name="text-7e8ab1">
+                        <div class="sl-block-content" style="z-index: 11; text-align: justify;">
+                            <p>1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 3</p>
+
+                            <p>&nbsp;</p>
+
+                            <p>&nbsp;</p>
+
+                            <p>4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 6</p>
+
+                            <p>&nbsp;</p>
+
+                            <p>&nbsp;</p>
+
+                            <p>7 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 8 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 9</p>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; width: 1005.9px; left: -39.092px; top: 50.5px;" data-name="text-82ab23">
+                        <div class="sl-block-content" style="z-index: 12;">
+                            <h3>Se crean 3 nuevos segmentos<br>
+                                <span style="font-size:0.7em">por la pérdida de conectividad en el segmento rojo</span>
+                            </h3>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" data-name="image-05f1bf" style="width: 500px; height: 478px; left: 230px; top: 111px; min-width: 1px; min-height: 1px;">
+                        <div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="500" data-natural-height="478" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/713971/images/7314193/3x3_segmentado_a_transferir.png"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; width: 447.788px; left: 336.106px; top: 190.603px;" data-name="text-7e8ab1">
+                        <div class="sl-block-content" style="z-index: 11; text-align: justify;">
+                            <p>1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 3</p>
+
+                            <p>&nbsp;</p>
+
+                            <p>&nbsp;</p>
+
+                            <p>4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 6</p>
+
+                            <p>&nbsp;</p>
+
+                            <p>&nbsp;</p>
+
+                            <p>7 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 8 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 9</p>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 160px; top: 39px;" data-name="text-82ab23">
+                        <div class="sl-block-content" style="z-index: 12;">
+                            <h3>Seleccionar manzana 3<br>
+                                para transferir</h3>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" data-name="image-8fcfaa" style="width: 500px; height: 478px; left: 230px; top: 111px; min-width: 1px; min-height: 1px;">
+                        <div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="500" data-natural-height="478" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/713971/images/7314191/3x3_segmentado_transferido.png"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; width: 447.788px; left: 336.106px; top: 190.603px;" data-name="text-7e8ab1">
+                        <div class="sl-block-content" style="z-index: 11; text-align: justify;">
+                            <p>1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 3</p>
+
+                            <p>&nbsp;</p>
+
+                            <p>&nbsp;</p>
+
+                            <p>4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 6</p>
+
+                            <p>&nbsp;</p>
+
+                            <p>&nbsp;</p>
+
+                            <p>7 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 8 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 9</p>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 166.163px; top: 50.5px;" data-name="text-82ab23">
+                        <div class="sl-block-content" style="z-index: 12;">
+                            <h3>Transfiere manzana 3<br>
+                                a segmento azul</h3>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" data-name="image-cb2247" style="width: 500px; height: 478px; left: 230px; top: 111px; min-width: 1px; min-height: 1px;">
+                        <div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="500" data-natural-height="478" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/713971/images/7314190/3x3_segmentado_a_fusionar.png"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; width: 447.788px; left: 336.106px; top: 190.603px;" data-name="text-7e8ab1">
+                        <div class="sl-block-content" style="z-index: 11; text-align: justify;">
+                            <p>1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 3</p>
+
+                            <p>&nbsp;</p>
+
+                            <p>&nbsp;</p>
+
+                            <p>4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 6</p>
+
+                            <p>&nbsp;</p>
+
+                            <p>&nbsp;</p>
+
+                            <p>7 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 8 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 9</p>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 166.163px; top: 50.5px;" data-name="text-82ab23">
+                        <div class="sl-block-content" style="z-index: 12;">
+                            <h3>Selecciona segmentos adyacenctes verde y azul</h3>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" data-name="image-193f6d" style="width: 500px; height: 478px; left: 230px; top: 111px; min-width: 1px; min-height: 1px;">
+                        <div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="500" data-natural-height="478" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/713971/images/7314189/3x3_segmentado_fusionado.png"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; width: 447.788px; left: 336.106px; top: 190.603px;" data-name="text-7e8ab1">
+                        <div class="sl-block-content" style="z-index: 11; text-align: justify;">
+                            <p>1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 3</p>
+
+                            <p>&nbsp;</p>
+
+                            <p>&nbsp;</p>
+
+                            <p>4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 5 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 6</p>
+
+                            <p>&nbsp;</p>
+
+                            <p>&nbsp;</p>
+
+                            <p>7 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 8 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 9</p>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 166.163px; top: 50.5px;" data-name="text-82ab23">
+                        <div class="sl-block-content" style="z-index: 12;">
+                            <h3>Los fusiona para armar un nuevo segmento amarillo</h3>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" data-name="image-d6ca16" style="width: 800px; height: 600px; left: 80px; top: 140px;">
+                        <div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="800" data-natural-height="600" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/713971/images/7385436/manzana_independiente.png"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-fe296e" style="height: auto; width: 843px; left: 37px; top: 50px;">
+                        <div class="sl-block-content" style="z-index: 11;">
+                            <h3>Caso con lados excedidos<br>
+                                hay que segmentar a recorrido<br>
+                                (<em><strong><span style="color:#008000">manzana independiente</span></strong></em>)</h3>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" data-name="image-42867a" style="width: 800px; height: 600px; left: 80px; top: 151px;">
+                        <div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="800" data-natural-height="600" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/713971/images/7385433/manzana_independiente_3_lados.png"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-425c2b" style="height: auto; width: 702px; left: 80px; top: 101px;">
+                        <div class="sl-block-content" style="z-index: 11;">
+                            <h3>Se puede separar un lado completo</h3>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" data-name="image-ef8df5" style="width: 800px; height: 600px; left: 86px; top: 179px;">
+                        <div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="800" data-natural-height="600" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/713971/images/7385432/manzana_independiente_3_lados_segmentado.png"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-f457a5" style="height: auto; width: 600px; left: 151px; top: 70px;">
+                        <div class="sl-block-content" style="z-index: 11;">
+                            <h3>y segmentar el recorrido<br>
+                                de los otros 3 lados</h3>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" data-name="image-2a864c" style="width: 800px; height: 600px; left: 74px; top: 220px;">
+                        <div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="800" data-natural-height="600" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/713971/images/7385431/manzana_independiente_2_lados.png"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-0a88a0" style="height: auto; width: 781px; left: 74px; top: 105px;">
+                        <div class="sl-block-content" style="z-index: 11;">
+                            <h3>Se pueden separar 2 lados completos</h3>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" data-name="image-4db80b" style="width: 800px; height: 600px; left: 88px; top: 134px;">
+                        <div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="800" data-natural-height="600" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/713971/images/7385429/manzana_independiente_2_lados_segmentado.png"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-227b51" style="height: auto; width: 880px; left: 26px; top: 90px;">
+                        <div class="sl-block-content" style="z-index: 11;">
+                            <h3><span>y segmentar los otros 2 lados completos </span></h3>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" data-name="image-f922e0" style="width: 800px; height: 600px; left: 93px; top: 107.5px;">
+                        <div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="800" data-natural-height="600" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/713971/images/7385435/manzana_independiente_4_lados.png"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-029472" style="height: auto; width: 936.5px; left: 0px; top: 27.5px;">
+                        <div class="sl-block-content" style="z-index: 11;">
+                            <h3>También se puede segmentar<br>
+                                manzana independiente</h3>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-d37aaf" style="height: auto; width: 878px; left: 41px; top: 528.5px;">
+                        <div class="sl-block-content" style="z-index: 12;">
+                            <p><span>Como en este caso con lados no excedidos, </span><br>
+                                <span>pero que se segmenta a recorrido<br>
+                                    en vez de a lados completos usando lados adyacentes</span></p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section class="stack">
+                <section>
+                    <div class="sl-block" data-block-type="text" data-name="text-c6a05c" style="height: auto; width: 600px; left: 180px; top: 24px;">
+                        <div class="sl-block-content" style="z-index: 11;">
+                            <p><span style="font-size:36px">Interfaz web</span></p>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-430ca9" style="height: auto; width: 387.054px; left: 80px; top: 105px;">
+                        <div class="sl-block-content" style="z-index: 12; text-align: center; border-style: solid; border-width: 2px; border-radius: 48px; border-color: rgb(32, 18, 77);">
+                            <p>Carga de datos</p>
+
+                            <ul>
+                                <li>geográficos</li>
+                                <li>domicilios (ADRA)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-2c6f97" style="height: auto; width: 260.012px; left: 135.052px; top: 280px;">
+                        <div class="sl-block-content" style="z-index: 13; text-align: center; border-style: solid; border-width: 2px; border-radius: 48px; border-color: rgb(32, 18, 77);">
+                            <p>Procesar segmentación</p>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-7f7560" style="height: auto; width: 301.149px; left: 498.851px; top: 268.832px;">
+                        <div class="sl-block-content" style="z-index: 14; text-align: center; border-style: solid; border-width: 2px; border-radius: 48px; border-color: rgb(32, 18, 77);">
+                            <p>Previsualización de segmentación y análisis.</p>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-96bd53" style="height: auto; width: 250.889px; left: 520px; top: 428.832px;">
+                        <div class="sl-block-content" style="z-index: 15; text-align: center; border-style: solid; border-width: 2px; border-radius: 48px; border-color: rgb(32, 18, 77);">
+                            <p style="text-align: center;">Preparar salida gráfica</p>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 265.058px; top: 70px;" data-name="line-5f3614">
+                        <div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="0" data-line-y2="39" data-line-color="#274e13" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 10;" data-line-width="6px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="1" height="39" viewBox="0 0 1 39">
+                                <line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="0" x2="0" y2="34.5"></line>
+                                <line class="line-element" stroke="#274e13" stroke-width="6" x1="0" y1="0" x2="0" y2="34.5"></line>
+                                <path style="fill: rgba(0,0,0,0);" stroke="#274e13" stroke-width="6" transform="translate(0,34.5) rotate(180)" d="M 13.5 13.5 L 0 0 L -13.5 13.5"></path>
+                            </svg></div>
+                    </div>
+                    <div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 265.058px; top: 241px;" data-name="line-e42e48">
+                        <div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="0" data-line-y2="39" data-line-color="#274e13" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 16;" data-line-width="4px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="1" height="39" viewBox="0 0 1 39">
+                                <line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="0" x2="0" y2="36"></line>
+                                <line class="line-element" stroke="#274e13" stroke-width="4" x1="0" y1="0" x2="0" y2="36"></line>
+                                <path style="fill: rgba(0,0,0,0);" stroke="#274e13" stroke-width="4" transform="translate(0,36) rotate(180)" d="M 9 9 L 0 0 L -9 9"></path>
+                            </svg></div>
+                    </div>
+                    <div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 394.851px; top: 310.111px;" data-name="line-388ff7">
+                        <div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="103.78699999999998" data-line-y2="0" data-line-color="#274e13" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 17;" data-line-width="4px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="103.78699999999998" height="1" viewBox="0 0 103.78699999999998 1">
+                                <line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="0" x2="100.78699999999998" y2="0"></line>
+                                <line class="line-element" stroke="#274e13" stroke-width="4" x1="0" y1="0" x2="100.78699999999998" y2="0"></line>
+                                <path style="fill: rgba(0,0,0,0);" stroke="#274e13" stroke-width="4" transform="translate(100.78699999999998,0) rotate(90)" d="M 9 9 L 0 0 L -9 9"></path>
+                            </svg></div>
+                    </div>
+                    <div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 394.638px; top: 329.332px;" data-name="line-1f0c6e">
+                        <div class="sl-block-content" data-line-x1="103.78734845735026" data-line-y1="0" data-line-x2="0" data-line-y2="0" data-line-color="#274e13" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 18;" data-line-width="4px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="103.78734845735026" height="1" viewBox="0 0 103.78734845735026 1">
+                                <line stroke="rgba(0,0,0,0)" stroke-width="15" x1="103.78734845735026" y1="0" x2="3" y2="0"></line>
+                                <line class="line-element" stroke="#274e13" stroke-width="4" x1="103.78734845735026" y1="0" x2="3" y2="0"></line>
+                                <path style="fill: rgba(0,0,0,0);" stroke="#274e13" stroke-width="4" transform="translate(3,0) rotate(270)" d="M 9 9 L 0 0 L -9 9"></path>
+                            </svg></div>
+                    </div>
+                    <div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 639px; top: 510.832px;" data-name="line-741775">
+                        <div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="0" data-line-y2="39" data-line-color="#274e13" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 19;" data-line-width="6px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="1" height="39" viewBox="0 0 1 39">
+                                <line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="0" x2="0" y2="34.5"></line>
+                                <line class="line-element" stroke="#274e13" stroke-width="6" x1="0" y1="0" x2="0" y2="34.5"></line>
+                                <path style="fill: rgba(0,0,0,0);" stroke="#274e13" stroke-width="6" transform="translate(0,34.5) rotate(180)" d="M 13.5 13.5 L 0 0 L -13.5 13.5"></path>
+                            </svg></div>
+                    </div>
+                    <div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 640px; top: 389.832px;" data-name="line-143413">
+                        <div class="sl-block-content" data-line-x1="0" data-line-y1="0" data-line-x2="0" data-line-y2="39" data-line-color="#274e13" data-line-start-type="none" data-line-end-type="line-arrow" style="z-index: 20;" data-line-width="4px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="1" height="39" viewBox="0 0 1 39">
+                                <line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="0" x2="0" y2="36"></line>
+                                <line class="line-element" stroke="#274e13" stroke-width="4" x1="0" y1="0" x2="0" y2="36"></line>
+                                <path style="fill: rgba(0,0,0,0);" stroke="#274e13" stroke-width="4" transform="translate(0,36) rotate(180)" d="M 9 9 L 0 0 L -9 9"></path>
+                            </svg></div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" style="min-width: 1px; min-height: 1px; width: 360px; height: 119px; left: 600px; top: 298px;" data-name="image-9498e3">
+                        <div class="sl-block-content" style="z-index: 10;"><img data-natural-width="390" data-natural-height="129" data-lazy-loaded="" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB-INi55_YZ35b2xKEWgZhnCoaOer-0quwVEJl-h-Qdg9FPy2C"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="image" style="min-width: 1px; min-height: 1px; width: 320px; height: 149px; left: 240px; top: 368px;" data-name="image-7c3029">
+                        <div class="sl-block-content" style="z-index: 11;"><img data-natural-width="256" data-natural-height="119" data-lazy-loaded="" data-src="https://www.gisjourney.com/images/QGIS.gif"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="image" style="min-width: 1px; min-height: 1px; width: 183px; height: 141px; left: 240px; top: 211px;" data-name="image-a34bb7">
+                        <div class="sl-block-content" style="z-index: 12;"><img data-natural-width="192" data-natural-height="148" data-lazy-loaded="" data-src="data:image/jpeg;base64,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"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="image" style="min-width: 1px; min-height: 1px; width: 155px; height: 142px; left: 78px; top: 212px;" data-name="image-5b5238">
+                        <div class="sl-block-content" style="z-index: 13;"><img data-natural-width="160" data-natural-height="147" data-lazy-loaded="" data-src="data:image/png;base64,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"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="image" style="min-width: 1px; min-height: 1px; width: 147px; height: 140px; left: 82px; top: 69px;" data-name="image-86fe6c">
+                        <div class="sl-block-content" style="z-index: 14;"><img data-natural-width="230" data-natural-height="219" data-lazy-loaded="" data-src="data:image/jpeg;base64,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"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="image" style="min-width: 1px; min-height: 1px; width: 179px; height: 119px; left: 240px; top: 69px;" data-name="image-658e31">
+                        <div class="sl-block-content" style="z-index: 15;"><img data-natural-width="276" data-natural-height="183" data-lazy-loaded="" data-src="data:image/png;base64,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"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="image" style="min-width: 1px; min-height: 1px; width: 180px; height: 121px; left: 419px; top: 70px;" data-name="image-5f77b4">
+                        <div class="sl-block-content" style="z-index: 16;"><img data-natural-width="273" data-natural-height="184" data-lazy-loaded="" data-src="data:image/jpeg;base64,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"></div>
+                    </div>
+                </section>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" data-name="text-430ca9" style="height: auto; width: 387.054px; left: 80px; top: 105px;">
+                    <div class="sl-block-content" style="z-index: 10; text-align: center; border-style: solid; border-width: 2px; border-radius: 48px; border-color: rgb(32, 18, 77);">
+                        <p>Carga de datos</p>
+
+                        <ul>
+                            <li>geográficos</li>
+                            <li>domicilios (ADRA)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="stack">
+                <section>
+                    <div class="sl-block" data-block-type="text" data-name="text-c6a05c" style="height: auto; width: 600px; left: 180px; top: 24px;">
+                        <div class="sl-block-content" style="z-index: 10;">
+                            <p><span style="font-size:36px">Salida gráfica</span></p>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" data-name="text-430ca9" style="height: auto; width: 600px; left: 180px; top: 164px;">
+                        <div class="sl-block-content" style="z-index: 11;" dir="ui">
+                            <ul>
+                                <li><span>Abrir proyecto QGIS</span></li>
+                                <li>Aplicar herramienta</li>
+                                <li>Generar mapas y R3</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" style="width: 616px; height: 279px; left: 172px; top: 210.5px;" data-name="image-7d20fb">
+                        <div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="616" data-natural-height="279" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/1315629/images/7401929/qgis.jpg"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 180px; top: 78.8695px;" data-name="text-bb80d0">
+                        <div class="sl-block-content" style="z-index: 11;">
+                            <h2>QGIS 3.12</h2>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" style="width: 205.089px; height: 261.9px; left: 69.3827px; top: 18.1px; min-width: 1px; min-height: 1px;" data-name="image-421cd8">
+                        <div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="361" data-natural-height="461" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/1315629/images/7401885/estructura_BD.jpg"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 200px; top: 70px;" data-name="text-ba6108">
+                        <div class="sl-block-content" style="z-index: 11;">
+                            <p>CONEXION BASE DE DATOS</p>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="image" style="width: 436.33px; height: 406.715px; left: 328.454px; top: 280px;" data-name="image-9c9603">
+                        <div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="663" data-natural-height="618" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/1315629/images/7401944/SCRIP.jpg"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; width: 279.357px; left: 80px; top: 447px;" data-name="text-8b4c18">
+                        <div class="sl-block-content" style="z-index: 13;">
+                            <p>SCRIPT</p>
+
+                            <p>&nbsp;</p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" style="width: 806.4px; height: 472.505px; left: 57.6885px; top: 140px; min-width: 1px; min-height: 1px;" data-name="image-3745cb">
+                        <div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1309" data-natural-height="767" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/1315629/images/7401907/general.jpg"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 160px; top: 70px;" data-name="text-830786">
+                        <div class="sl-block-content" style="z-index: 11;">
+                            <p>PANTALLA PRINCIPAL QGIS</p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" style="width: 309.326px; height: 328.351px; left: 45.1116px; top: 206.679px; min-width: 1px; min-height: 1px;" data-name="image-da099a">
+                        <div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="439" data-natural-height="466" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/1315629/images/7401886/seg_plantillas.jpg"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="image" style="width: 309.326px; height: 329.146px; left: 480px; top: 210px; min-width: 1px; min-height: 1px;" data-name="image-0af278">
+                        <div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="437" data-natural-height="465" alt="Plantillas" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/1315629/images/7401901/radios_plantillas.jpg"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 137.531px; top: 84.1782px;" data-name="text-1a8901">
+                        <div class="sl-block-content" style="z-index: 12;">
+                            <p>PLANTILLAS DE SALIDA GRAFICA</p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" style="width: 806.4px; height: 502.859px; left: 73.6px; top: 98.5705px; min-width: 1px; min-height: 1px;" data-name="image-ae8e6b">
+                        <div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1060" data-natural-height="661" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/1315629/images/7336395/1.jpg"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 169.383px; top: 17.289px;" data-name="text-369a80">
+                        <div class="sl-block-content" style="z-index: 11;">
+                            <p>PROPIEDAS DE ATLAS</p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" style="width: 806.4px; height: 570.267px; left: 76.8px; top: 89.2863px; min-width: 1px; min-height: 1px;" data-name="image-5e9070">
+                        <div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1909" data-natural-height="1350" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/1315629/images/7401774/16-A3h-F04-R11-Humahuaca.png"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 167.259px; top: 15.1656px;" data-name="text-21c915">
+                        <div class="sl-block-content" style="z-index: 11;">
+                            <p>SALIDA GRAFICA RADIOS</p>
+
+                            <p>&nbsp;</p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="image" style="width: 806.4px; height: 570.267px; left: 80px; top: 89.2863px; min-width: 1px; min-height: 1px;" data-name="image-49a5e5">
+                        <div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1909" data-natural-height="1350" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/1315629/images/7401829/A4h-F04-R11-S11-Humahuaca.png"></div>
+                    </div>
+                    <div class="sl-block" data-block-type="text" style="height: auto; width: 600px; left: 152.395px; top: 16.2273px;" data-name="text-df3173">
+                        <div class="sl-block-content" style="z-index: 11;">
+                            <p>SALIDA GRAFICA SEGMENTOS</p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" data-name="text-c6a05c" style="height: auto; width: 600px; left: 180px; top: 24px;">
+                    <div class="sl-block-content" style="z-index: 10;">
+                        <p><span style="font-size:36px">Conclusión</span></p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="sl-block" data-block-type="text" data-name="text-c6a05c" style="height: auto; width: 600px; left: 180px; top: 24px;">
+                    <div class="sl-block-content" style="z-index: 10;">
+                        <p><span style="font-size:36px">Preguntas</span></p>
+                    </div>
+                </div>
+            </section>
+            <section class="stack">
+                <section>
+                    <div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 43.7041px; top: 140px;" data-name="math-d040d5">
+                        <div class="sl-block-content notranslate" style="z-index: 11;">
+                            <div class="math-input">\mathbf{x} =
+                                \begin{bmatrix}
+                                x_{11} &amp; x_{12} &amp; \cdots &amp; x_{1m} \\
+                                x_{21} &amp; x_{22} &amp; \cdots &amp; x_{2m} \\
+                                \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+                                x_{n1} &amp; x_{n2} &amp; \cdots &amp; x_{nm}
+                                \end{bmatrix}
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 25.4083px; top: 472.901px;" data-name="math-bdbf73">
+                        <div class="sl-block-content notranslate" style="z-index: 12;">
+                            <div class="math-input">
+                                x_{ij} = \begin{cases}
+                                1 &amp;\text{si la vivienda }i \\
+                                &amp;\text{está en el segmento }j \\
+                                0 &amp;\text{si no}
+                                \end{cases}</div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 0px; top: 140px;" data-name="math-f814e3">
+                        <div class="sl-block-content notranslate" style="z-index: 10;">
+                            <div class="math-input">f(\mathbf{x}) = \lambda_1 f_1(\mathbf{x}) + \lambda_2 f_2(\mathbf{x}) + \dots + \lambda_k f_k(\mathbf{x})</div>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 72.8548px; top: 252.878px;" data-name="math-482724">
+                        <div class="sl-block-content notranslate" style="z-index: 11;">
+                            <div class="math-input">\text {$f_i(\mathbf{x})$ \\
+                                es la $i$-ésima función de costo}</div>
+                        </div>
+                    </div>
+                    <div class="sl-block" data-block-type="math" style="width: auto; height: auto; left: 80px; top: 350px;" data-name="math-62f09b">
+                        <div class="sl-block-content notranslate" style="z-index: 12;">
+                            <div class="math-input">\text {$\lambda_i$ es el $i$-ésimo ponderador}</div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section></section>
+        </div>
+    </div>
+</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
