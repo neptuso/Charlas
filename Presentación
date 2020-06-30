@@ -1,0 +1,119 @@
+El Problema
+(a grosso modo o descripción somera)
+
+censar 10M viviendas en un día
+asumiendo que 1 censista puede censar
+20-40 viviendas en 12 horas de trabajo
+(según la longitud del formulario censal)
+se requieren 250-500m censistas, 
+más toda la logistica involucrada
+
+Para ello se requiere generar
+mapas, recorridosy listado
+para que el censista realice su trabajo
+
+---
+
+Insumos:
+
+1. listados o conteos de direcciones
+por manzanas o lados de manzanas
+
+2. datos espaciales
+cartografía de la zona
+
+---
+
+
+
+. reglas 
+
+. restricciones
+
+. Objetivo
+
+---
+
+Productos:
+
+1. mapas 
+2. formularios
+
+---
+
+
+
+---
+
+Historia
+
+censo cada 10 años
+segmentación manual
+
+---
+
+Antecedentes
+
+Software
+DPEs
+
+---
+
+Descripción más precisa
+y Definiciones
+
+Cubrir completamente una zona geográfica 
+(radio)
+
+dividiendola en conjuntos de viviendas 
+(segmento)
+
+los segmentos deberán tener
+
+una cantidad deseada de viviendas (carga)
+una continuidad geográfica (continuidad)
+un recorrido espacial (secuencia)
+
+---
+
+
+
+---
+
+Tipos de radios
+
+distribución de vivendas 
+dada una carga deseada
+
+1. todos los lados con pocas viviendas
+2. todas las manzanas con muchas viviendas
+3. situaciones intermedias
+algunas manzanas con pocas viviendas
+y algunos lados con muchas viviendas
+
+---
+
+Algoritmos o Métodos
+
+elementos disponibles, 
+o agrupación elemntal
+
+1. conteos: 
+lados_completos o manzanas_completas
+
+2. listado: direcciones, pisos 
+(no se corta un piso)
+recorrido o manzanas_independientes
+
+3. combinación de ambos
+
+---
+
+
+
+
+.
+.
+. 
+
+
