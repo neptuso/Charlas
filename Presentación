@@ -1,3 +1,10 @@
+---
+
+CNPHyV 2020
+Segmentación
+
+---
+
 El Problema
 (a grosso modo o descripción somera)
 
@@ -36,8 +43,9 @@ cartografía de la zona
 
 Productos:
 
-1. mapas 
-2. formularios
+. mapas
+. recorridos
+. formularios
 
 ---
 
@@ -62,17 +70,15 @@ DPEs
 Descripción más precisa
 y Definiciones
 
-Cubrir completamente una zona geográfica 
-(radio)
+Cubrir completamente una zona geográfica (radio)
 
-dividiendola en conjuntos de viviendas 
-(segmento)
+dividiéndola en conjuntos de viviendas (segmentos)
 
 los segmentos deberán tener
 
-una cantidad deseada de viviendas (carga)
-una continuidad geográfica (continuidad)
-un recorrido espacial (secuencia)
+una carga 
+continuidad
+un recorrido
 
 ---
 
@@ -82,30 +88,30 @@ un recorrido espacial (secuencia)
 
 Tipos de radios
 
-distribución de vivendas 
+según distribución de vivendas 
 dada una carga deseada
 
-1. todos los lados con pocas viviendas
-2. todas las manzanas con muchas viviendas
-3. situaciones intermedias
+1. Esparzo: todos los lados con pocas viviendas
+2. Denso: todas las manzanas con muchas viviendas
+3. Combinado: situaciones intermedias
 algunas manzanas con pocas viviendas
-y algunos lados con muchas viviendas
+o algunos lados con muchas viviendas
 
 ---
 
 Algoritmos o Métodos
 
 elementos disponibles, 
-o agrupación elemntal
+o agrupación elemental
 
 1. conteos: 
-lados_completos o manzanas_completas
+lados o manzanas completas
 
 2. listado: direcciones, pisos 
-(no se corta un piso)
-recorrido o manzanas_independientes
+(no puede haber más de 1 segmento por piso)
+recorrido o manzanas independientes
 
-3. combinación de ambos
+3. varias combinaciones de ambos
 
 ---
 
