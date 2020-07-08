@@ -109,8 +109,113 @@ recorrido o manzanas_independientes
 
 ---
 
+Reglas de recorridos (para lados)
+
+- llegar a la esquina para cruzar
+
+- y allí no se puede cruzar más de 1 vez
+
+=> una vez en la esquina se pueden hacer
+3 cosas para continuar el recorrido:
+
+1. doblar
+2. volver
+(3. cruzar)
+
+[dvc.png]
+
+---
+
+dentro de 1 lado (para recorrido de un listado)
+
+- se recorre con el hombro derecho pegado a la pared
+
+- no se cortan pisos
+
+---
+
+Algoritmos
+
+1. conteos: usa adyacencias entre lados y manzanas
+generados por las reglas de acciones 
+doblar, volver y cruzar
+
+2. listado: usa un recorrido generado por empalme 
+de listados de lados de manzana
+
+---
+
+Formulación Matemática
+
+OPTIMIZACION GLOBAL
+de 1 FUNCIÓN MULTIOBJETIVO
+en un ESPACIO RETICULADO
+
+- costo 
+función (multi) objectivo
+- restricciones 
+(no convexas, con mínimos locales)
+- espacio reticulado
+(generado por las reglas)
+
+Min  c(x)
+s.a. g(x) >= 0
+     x \in R
+
+x es una segmentación factible
+(cumple las reglas de adyacencia)
+
+---
+
+Función Multiobjetivo
+
+---
+
+Restricciones Lineales
+
+ x_{ij} 
+
+define si la vivienda i 
+está en el segmento j
+
+ lineales  Ax = b 
+
+arma la relacion entre viviendas con lados
+y lados con manzanas
+
+ \sum_{ciertos i} viv_i = lado_k / c_k
+ c_k = cantidad de viviendas en el lado k
+
+ \sum_{ciertos j} lado_j = mmza_m / c_m
+ c_m = cantidad de viviendas en la manzana m
+
+ \sum_{todo i} x_{ij} = r
+ r = cantidad de viviendas en el radio
+
+ \sum_{todo j} x_{ij} = \sum_{todo j} seg_j / |seg_j|
+ todas los segmentos cubren el radio
+
+ x_{ij} + x_{ik} <= 1 
+ la vivienda i está en 1 y sólo 1 segmento
+ no se sabe de antemano la cantidad de segmentos
+ puede que hay segmentos nulos a partir de un cierto número s
+ 
 
 
+---
+
+
+
+
+---
+
+Implementación
+
+1. python algoritmo + PostgreSQL tabla de adyacencias
+
+2. PostgresSQL function segmentar_equilibrado
+
+---
 
 .
 .
