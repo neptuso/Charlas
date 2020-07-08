@@ -57,13 +57,42 @@ Historia
 
 censo cada 10 años
 segmentación manual
+hasta el año tal
+
 
 ---
 
 Antecedentes
 
-Software
-DPEs
+Sante Fe, 
+Sistema basado en listados, 
+segmenta en forma asistida basada en grafos, 
+[muy interesante optimización de la salida impresa, 
+la direccionaban a plotters tamaño A0, en lugar de Impresoras, 
+Componían Mosaicos de ancho A0 con las hojas a4 y a3 de los planos de segmentación 
+(Censista y Coordinador), después cortaban las sábanas con trincheta.
+]
+
+Río Negro / Neuquén 
+Segmentación asistida por PC), 
+implementado por primera vez para el censo 2001. 
+[
+respecto del programador, si se presentó a los preliminares del 2010, 
+ya no trabajaba para el INDEC ni para la/las DPE, 
+entregó el código y se desentendió del asunto
+Nunca supimos que hacer con el código (Por Informática) 
+Un desarrollador que le dedicó un par de semanas (Juan Carlos Marchioni) 
+dictaminó que el código que le entregaron para aplicar ingenieria inversa 
+y así poder "modificarlo y/o actualizarlo
+]
+
+Prov. BsAs
+censo 2010
+IC-FCEyN - IMPRONTA - DPE
+segmentación tercerizada. Se entregó listado y cartografía a Empresa
+UBA publicó paper con el método 
+Algoritmo recursivo de Programación Linear Entera
+Requiere Software propietario CPLEX
 
 ---
 
