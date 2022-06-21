@@ -11,6 +11,20 @@ class: center, inverse
 background-image: url("plantilla_idera_html/img0.png")
 
 # Introducción al problema.
+
+##¿Que es la segmentación?
+
+Es la tarea que permite subdividir el radio censal en unidades operativas menores llamadas segmentos.
+Para asegurar que todas las viviendas y personas sean censadas, es necesario determinar con anterioridad el área que deberán recorrer los censistas y la carga de trabajo que se le asignará a cada uno de ellos.
+
+##Segmentación de radios censales
+- Se subdividen los radios en fragmentos menores, “los segmentos”.
+- Recorrido óptimo de cada uno de los censistas en campo.
+- Carga promedio en zona urbana: entre 30 y 36 viviendas (según la provincia)
+- Carga promedio en asentamientos: 18 viviendas.
+- Carga promedio en zona suburbana: 12 a 15 viviendas.
+
+
 ---
 
 
@@ -23,18 +37,23 @@ Estamos acostumbrados a considerar problemas de optimización, que matemáticame
 Min f(x)
 sujeto a: x Є S
 Donde S es el conjunto de los valores entre los que podemos buscar la solución, lo que se llama conjunto de Factible, Desde el punto de vista matemático no existe ninguna diferencia entre que el problema sea de maximizar o de minimizar, pues el cambio se puede hacer .
-Optimización Discreta
-Función objetivo con costo que incluye penalidad 
-cantidad de viviendas por segmento
-cantidad de manzanas por segmento
-cantidad de segmentos
-cantidad de lados delimitando segmentos
-Espacio factible definido por vecindario de segmentación
-Vecinos se calculan con operaciones elementales
-extraer componente (manzana o lado) de segmento
-transferir componente de un segmento a otro
-fusionar 2 segmentos
-image: ![ETL](imagenes/1.png)
+
+### Optimización Discreta
+
+### Función objetivo con costo que incluye penalidad 
+
+- cantidad de viviendas por segmento
+- cantidad de manzanas por segmento
+- cantidad de segmentos
+- cantidad de lados delimitando segmentos
+
+#### Espacio factible definido por vecindario de segmentación
+- Vecinos se calculan con operaciones elementales
+1. extraer componente (manzana o lado) de segmento
+2. transferir componente de un segmento a otro
+3. fusionar 2 segmentos
+
+![ETL](imagenes/ETL.png)
 ---
 # Carga de datos y procesamiento de datos.
 
