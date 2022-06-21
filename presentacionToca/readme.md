@@ -1,3 +1,4 @@
-# Presentacion Toca a Observadores Iternacionales
+# Presentación Toca a Observadores Internacionales
 
-La presentacion que dio Adrian Toca a los Observadores Internacionales , presentando las actividades pre censales, la cartografia y los archivos utilizados para la Segmentacion y Salida Grafica
+La presentación que dio Adrián Toca a los Observadores Internacionales, 
+sobre las actividades pre censales, la cartografía y los archivos utilizados para la Segmentación y Salida Gráfica
