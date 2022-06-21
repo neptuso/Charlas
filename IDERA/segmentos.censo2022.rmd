@@ -150,13 +150,19 @@ El optimo no es un valor, sino una función Estamos acostumbrados a considerar p
 
 #### Espacio factible definido por vecindario de segmentación
 
+::: columns
+::: {.column width="50%"}
+![ETL](imagenes/ETL.png)
+:::
+
+::: {.column width="50%"}
 -   Vecinos se calculan con operaciones elementales
 
 1.  extraer componente (manzana o lado) de segmento
 2.  transferir componente de un segmento a otro
 3.  fusionar 2 segmentos
-
-![ETL](imagenes/ETL.png)
+:::
+:::
 
 ------------------------------------------------------------------------
 
