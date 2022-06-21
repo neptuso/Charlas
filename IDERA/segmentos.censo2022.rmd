@@ -12,20 +12,99 @@ background-image: url("plantilla_idera_html/img0.png")
 
 # Introducción al problema.
 
-##¿Que es la segmentación?
+## ¿Que es la segmentación?
 
 Es la tarea que permite subdividir el radio censal en unidades operativas menores llamadas segmentos.
-Para asegurar que todas las viviendas y personas sean censadas, es necesario determinar con anterioridad el área que deberán recorrer los censistas y la carga de trabajo que se le asignará a cada uno de ellos.
+Para asegurar que todas las viviendas y personas sean censadas, es necesario determinar con anterioridad el área que deberán recorrer los censistas 
+y la carga de trabajo que se le asignará a cada uno de ellos.
 
-##Segmentación de radios censales
-- Se subdividen los radios en fragmentos menores, “los segmentos”.
-- Recorrido óptimo de cada uno de los censistas en campo.
+## Descripcion somera , Generar mapas, recorridos, planillas. 
+
+- 16 millones de domicilios.
 - Carga promedio en zona urbana: entre 30 y 36 viviendas (según la provincia)
 - Carga promedio en asentamientos: 18 viviendas.
 - Carga promedio en zona suburbana: 12 a 15 viviendas.
+- De 8 a 12 hs. de trabajo.
+- Aprox. 650 mil censistas
+
+## Tipos de Radios
+
+### Urbano
+
+- con población agrupada únicamente, y conformado por manzanas y/o sectores pertenecientes a una localidad.
+
+### Sub Urbano
+
+- agrupada en pequeños poblados o en bordes amanzanados de localidades.
+
+### Limites del segmento
+
+- Todo espacio con o sin viviendas debe estar asignado a algún segmento.
+- Identificar claramente Inicio y Fin de cada uno.
+
+### Facilitar el recorrido del censista
+
+#### Evitar
+- recorridos discontinuo
+- Cruces en diagonal
+- En lo posible cruces de avenidas, rutas, vías de ferrocarril o cursos de agua.
+- Identificar claramente INICIO y FIN de cada segmento.
 
 
 ---
+![M](imagenes/mapa.png)
+---
+
+### Descripción más precisa y Definiciones.
+
+
+#### Los segmentos deberán tener:
+
+- Una carga.
+- Continuidad.
+- Recorrido.
+
+### Tipos de Radios Urbanos o parte Sub Urbana de Radios Mixtos
+
+#### Según distribución de viviendas dada una carga deseada.
+
+- Esparcidos: todos los lados con pocas viviendas.
+- Densos: todas las manzanas con muchas viviendas.
+- Combinados: situaciones intermedias algunas manzanas con pocas viviendas o algunos lados con muchas viviendas. 
+
+### Algoritmos o Métodos.
+
+#### Elementos disponibles, o agrupación elemental.
+
+- Conteos: lados o manzanas completas
+- Listados: direcciones, pisos (no puede haber más de 1 segmento por piso) recorridos o manzanas independientes
+- Varias combinaciones de ambos.
+
+---
+![OG](imagenes/optimizacion_global.png)
+---
+
+---
+![EC](imagenes/extraer.png)
+---
+
+---
+![TC](imagenes/transferir.png)
+---
+
+---
+![FD](imagenes/fusionar.png)
+---
+
+### Numeración de los segmentos
+- Cada segmento del radio urbano se debe identificar con un número de dos dígitos. Esta numeración es correlativa, de 01 en más, dentro del radio.
+- En el área urbana del radio mixto los segmentos se numeran del 80 al 89, siguiendo por 70 hasta 75 y continuando por 76 a 79 y finalmente del 91 al 99 de ser necesario.
+- El segmento colectivo está identificado con el número 90 y dentro del mismo están contenidas todas las viviendas colectivas del radio.
+
+
+
+
+
 
 
 ---
