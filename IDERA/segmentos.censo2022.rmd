@@ -14,10 +14,30 @@ background-image: url("plantilla_idera_html/img0.png")
 ---
 
 
+---
 ## Descripción del problema.
+Armar el recorrido de 650.000 censistas para que visiten todas las viviendas del territorio siguiendo las reglas definidas en el MANUAL del SEGMENTADOR
 
-
+El  optimo no es un valor, sino una función
+Estamos acostumbrados a considerar problemas de optimización, que matemáticamente se formulan como:
+Min f(x)
+sujeto a: x Є S
+Donde S es el conjunto de los valores entre los que podemos buscar la solución, lo que se llama conjunto de Factible, Desde el punto de vista matemático no existe ninguna diferencia entre que el problema sea de maximizar o de minimizar, pues el cambio se puede hacer .
+Optimización Discreta
+Función objetivo con costo que incluye penalidad 
+cantidad de viviendas por segmento
+cantidad de manzanas por segmento
+cantidad de segmentos
+cantidad de lados delimitando segmentos
+Espacio factible definido por vecindario de segmentación
+Vecinos se calculan con operaciones elementales
+extraer componente (manzana o lado) de segmento
+transferir componente de un segmento a otro
+fusionar 2 segmentos
+image: ![ETL](imagenes/1.png)
+---
 # Carga de datos y procesamiento de datos.
+
 
 
 # Segmentación.
