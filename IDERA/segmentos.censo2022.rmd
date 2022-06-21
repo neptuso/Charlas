@@ -136,13 +136,22 @@ Donde S es el conjunto de los valores entre los que podemos buscar la solución,
 ---
 # Carga de datos y procesamiento de datos.
 
+![DTL](imagenes/DTL.png)
+---
 
+---
+![L](imagenes/amigos.png)
+---
 
 # Segmentación.
+
 
 # Generación de resumenes.
 
 # Salidas Gráficas.
 
+---
+![Plugin](imagenes/plugin.png)
+---
 # Conclusiones.
 
