@@ -1,6 +1,12 @@
 # Presentación del Proyecto Mandarina para CAC e IDERA
 
-Estructura básica de presentación
+Presentaciones en diferentes formatos.
+
+Para utilizar Rmd ```install.packages("rmarkdown")```
+
+
+
+## Estructura básica de presentación
 
 1. Introducción al problema.
 2. Carga de datos y procesamiento de datos.
