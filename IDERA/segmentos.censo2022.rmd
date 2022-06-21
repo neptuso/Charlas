@@ -15,10 +15,10 @@ output:
           in_header: header.html
           before_body: doc_prefix.html
           after_body: doc_suffix.html
-    revealjs::revealjs_presentation
----
 
-class: center, inverse background-image: url("plantilla_idera_html/img0.png")
+---
+class: center, inverse 
+background-image: url("plantilla_idera_html/img0.png")
 
 # Introducción al problema.
 
