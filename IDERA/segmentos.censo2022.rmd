@@ -1,157 +1,187 @@
 ---
-title: "Generación de Segmentos Geográficos para el Censo 2022 en áreas
-urbanas y suburbanas"
+title: "Generación de Segmentos Geográficos para el Censo 2022 en áreas urbanas y suburbanas"
 author: Hernán Alperin, Veróncia Heredia, Manuel Retamozo
 date: June, 2022
-output: revealjs::revealjs_presentation, powerpoint_presentation
+output: 
+    pdf_document:
+        default
+    powerpoint_presentation:
+        reference_doc: idera-styles.pptx
+    html_document:
+        toc: true
+        toc_depth: 2
+        dev: 'svg'
+        includes:
+          in_header: header.html
+          before_body: doc_prefix.html
+          after_body: doc_suffix.html
+    revealjs::revealjs_presentation
 ---
 
----
-class: center, inverse
-background-image: url("plantilla_idera_html/img0.png")
+class: center, inverse background-image: url("plantilla_idera_html/img0.png")
 
 # Introducción al problema.
 
 ## ¿Que es la segmentación?
 
-Es la tarea que permite subdividir el radio censal en unidades operativas menores llamadas segmentos.
-Para asegurar que todas las viviendas y personas sean censadas, es necesario determinar con anterioridad el área que deberán recorrer los censistas 
-y la carga de trabajo que se le asignará a cada uno de ellos.
+Es la tarea que permite subdividir el radio censal en unidades operativas menores llamadas segmentos. Para asegurar que todas las viviendas y personas sean censadas, es necesario determinar con anterioridad el área que deberán recorrer los censistas y la carga de trabajo que se le asignará a cada uno de ellos.
 
-## Descripcion somera , Generar mapas, recorridos, planillas. 
+------------------------------------------------------------------------
 
-- 16 millones de domicilios.
-- Carga promedio en zona urbana: entre 30 y 36 viviendas (según la provincia)
-- Carga promedio en asentamientos: 18 viviendas.
-- Carga promedio en zona suburbana: 12 a 15 viviendas.
-- De 8 a 12 hs. de trabajo.
-- Aprox. 650 mil censistas
+## Descripcion somera , Generar mapas, recorridos, planillas.
+
+-   16 millones de domicilios.
+-   Carga promedio en zona urbana: entre 30 y 36 viviendas (según la provincia)
+-   Carga promedio en asentamientos: 18 viviendas.
+-   Carga promedio en zona suburbana: 12 a 15 viviendas.
+-   De 8 a 12 hs. de trabajo.
+-   Aprox. 650 mil censistas
+
+------------------------------------------------------------------------
 
 ## Tipos de Radios
 
-### Urbano
+-   Urbano
 
-- con población agrupada únicamente, y conformado por manzanas y/o sectores pertenecientes a una localidad.
+con población agrupada únicamente, y conformado por manzanas y/o sectores pertenecientes a una localidad.
 
-### Sub Urbano
+-   Sub Urbano
 
-- agrupada en pequeños poblados o en bordes amanzanados de localidades.
+    agrupada en pequeños poblados o en bordes amanzanados de localidades.
 
-### Limites del segmento
+------------------------------------------------------------------------
 
-- Todo espacio con o sin viviendas debe estar asignado a algún segmento.
-- Identificar claramente Inicio y Fin de cada uno.
+## Limites del segmento
+
+-   Todo espacio con o sin viviendas debe estar asignado a algún segmento.
+-   Identificar claramente Inicio y Fin de cada uno.
+
+------------------------------------------------------------------------
 
 ### Facilitar el recorrido del censista
 
-#### Evitar
-- recorridos discontinuo
-- Cruces en diagonal
-- En lo posible cruces de avenidas, rutas, vías de ferrocarril o cursos de agua.
-- Identificar claramente INICIO y FIN de cada segmento.
+### Evitar
 
+-   recorridos discontinuo
+-   Cruces en diagonal
+-   En lo posible cruces de avenidas, rutas, vías de ferrocarril o cursos de agua.
+-   Identificar claramente INICIO y FIN de cada segmento.
 
----
+------------------------------------------------------------------------
+
+# Segmentos
+
 ![M](imagenes/mapa.png)
----
+
+------------------------------------------------------------------------
 
 ### Descripción más precisa y Definiciones.
 
+Los segmentos deberán tener:
 
-#### Los segmentos deberán tener:
-
-- Una carga.
-- Continuidad.
-- Recorrido.
+-   Una carga.
+-   Continuidad.
+-   Recorrido.
 
 ### Tipos de Radios Urbanos o parte Sub Urbana de Radios Mixtos
 
 #### Según distribución de viviendas dada una carga deseada.
 
-- Esparcidos: todos los lados con pocas viviendas.
-- Densos: todas las manzanas con muchas viviendas.
-- Combinados: situaciones intermedias algunas manzanas con pocas viviendas o algunos lados con muchas viviendas. 
+-   Esparcidos: todos los lados con pocas viviendas.
+-   Densos: todas las manzanas con muchas viviendas.
+-   Combinados: situaciones intermedias algunas manzanas con pocas viviendas o algunos lados con muchas viviendas.
 
 ### Algoritmos o Métodos.
 
 #### Elementos disponibles, o agrupación elemental.
 
-- Conteos: lados o manzanas completas
-- Listados: direcciones, pisos (no puede haber más de 1 segmento por piso) recorridos o manzanas independientes
-- Varias combinaciones de ambos.
+-   Conteos: lados o manzanas completas
+-   Listados: direcciones, pisos (no puede haber más de 1 segmento por piso) recorridos o manzanas independientes
+-   Varias combinaciones de ambos.
 
----
+------------------------------------------------------------------------
+
+# Optimización global
+
 ![OG](imagenes/optimizacion_global.png)
----
 
----
+------------------------------------------------------------------------
+
 ![EC](imagenes/extraer.png)
----
 
----
+------------------------------------------------------------------------
+
 ![TC](imagenes/transferir.png)
----
 
----
+------------------------------------------------------------------------
+
 ![FD](imagenes/fusionar.png)
----
+
+------------------------------------------------------------------------
 
 ### Numeración de los segmentos
-- Cada segmento del radio urbano se debe identificar con un número de dos dígitos. Esta numeración es correlativa, de 01 en más, dentro del radio.
-- En el área urbana del radio mixto los segmentos se numeran del 80 al 89, siguiendo por 70 hasta 75 y continuando por 76 a 79 y finalmente del 91 al 99 de ser necesario.
-- El segmento colectivo está identificado con el número 90 y dentro del mismo están contenidas todas las viviendas colectivas del radio.
 
+-   Cada segmento del radio urbano se debe identificar con un número de dos dígitos. Esta numeración es correlativa, de 01 en más, dentro del radio.
+-   En el área urbana del radio mixto los segmentos se numeran del 80 al 89, siguiendo por 70 hasta 75 y continuando por 76 a 79 y finalmente del 91 al 99 de ser necesario.
+-   El segmento colectivo está identificado con el número 90 y dentro del mismo están contenidas todas las viviendas colectivas del radio.
 
+------------------------------------------------------------------------
 
-
-
-
-
----
 ## Descripción del problema.
+
 Armar el recorrido de 650.000 censistas para que visiten todas las viviendas del territorio siguiendo las reglas definidas en el MANUAL del SEGMENTADOR
 
-El  optimo no es un valor, sino una función
-Estamos acostumbrados a considerar problemas de optimización, que matemáticamente se formulan como:
-Min f(x)
-sujeto a: x Є S
-Donde S es el conjunto de los valores entre los que podemos buscar la solución, lo que se llama conjunto de Factible, Desde el punto de vista matemático no existe ninguna diferencia entre que el problema sea de maximizar o de minimizar, pues el cambio se puede hacer .
+El optimo no es un valor, sino una función Estamos acostumbrados a considerar problemas de optimización, que matemáticamente se formulan como: Min f(x) sujeto a: x Є S Donde S es el conjunto de los valores entre los que podemos buscar la solución, lo que se llama conjunto de Factible, Desde el punto de vista matemático no existe ninguna diferencia entre que el problema sea de maximizar o de minimizar, pues el cambio se puede hacer .
+
+------------------------------------------------------------------------
 
 ### Optimización Discreta
 
-### Función objetivo con costo que incluye penalidad 
+------------------------------------------------------------------------
 
-- cantidad de viviendas por segmento
-- cantidad de manzanas por segmento
-- cantidad de segmentos
-- cantidad de lados delimitando segmentos
+### Función objetivo con costo que incluye penalidad
+
+-   cantidad de viviendas por segmento
+-   cantidad de manzanas por segmento
+-   cantidad de segmentos
+-   cantidad de lados delimitando segmentos
+
+------------------------------------------------------------------------
 
 #### Espacio factible definido por vecindario de segmentación
-- Vecinos se calculan con operaciones elementales
-1. extraer componente (manzana o lado) de segmento
-2. transferir componente de un segmento a otro
-3. fusionar 2 segmentos
+
+-   Vecinos se calculan con operaciones elementales
+
+1.  extraer componente (manzana o lado) de segmento
+2.  transferir componente de un segmento a otro
+3.  fusionar 2 segmentos
 
 ![ETL](imagenes/ETL.png)
----
+
+------------------------------------------------------------------------
+
 # Carga de datos y procesamiento de datos.
 
-![DTL](imagenes/DTL.png)
----
+## ![DTL](imagenes/DTL.png)
 
----
+------------------------------------------------------------------------
+
 ![L](imagenes/amigos.png)
----
+
+------------------------------------------------------------------------
 
 # Segmentación.
 
+------------------------------------------------------------------------
 
 # Generación de resumenes.
 
+------------------------------------------------------------------------
+
 # Salidas Gráficas.
 
----
 ![Plugin](imagenes/plugin.png)
----
-# Conclusiones.
 
+------------------------------------------------------------------------
+
+# Conclusiones.
