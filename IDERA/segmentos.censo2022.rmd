@@ -1,6 +1,6 @@
 ---
 title: "Generación de Segmentos Geográficos para el Censo 2022 en áreas urbanas y suburbanas"
-author: Hernán Alperin, Veróncia Heredia, Manuel Retamozo
+author: Hernán Alperin, Verónica Heredia, Manuel Retamozo
 date: June, 2022
 output: 
     pdf_document:
@@ -28,7 +28,7 @@ Es la tarea que permite subdividir el radio censal en unidades operativas menore
 
 ------------------------------------------------------------------------
 
-## Descripcion somera , Generar mapas, recorridos, planillas.
+## Descripción somera: Generar mapas, recorridos, planillas.
 
 -   16 millones de domicilios.
 -   Carga promedio en zona urbana: entre 30 y 36 viviendas (según la provincia)
@@ -43,15 +43,15 @@ Es la tarea que permite subdividir el radio censal en unidades operativas menore
 
 -   Urbano
 
-con población agrupada únicamente, y conformado por manzanas y/o sectores pertenecientes a una localidad.
+población agrupada únicamente, y conformado por manzanas y/o sectores pertenecientes a una localidad.
 
--   Sub Urbano
+-   Suburbano
 
-    agrupada en pequeños poblados o en bordes amanzanados de localidades.
+agrupada en pequeños poblados o en bordes amanzanados de localidades.
 
 ------------------------------------------------------------------------
 
-## Limites del segmento
+## Límites del segmento
 
 -   Todo espacio con o sin viviendas debe estar asignado a algún segmento.
 -   Identificar claramente Inicio y Fin de cada uno.
@@ -83,7 +83,7 @@ Los segmentos deberán tener:
 -   Continuidad.
 -   Recorrido.
 
-### Tipos de Radios Urbanos o parte Sub Urbana de Radios Mixtos
+### Tipos de Radios Urbanos o parte Urbana de Radios Mixtos
 
 #### Según distribución de viviendas dada una carga deseada.
 
@@ -121,9 +121,9 @@ Los segmentos deberán tener:
 
 ### Numeración de los segmentos
 
--   Cada segmento del radio urbano se debe identificar con un número de dos dígitos. Esta numeración es correlativa, de 01 en más, dentro del radio.
--   En el área urbana del radio mixto los segmentos se numeran del 80 al 89, siguiendo por 70 hasta 75 y continuando por 76 a 79 y finalmente del 91 al 99 de ser necesario.
--   El segmento colectivo está identificado con el número 90 y dentro del mismo están contenidas todas las viviendas colectivas del radio.
+-   Cada segmento del radio urbano se identifica con un número de dos dígitos, de 01 en más, dentro del radio.
+-   En el área urbana del radio mixto los segmentos se numeran del 60 en más excluyendo al 90.
+-   El segmento 90 y contiene las viviendas colectivas del radio.
 
 ------------------------------------------------------------------------
 
@@ -131,7 +131,9 @@ Los segmentos deberán tener:
 
 Armar el recorrido de 650.000 censistas para que visiten todas las viviendas del territorio siguiendo las reglas definidas en el MANUAL del SEGMENTADOR
 
-El optimo no es un valor, sino una función Estamos acostumbrados a considerar problemas de optimización, que matemáticamente se formulan como: Min f(x) sujeto a: x Є S Donde S es el conjunto de los valores entre los que podemos buscar la solución, lo que se llama conjunto de Factible, Desde el punto de vista matemático no existe ninguna diferencia entre que el problema sea de maximizar o de minimizar, pues el cambio se puede hacer .
+Un problema de optimización, matemáticamente se formulan como: Min f(x) sujeto a: x Є S, donde S es el conjunto de los valores entre los que podemos buscar la solución, lo que se llama conjunto de soluciones factibles. 
+
+En este caso, S es el conjunto de todas las segmentaciones posibles, x es una segmentación y f(x) es el costo de dicha segmentación.
 
 ------------------------------------------------------------------------
 
