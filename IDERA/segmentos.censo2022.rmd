@@ -26,7 +26,9 @@ background-image: url("plantilla_idera_html/img0.png")
 
 ## ¿Que es la segmentación?
 
-Es la tarea que permite subdividir el radio censal en unidades operativas menores llamadas segmentos. Para asegurar que todas las viviendas y personas sean censadas, es necesario determinar con anterioridad el área que deberán recorrer los censistas y la carga de trabajo que se le asignará a cada uno de ellos.
+Es la tarea que permite subdividir el radio censal en segmentos. 
+
+Para asegurar que todas las viviendas sean censadas, hay que determinar qué área y qué viviendas le corresponden a cada censista.
 
 ------------------------------------------------------------------------
 
@@ -45,18 +47,18 @@ Es la tarea que permite subdividir el radio censal en unidades operativas menore
 
 -   Urbano
 
-población agrupada únicamente, y conformado por manzanas y/o sectores pertenecientes a una localidad.
+--- población agrupada únicamente, y conformado por manzanas y/o sectores pertenecientes a una localidad. ---
 
 -   Suburbano
 
-agrupada en pequeños poblados o en bordes amanzanados de localidades.
+--- agrupada en pequeños poblados o en bordes amanzanados de localidades. ---
 
 ------------------------------------------------------------------------
 
-## Límites del segmento
+## Delimitación del segmento
 
--   Todo espacio con o sin viviendas debe estar asignado a algún segmento.
--   Identificar claramente Inicio y Fin de cada uno.
+-   Todo espacio (con o sin viviendas) debe estar asignado a un segmento.
+-   Identificar claramente Inicio y Fin de cada segmento.
 
 ------------------------------------------------------------------------
 
@@ -64,26 +66,17 @@ agrupada en pequeños poblados o en bordes amanzanados de localidades.
 
 ### Evitar
 
--   recorridos discontinuo
--   Cruces en diagonal
--   En lo posible cruces de avenidas, rutas, vías de ferrocarril o cursos de agua.
--   Identificar claramente INICIO y FIN de cada segmento.
+-   Recorrido discontinuo
+-   Cruce en diagonal
+-   "En lo posible" cruce de avenidas, rutas, vías de ferrocarril o cursos de agua.
 
 ------------------------------------------------------------------------
 
 # Segmentos
 
-![M](imagenes/mapa.png)
+![Mapas de análisis](imagenes/mapa.png)
 
 ------------------------------------------------------------------------
-
-### Descripción más precisa y Definiciones.
-
-Los segmentos deberán tener:
-
--   Una carga.
--   Continuidad.
--   Recorrido.
 
 ### Tipos de Radios Urbanos o parte Urbana de Radios Mixtos
 
@@ -91,9 +84,9 @@ Los segmentos deberán tener:
 
 -   Esparcidos: todos los lados con pocas viviendas.
 -   Densos: todas las manzanas con muchas viviendas.
--   Combinados: situaciones intermedias algunas manzanas con pocas viviendas o algunos lados con muchas viviendas.
+-   Combinados: situaciones intermedias, algunas manzanas con pocas viviendas o algunos lados con muchas viviendas.
 
-### Algoritmos o Métodos.
+------------------------------------------------------------------------
 
 #### Elementos disponibles, o agrupación elemental.
 
@@ -103,21 +96,29 @@ Los segmentos deberán tener:
 
 ------------------------------------------------------------------------
 
+### Algoritmos o Métodos.
+
+
+
+
+------------------------------------------------------------------------
+
 # Optimización global
 
-![OG](imagenes/optimizacion_global.png)
+![Espacio de solucines](imagenes/optimizacion_global.png)
+
+------------------------------------------------------------------------
+# Como generara segmentaciones vecinas
+
+![Extraer componente](imagenes/extraer.png)
 
 ------------------------------------------------------------------------
 
-![EC](imagenes/extraer.png)
+![Transferir componenteC](imagenes/transferir.png)
 
 ------------------------------------------------------------------------
 
-![TC](imagenes/transferir.png)
-
-------------------------------------------------------------------------
-
-![FD](imagenes/fusionar.png)
+![Fusionar componente](imagenes/fusionar.png)
 
 ------------------------------------------------------------------------
 
@@ -125,13 +126,17 @@ Los segmentos deberán tener:
 
 -   Cada segmento del radio urbano se identifica con un número de dos dígitos, de 01 en más, dentro del radio.
 -   En el área urbana del radio mixto los segmentos se numeran del 60 en más excluyendo al 90.
--   El segmento 90 y contiene las viviendas colectivas del radio.
+-   El segmento 90 contiene las viviendas colectivas del radio.
 
 ------------------------------------------------------------------------
 
 ## Descripción del problema.
 
-Armar el recorrido de 650.000 censistas para que visiten todas las viviendas del territorio siguiendo las reglas definidas en el MANUAL del SEGMENTADOR
+-   Armar el recorrido de 650.000 censistas para que visiten todas las viviendas del territorio siguiendo las reglas definidas en el MANUAL del SEGMENTADOR.
+
+-------------------------------------------------------------------------
+
+### El problema
 
 Un problema de optimización, matemáticamente se formulan como:  \( Min f(x)
  sujeto a: x E S \) , donde S es el conjunto de los valores entre los que podemos buscar la solución, lo que se llama conjunto de soluciones factibles. 
@@ -162,7 +167,7 @@ es una segmentación y $ f(x) $ es el costo de dicha segmentación.
 :::
 
 ::: {.column width="50%"}
--   Vecinos se calculan con operaciones elementales
+-   Vecinos se calculan con operaciones elementales 
 
 1.  extraer componente (manzana o lado) de segmento
 2.  transferir componente de un segmento a otro
