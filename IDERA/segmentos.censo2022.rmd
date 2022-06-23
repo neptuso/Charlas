@@ -20,19 +20,17 @@ output:
 encoding: utf8
 ---
 
-class: center, inverse background-image: url("plantilla_idera_html/img0.png")
-
-# Introducción al problema.
+# Introducción al problema. {style="class: center, inverse; background-image: url('plantilla_idera_html/img0.png');"}
 
 ## ¿Que es la segmentación?
 
-Es la tarea que permite subdividir el radio censal en segmentos.
+Son las tareas que permiten subdividir el radio censal en segmentos.
 
 Para asegurar que todas las viviendas sean censadas, hay que determinar qué área y qué viviendas le corresponden a cada censista.
 
 ------------------------------------------------------------------------
 
-## Descripción somera: Generar mapas, recorridos, planillas.
+# Tareas: Generar mapas, recorridos, planillas.
 
 -   16 millones de domicilios.
 -   Carga promedio en zona urbana: entre 30 y 36 viviendas (según la provincia)
@@ -43,7 +41,7 @@ Para asegurar que todas las viviendas sean censadas, hay que determinar qué ár
 
 ------------------------------------------------------------------------
 
-## Tipos de Radios
+# Tipos de Radios
 
 -   Urbano
 
@@ -55,16 +53,16 @@ Para asegurar que todas las viviendas sean censadas, hay que determinar qué ár
 
 ------------------------------------------------------------------------
 
-## Delimitación del segmento
+# Delimitación del segmento
 
 -   Todo espacio (con o sin viviendas) debe estar asignado a un segmento.
 -   Identificar claramente Inicio y Fin de cada segmento.
 
 ------------------------------------------------------------------------
 
-### Facilitar el recorrido del censista
+# Facilitar el recorrido del censista
 
-### Evitar
+## Evitar
 
 -   Recorrido discontinuo
 -   Cruce en diagonal
@@ -78,25 +76,25 @@ Para asegurar que todas las viviendas sean censadas, hay que determinar qué ár
 
 ------------------------------------------------------------------------
 
-### Tipos de Radios Urbanos o parte Urbana de Radios Mixtos
+# Tipos de Radios Urbanos o parte Urbana de Radios Mixtos
 
-#### Según distribución de viviendas dada una carga deseada.
+## Según distribución de viviendas dada una carga deseada.
 
--   Esparcidos: todos los lados con pocas viviendas.
--   Densos: todas las manzanas con muchas viviendas.
--   Combinados: situaciones intermedias, algunas manzanas con pocas viviendas o algunos lados con muchas viviendas.
-
-------------------------------------------------------------------------
-
-#### Elementos disponibles, o agrupación elemental.
-
--   Conteos: lados o manzanas completas
--   Listados: direcciones, pisos (no puede haber más de 1 segmento por piso) recorridos o manzanas independientes
--   Varias combinaciones de ambos.
+*   Esparcidos: todos los lados con pocas viviendas.
+*   Densos: todas las manzanas con muchas viviendas.
+*   Combinados: situaciones intermedias, algunas manzanas con pocas viviendas o algunos lados con muchas viviendas.
 
 ------------------------------------------------------------------------
 
-### Algoritmos o Métodos.
+# Elementos disponibles, o agrupación elemental.
+
+*   Conteos: lados o manzanas completas
+*   Listados: direcciones, pisos (no puede haber más de 1 segmento por piso) recorridos o manzanas independientes
+*   Varias combinaciones de ambos.
+
+------------------------------------------------------------------------
+
+# Algoritmos o Métodos.
 
 ------------------------------------------------------------------------
 
@@ -107,7 +105,7 @@ Para asegurar que todas las viviendas sean censadas, hay que determinar qué ár
 ------------------------------------------------------------------------
 
 # Generación de segmentaciones vecinas
- 
+
 ![Extraer componente](imagenes/extraer.png)
 
 ------------------------------------------------------------------------
@@ -120,7 +118,7 @@ Para asegurar que todas las viviendas sean censadas, hay que determinar qué ár
 
 ------------------------------------------------------------------------
 
-### Numeración de los segmentos
+# Numeración de los segmentos
 
 -   Cada segmento del radio urbano se identifica con un número de dos dígitos, de 01 en más, dentro del radio.
 -   En el área urbana del radio mixto los segmentos se numeran del 60 en más excluyendo al 90.
@@ -128,13 +126,13 @@ Para asegurar que todas las viviendas sean censadas, hay que determinar qué ár
 
 ------------------------------------------------------------------------
 
-## Descripción del problema.
+# Descripción del problema.
 
 -   Armar el recorrido de 650.000 censistas para que visiten todas las viviendas del territorio siguiendo las reglas definidas en el MANUAL del SEGMENTADOR.
 
 ------------------------------------------------------------------------
 
-### El problema
+## El problema
 
 Un problema de optimización, matemáticamente se formulan como: $Min f(x) sujeto a: x E S$ , donde S es el conjunto de los valores entre los que podemos buscar la solución, lo que se llama conjunto de soluciones factibles.
 
@@ -142,11 +140,11 @@ En este caso, \$ S \$ es el conjunto de todas las segmentaciones posibles, \$ x 
 
 ------------------------------------------------------------------------
 
-### Optimización Discreta
+# Optimización Discreta
 
 ------------------------------------------------------------------------
 
-### Función objetivo con costo que incluye penalidad
+## Función objetivo con costo que incluye penalidad
 
 -   cantidad de viviendas por segmento
 -   cantidad de manzanas por segmento
@@ -155,9 +153,9 @@ En este caso, \$ S \$ es el conjunto de todas las segmentaciones posibles, \$ x 
 
 ------------------------------------------------------------------------
 
-#### Espacio factible definido por vecindario de segmentación
+### Espacio factible definido por vecindario de segmentación
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 ![ETL](imagenes/ETL.png)
 :::
@@ -169,13 +167,13 @@ En este caso, \$ S \$ es el conjunto de todas las segmentaciones posibles, \$ x 
 2.  transferir componente de un segmento a otro
 3.  fusionar 2 segmentos
 :::
-:::
+:::::
 
 ------------------------------------------------------------------------
 
 # Carga de datos y procesamiento de datos.
 
-## ![DTL](imagenes/DTL.png)
+![DTL](imagenes/DTL.png)
 
 ------------------------------------------------------------------------
 
