@@ -24,7 +24,9 @@ class: center, inverse background-image: url("plantilla_idera_html/img0.png")
 
 ## ¿Que es la segmentación?
 
-Es la tarea que permite subdividir el radio censal en unidades operativas menores llamadas segmentos. Para asegurar que todas las viviendas y personas sean censadas, es necesario determinar con anterioridad el área que deberán recorrer los censistas y la carga de trabajo que se le asignará a cada uno de ellos.
+Es la tarea que permite subdividir el radio censal en segmentos. 
+Para asegurar que todas las viviendas sean censadas, hay que determinar área que deberá recorrer cada censista.
+
 
 ------------------------------------------------------------------------
 
