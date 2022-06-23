@@ -71,7 +71,7 @@ agrupada en pequeños poblados o en bordes amanzanados de localidades.
 
 # Segmentos
 
-![M](imagenes/mapa.png)
+![Mapas de análisis](imagenes/mapa.png)
 
 ------------------------------------------------------------------------
 
@@ -103,19 +103,20 @@ Los segmentos deberán tener:
 
 # Optimización global
 
-![OG](imagenes/optimizacion_global.png)
+![Espacio de solucines](imagenes/optimizacion_global.png)
+
+------------------------------------------------------------------------
+# Como generara segmentaciones vecinas
+
+![Extraer componente](imagenes/extraer.png)
 
 ------------------------------------------------------------------------
 
-![EC](imagenes/extraer.png)
+![Transferir componenteC](imagenes/transferir.png)
 
 ------------------------------------------------------------------------
 
-![TC](imagenes/transferir.png)
-
-------------------------------------------------------------------------
-
-![FD](imagenes/fusionar.png)
+![Fusionar componente](imagenes/fusionar.png)
 
 ------------------------------------------------------------------------
 
