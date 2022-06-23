@@ -1,21 +1,23 @@
 ---
-title: "Generación de Segmentos Geográficos para el Censo 2022 en áreas urbanas y suburbanas"
-author: Hernán Alperin, Verónica Heredia, Manuel Retamozo
-date: June, 2022
-output: 
-    pdf_document:
-        default
-    powerpoint_presentation:
-        reference_doc: idera-styles.pptx
-    html_document:
-        toc: true
-        toc_depth: 2
-        dev: 'svg'
-        includes:
-          in_header: header.html
-          before_body: doc_prefix.html
-          after_body: doc_suffix.html
-
+title: "Segmentación Censo 2022"
+author: "Hernán Alperin, Verónica Heredia, Manuel Retamozo"
+date: "June, 2022"
+subtitle: Generación de Segmentos Geográficos para el Censo 2022
+          en áreas urbanas y suburbanas"
+output:
+  powerpoint_presentation:
+    reference_doc: idera-styles.pptx
+  html_document:
+    toc: yes
+    toc_depth: 2
+    dev: svg
+    includes:
+      in_header: header.html
+      before_body: doc_prefix.html
+      after_body: doc_suffix.html
+  pdf_document: default
+  beamer_presentation: default
+encoding: utf8
 ---
 class: center, inverse 
 background-image: url("plantilla_idera_html/img0.png")
@@ -131,9 +133,11 @@ Los segmentos deberán tener:
 
 Armar el recorrido de 650.000 censistas para que visiten todas las viviendas del territorio siguiendo las reglas definidas en el MANUAL del SEGMENTADOR
 
-Un problema de optimización, matemáticamente se formulan como: Min f(x) sujeto a: x Є S, donde S es el conjunto de los valores entre los que podemos buscar la solución, lo que se llama conjunto de soluciones factibles. 
+Un problema de optimización, matemáticamente se formulan como:  \( Min f(x)
+ sujeto a: x E S \) , donde S es el conjunto de los valores entre los que podemos buscar la solución, lo que se llama conjunto de soluciones factibles. 
 
-En este caso, S es el conjunto de todas las segmentaciones posibles, x es una segmentación y f(x) es el costo de dicha segmentación.
+En este caso, $ S $ es el conjunto de todas las segmentaciones posibles, $ x $
+es una segmentación y $ f(x) $ es el costo de dicha segmentación.
 
 ------------------------------------------------------------------------
 
