@@ -161,7 +161,7 @@ En este caso, S es el conjunto de todas las segmentaciones posibles, x es una se
 :::
 
 ::: {.column width="50%"}
--   Vecinos se calculan con operaciones elementales
+-   Vecinos se calculan con operaciones elementales 
 
 1.  extraer componente (manzana o lado) de segmento
 2.  transferir componente de un segmento a otro
