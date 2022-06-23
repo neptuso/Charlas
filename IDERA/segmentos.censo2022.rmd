@@ -15,18 +15,18 @@ output:
       in_header: header.html
       before_body: doc_prefix.html
       after_body: doc_suffix.html
-  pdf_document: default
   beamer_presentation: default
+  pdf_document: default
 encoding: utf8
 ---
-class: center, inverse 
-background-image: url("plantilla_idera_html/img0.png")
+
+class: center, inverse background-image: url("plantilla_idera_html/img0.png")
 
 # Introducción al problema.
 
 ## ¿Que es la segmentación?
 
-Es la tarea que permite subdividir el radio censal en segmentos. 
+Es la tarea que permite subdividir el radio censal en segmentos.
 
 Para asegurar que todas las viviendas sean censadas, hay que determinar qué área y qué viviendas le corresponden a cada censista.
 
@@ -98,23 +98,21 @@ Para asegurar que todas las viviendas sean censadas, hay que determinar qué ár
 
 ### Algoritmos o Métodos.
 
-
-
-
 ------------------------------------------------------------------------
 
 # Optimización global
 
-![Espacio de solucines](imagenes/optimizacion_global.png)
+![Espacio de soluciones](imagenes/optimizacion_global.png)
 
 ------------------------------------------------------------------------
-# Como generara segmentaciones vecinas
 
+# Generación de segmentaciones vecinas
+ 
 ![Extraer componente](imagenes/extraer.png)
 
 ------------------------------------------------------------------------
 
-![Transferir componenteC](imagenes/transferir.png)
+![Transferir componente](imagenes/transferir.png)
 
 ------------------------------------------------------------------------
 
@@ -134,15 +132,13 @@ Para asegurar que todas las viviendas sean censadas, hay que determinar qué ár
 
 -   Armar el recorrido de 650.000 censistas para que visiten todas las viviendas del territorio siguiendo las reglas definidas en el MANUAL del SEGMENTADOR.
 
--------------------------------------------------------------------------
+------------------------------------------------------------------------
 
 ### El problema
 
-Un problema de optimización, matemáticamente se formulan como:  \( Min f(x)
- sujeto a: x E S \) , donde S es el conjunto de los valores entre los que podemos buscar la solución, lo que se llama conjunto de soluciones factibles. 
+Un problema de optimización, matemáticamente se formulan como: $Min f(x) sujeto a: x E S$ , donde S es el conjunto de los valores entre los que podemos buscar la solución, lo que se llama conjunto de soluciones factibles.
 
-En este caso, $ S $ es el conjunto de todas las segmentaciones posibles, $ x $
-es una segmentación y $ f(x) $ es el costo de dicha segmentación.
+En este caso, \$ S \$ es el conjunto de todas las segmentaciones posibles, \$ x \$ es una segmentación y \$ f(x) \$ es el costo de dicha segmentación.
 
 ------------------------------------------------------------------------
 
@@ -167,7 +163,7 @@ es una segmentación y $ f(x) $ es el costo de dicha segmentación.
 :::
 
 ::: {.column width="50%"}
--   Vecinos se calculan con operaciones elementales 
+-   Vecinos se calculan con operaciones elementales
 
 1.  extraer componente (manzana o lado) de segmento
 2.  transferir componente de un segmento a otro
