@@ -142,9 +142,9 @@ En este caso, \$ S \$ es el conjunto de todas las segmentaciones posibles, \$ x 
 
 ## Función objetivo con costo que incluye penalidad
 
-*   cantidad de viviendas por segmento 
-*   cantidad de manzanas por segmento
-*   tipos de ejes que se cruzan 
+*   Cantidad de viviendas por segmento 
+*   Cantidad de manzanas por segmento
+*   Tipos de ejes que se cruzan 
 
 ------------------------------------------------------------------------
 
@@ -159,9 +159,9 @@ En este caso, \$ S \$ es el conjunto de todas las segmentaciones posibles, \$ x 
 ::: {.column width="50%"}
 *   Vecinos se calculan con operaciones elementales
 
-1.  extraer componente (manzana o lado) de segmento
-2.  transferir componente de un segmento a otro
-3.  fusionar 2 segmentos
+1.  Extraer componente (manzana o lado) de segmento
+2.  Transferir componente de un segmento a otro
+3.  Fusionar 2 segmentos
 :::
 :::::
 
@@ -169,27 +169,27 @@ En este caso, \$ S \$ es el conjunto de todas las segmentaciones posibles, \$ x 
 
 ### Algoritmo para radios esparcidos (lados completos)
 
-1. tomar una segmentación inicial y hacer que sea la actual
-1. calcular todas las segmentaciones vecinas a la actual y elejir una de costo mínimo
-2. si su costo es menor que el costo de la segmentación actual, hacer ésta la nueva segmentación actual
-3. si no, la segmentación actual es un mínimo local, terminar.
+1. Tomar una segmentación inicial y hacer que sea la actual
+1. Calcular todas las segmentaciones vecinas a la actual y elejir una de costo mínimo
+2. Si su costo es menor que el costo de la segmentación actual, hacer ésta la nueva segmentación actual
+3. Si no, la segmentación actual es un mínimo local, terminar.
 
 ------------------------------------------------------------------------
 
 ### Algoritmo para radios densos (manzanas independientes)
 
-1. en cada manzana encontrar el número entero  \$d_m\$ más cercano a cantidad de viviendas de la manzana dividido cantidad de viviendas deseada 
-2. hacer ese el número de segmentos en la manzana  \$m\$
-3. calcular la cantidad de viviendas por segmento en la manzana \$m\$, \$s_m = v_m / d_m\$
-4. cortar el listado de la manzana \$m\$ cortando a piso enteros anavanzando con segmentos de cantidad de viviendas lo más cercano a  \$s_m\$ posible
+1. En cada manzana encontrar el número entero  \$d_m\$ más cercano a cantidad de viviendas de la manzana dividido cantidad de viviendas deseada 
+2. Hacer ese el número de segmentos en la manzana  \$m\$
+3. Calcular la cantidad de viviendas por segmento en la manzana \$m\$, \$s_m = v_m / d_m\$
+4. Cortar el listado de la manzana \$m\$ cortando a piso enteros anavanzando con segmentos de cantidad de viviendas lo más cercano a  \$s_m\$ posible
 
 -------------------------------------------------------------------------
 
 ### Algoritmo para radios combinados
 
-1. aplicar el algoritmo para radios esparcidos (lados completos)
-2. para todos los segmentos que superen un valor umbral de viviendas aplicar algoritmo de (listado) manzana independiente
-3. juntar segmentos con cero o pocas viviendas
+1. Aplicar el algoritmo para radios esparcidos (lados completos)
+2. Para todos los segmentos que superen un valor umbral de viviendas aplicar algoritmo de (listado) manzana independiente
+3. Juntar segmentos con cero o pocas viviendas
 
 ------------------------------------------------------------------------
 
@@ -223,11 +223,10 @@ En este caso, \$ S \$ es el conjunto de todas las segmentaciones posibles, \$ x 
 ------------------------------------------------------------------------
 # Optmización de recursos
 
-*  se redujo el tiempo de armado e impresion de mapas
-*  se utilizo el complemento atlas para automatizar el armado de los mapas para censistas, jefes de radios, fracciones, departamentos
-*  y la planilla de recorrido del censista R3 
-*  se informatizó y masificó la distribución de planos utilizando formato digital (.pdf .png)
-*  se fomentó el uso de herramientas de software libre, QGIS
+*  Se redujo el tiempo de armado e impresion de mapas
+*  Se utilizó el complemento atlas para automatizar el armado de los mapas para censistas, jefes de radios, fracciones, departamentos y la planilla de recorrido del censista R3 
+*  Se informatizó y masificó la distribución de planos utilizando formato digital (.pdf .png)
+*  Se fomentó el uso de herramientas de software libre, QGIS
 
 ------------------------------------------
 
