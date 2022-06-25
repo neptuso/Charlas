@@ -230,5 +230,11 @@ En este caso, \$ S \$ es el conjunto de todas las segmentaciones posibles, \$ x 
 
 ------------------------------------------
 
+# Espacio de trabajo QGIS
+
+![Mapa Fracción](imagenes/SG_fraccion.png)
+
+
+------------------------------------------
 
 # Conclusiones.
