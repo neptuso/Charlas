@@ -198,6 +198,7 @@ En este caso, \$ S \$ es el conjunto de todas las segmentaciones posibles, \$ x 
 ![DTL](imagenes/DTL.png)
 
 ------------------------------------------------------------------------
+# Software utilizado 
 
 ![L](imagenes/amigos.png)
 
@@ -205,10 +206,13 @@ En este caso, \$ S \$ es el conjunto de todas las segmentaciones posibles, \$ x 
 
 # Segmentación.
 
+![Parámetros](imagenes/SP.png)
+
 ------------------------------------------------------------------------
 
 # Generación de resumenes.
-
+ 
+ ![Resumen R3](imagenes/R3.png)
 ------------------------------------------------------------------------
 
 # Salidas Gráficas.
