@@ -240,7 +240,7 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 ------------------------------------------------------------------------
 # Mapas de Fracción
 
-![Plugin](imagenes/MF.pngng)
+![Plugin](imagenes/MF.png)
 
 ------------------------------------------------------------------------
 # Mapas de Radios 
