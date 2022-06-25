@@ -213,6 +213,7 @@ En este caso, \$ S \$ es el conjunto de todas las segmentaciones posibles, \$ x 
 # Generación de resumenes.
  
  ![Resumen R3](imagenes/R3.png)
+ 
 ------------------------------------------------------------------------
 
 # Salidas Gráficas.
@@ -220,5 +221,15 @@ En este caso, \$ S \$ es el conjunto de todas las segmentaciones posibles, \$ x 
 ![Plugin](imagenes/plugin.png)
 
 ------------------------------------------------------------------------
+# Optmización de tiempo
+
+-  se redujo el tiempo de armado e impresion de mapas
+-  se utilizo el complemento atlas para automatizar el armado de los mapas para censistas, jefes de Radios, Fracciones, Departamentos
+-  y la planilla de recorrido del censista R3 
+-  se informatizó y masificó la distribución de planos utilizando formato digital (.pdf .png)
+-  se fomentó el uso de herraminetas de software libre QGIS
+
+------------------------------------------
+
 
 # Conclusiones.
