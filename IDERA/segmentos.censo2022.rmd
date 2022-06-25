@@ -221,13 +221,13 @@ En este caso, \$ S \$ es el conjunto de todas las segmentaciones posibles, \$ x 
 ![Plugin](imagenes/plugin.png)
 
 ------------------------------------------------------------------------
-# Optmización de tiempo
+# Optmización de recursos
 
 -  se redujo el tiempo de armado e impresion de mapas
--  se utilizo el complemento atlas para automatizar el armado de los mapas para censistas, jefes de Radios, Fracciones, Departamentos
+-  se utilizo el complemento atlas para automatizar el armado de los mapas para censistas, jefes de radios, fracciones, departamentos
 -  y la planilla de recorrido del censista R3 
 -  se informatizó y masificó la distribución de planos utilizando formato digital (.pdf .png)
--  se fomentó el uso de herraminetas de software libre QGIS
+-  se fomentó el uso de herramientas de software libre, QGIS
 
 ------------------------------------------
 
