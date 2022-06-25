@@ -142,6 +142,8 @@ En este caso, \$ S \$ es el conjunto de todas las segmentaciones posibles, \$ x 
 
 # Optimización Discreta
 
+![OD](imagenes/optimizacion_discreta.png)
+
 ------------------------------------------------------------------------
 
 ## Función objetivo con costo que incluye penalidad
