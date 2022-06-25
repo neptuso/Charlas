@@ -130,11 +130,7 @@ Para asegurar que todas las viviendas sean censadas, hay que determinar qué ár
 
 # Descripción del problema.
 
-<<<<<<< HEAD
-*   Armar el recorrido de 650.000 censistas para que visiten todas las viviendas del territorio siguiendo las reglas definidas en el MANUAL del SEGMENTADOR.
-=======
--   Armar el recorrido de 650.000 censistas para que visiten todas las viviendas del territorio siguiendo las reglas definidas en el MANUAL del SEGMENTADOR.
->>>>>>> f74dab2 (ahora yo vuelvo * a - :p)
+*   Armar el recorrido de 650.000 censistas para que visiten todas las viviendas del territorio siguiendo las reglas definidas en el MANUAL del SEGMENTADOR.
 
 ------------------------------------------------------------------------
 
