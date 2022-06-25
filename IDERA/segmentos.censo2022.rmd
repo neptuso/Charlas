@@ -134,7 +134,7 @@ Para asegurar que todas las viviendas sean censadas, hay que determinar qué ár
 
 ## El problema
 
-Un problema de optimización, matemáticamente se formulan como: $Min f(x) sujeto a: x E S$ , donde S es el conjunto de los valores entre los que podemos buscar la solución, lo que se llama conjunto de soluciones factibles.
+Un problema de optimización, matemáticamente se formulan como: \$ Min f(x) sujeto a: x \in S\$, donde \$ S \$ es el conjunto de los valores entre los que podemos buscar la solución, lo que se llama conjunto de soluciones factibles.
 
 En este caso, \$ S \$ es el conjunto de todas las segmentaciones posibles, \$ x \$ es una segmentación y \$ f(x) \$ es el costo de dicha segmentación.
 
