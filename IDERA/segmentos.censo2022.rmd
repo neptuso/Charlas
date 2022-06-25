@@ -216,12 +216,44 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 ![Resumen R3](imagenes/R3.png)
 
 ------------------------------------------------------------------------
+# Radios Urbanos 
+
+![](imagenes/RU.png)
+
+------------------------------------------------------------------------
+# Radios Sub Urbanos
+
+![](imagenes/RSU.png)
+
+------------------------------------------------------------------------
+
+# Estructura de Base de Dato
+
+![](imagenes/BD.png)
+
+------------------------------------------------------------------------
 
 # Salidas Gráficas.
 
-![Plugin](imagenes/plugin.png)
+![](imagenes/plugin.png)
 
 ------------------------------------------------------------------------
+# Mapas de Fracción
+
+![Plugin](imagenes/MF.pngng)
+
+------------------------------------------------------------------------
+# Mapas de Radios 
+
+![](imagenes/MR.png)
+
+------------------------------------------------------------------------
+# Mapas Segmentos
+
+![](imagenes/MS.png)
+
+------------------------------------------------------------------------
+
 # Optmización de recursos
 
 *  Se redujo el tiempo de armado e impresion de mapas
