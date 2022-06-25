@@ -140,26 +140,20 @@ En este caso, \$ S \$ es el conjunto de todas las segmentaciones posibles, \$ x 
 
 ------------------------------------------------------------------------
 
-# Optimización Discreta
-
-![OD](imagenes/optimizacion_discreta.png)
-
-------------------------------------------------------------------------
-
 ## Función objetivo con costo que incluye penalidad
 
--   cantidad de viviendas por segmento
+-   cantidad de viviendas por segmento 
 -   cantidad de manzanas por segmento
--   cantidad de segmentos
--   cantidad de lados delimitando segmentos
+-   tipos de ejes que se cruzan 
 
 ------------------------------------------------------------------------
 
-### Espacio factible definido por vecindario de segmentación
+## Espacio factible definido por vecindario de segmentación
 
 ::::: columns
 ::: {.column width="50%"}
-![ETL](imagenes/ETL.png)
+### Optimización Discreta
+![OD](imagenes/optimizacion_discreta.png)
 :::
 
 ::: {.column width="50%"}
@@ -178,24 +172,24 @@ En este caso, \$ S \$ es el conjunto de todas las segmentaciones posibles, \$ x 
 1. tomar una segmentación inicial y hacer que sea la actual
 1. calcular todas las segmentaciones vecinas a la actual y elejir una de costo mínimo
 2. si su costo es menor que el costo de la segmentación actual, hacer ésta la nueva segmentación actual
-3. si no, es un la segmentación actual es un mínimo local, terminar.
+3. si no, la segmentación actual es un mínimo local, terminar.
 
 ------------------------------------------------------------------------
 
 ### Algoritmo para radios densos (manzanas independientes)
 
-1. en cada manzana encontrar el número entero $d_m$ más cercano a cant_viv_m / cant_viv_deseada
-2. hacer ese el número de segmentos en la manzana m
-3. calcular cantidad de viviendas por segmento en manzana m $s_m = v_m / d_m$
-4. cortar el listado de la manzana m cortando a piso enteros anavanzando con segmentos de cant. de viviendas lo más cercano a $s_m$ posible
+1. en cada manzana encontrar el número entero  \$d_m\$ más cercano a cantidad de viviendas de la manzana dividido cantidad de viviendas deseada 
+2. hacer ese el número de segmentos en la manzana  \$m\$
+3. calcular la cantidad de viviendas por segmento en la manzana \$m\$, \$s_m = v_m / d_m\$
+4. cortar el listado de la manzana \$m\$ cortando a piso enteros anavanzando con segmentos de cantidad de viviendas lo más cercano a  \$s_m\$ posible
 
 -------------------------------------------------------------------------
 
 ### Algoritmo para radios combinados
 
 1. aplicar el algoritmo para radios esparcidos (lados completos)
-2. para todos los componentes que superen un valor umbral de viviendas aplicar algoritmo de (listado) manzana independiente
-
+2. para todos los segmentos que superen un valor umbral de viviendas aplicar algoritmo de (listado) manzana independiente
+3. juntar segmentos con cero o pocas viviendas
 
 ------------------------------------------------------------------------
 
