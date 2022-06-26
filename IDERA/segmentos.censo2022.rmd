@@ -37,11 +37,12 @@ Para asegurar que todas las viviendas sean censadas, hay que determinar qué ár
 # Tareas: Generar mapas, recorridos, planillas.
 
 -   16 millones de domicilios.
+-   De 8 a 12 hs. de trabajo.
+-   Aprox. 650 mil censistas
 -   Carga promedio en zona urbana: entre 30 y 36 viviendas (según la provincia)
 -   Carga promedio en asentamientos: 18 viviendas.
 -   Carga promedio en zona suburbana: 12 a 15 viviendas.
--   De 8 a 12 hs. de trabajo.
--   Aprox. 650 mil censistas
+
 
 ------------------------------------------------------------------------
 
