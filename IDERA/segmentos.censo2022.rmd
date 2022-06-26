@@ -239,6 +239,8 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 | \# Radios Suburbanos  |
 | ![](imagenes/RSU.png){width=90%} |
 
+--------------------------------------------------------------------------
+
 # Estructura de Base de Datos
 
 ![](imagenes/BD.png){width=90%}
@@ -247,12 +249,18 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 
 # Segmentación de 1 Radio que compartido con 5 localidades 
 
-![](imagenes/S5L.png){width=90%}
+![](imagenes/R5L.png){width=90%}
 
 -----------------------------------------------------------------------
 # Previsualización de la segmentación y de grafo
 
 ![](imagenes/SegG.png){width=90%}
+
+-----------------------------------------------------------------------
+
+# Resumen de la segmentación 
+
+![](imagenes/resumen.png){width=90%}
 
 -----------------------------------------------------------------------
 
