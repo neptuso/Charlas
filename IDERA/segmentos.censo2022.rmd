@@ -36,9 +36,11 @@ encoding: utf8
 ---
 
 <!-- por acá empieza Vero la resentación -->
-# Introducción al problema. {style="class: center, inverse; background-image: url('plantilla_idera_html/img0.png');"}
+{style="class: center, inverse; background-image: url('plantilla_idera_html/img0.png');"}
 
-## ¿Que es la segmentación?
+---------------------------------------------------------------------
+
+# ¿Que es la segmentación?
 
 Son las tareas que permiten subdividir el radio censal en segmentos.
 
