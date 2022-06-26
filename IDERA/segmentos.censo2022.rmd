@@ -156,7 +156,7 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 ::: {.column width="50%"}
 ### Optimización Discreta
 
-![OD](imagenes/optimizacion_discreta.png)
+![](imagenes/optimizacion_discreta.png)
 :::
 
 ::: {.column width="50%"}
@@ -253,7 +253,6 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 ![](imagenes/MS.png)
 
 ------------------------------------------------------------------------
-
 # Optmización de recursos
 
 *  Se redujo el tiempo de armado e impresion de mapas
@@ -261,13 +260,13 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 *  Se informatizó y masificó la distribución de planos utilizando formato digital (.pdf .png)
 *  Se fomentó el uso de herramientas de software libre, QGIS
 
-------------------------------------------
+-------------------------------------------------------------------------
 
 # Espacio de trabajo QGIS
 
 ![Mapa Fracción](imagenes/SG_fraccion.png)
 
 
-------------------------------------------
+-------------------------------------------------------------------------
 
 # Conclusiones.
