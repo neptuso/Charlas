@@ -96,10 +96,6 @@ Para asegurar que todas las viviendas sean censadas, hay que determinar qué ár
 
 ------------------------------------------------------------------------
 
-# Algoritmos o Métodos.
-
-------------------------------------------------------------------------
-
 # Optimización global
 
 ![Espacio de soluciones](imagenes/optimizacion_global.png)
@@ -134,15 +130,15 @@ Para asegurar que todas las viviendas sean censadas, hay que determinar qué ár
 
 ------------------------------------------------------------------------
 
-## El problema
+# El problema
 
-Un problema de optimización, matemáticamente se formulan como: $Min f(x)$ sujeto a: $x \in S$, donde $S$ es el conjunto de los valores entre los que podemos buscar la solución, lo que se llama conjunto de soluciones factibles.
+Un problema de optimización, matemáticamente se formula como: Minimizar $f(x)$ sujeto a: $x \in S$, donde $S$ es el conjunto de los valores entre los que podemos buscar la solución, lo que se llama conjunto de soluciones factibles.
 
 En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es una segmentación y $f(x)$ es el costo de dicha segmentación.
 
 ------------------------------------------------------------------------
 
-## Función objetivo con costo que incluye penalidad
+# Función objetivo con costo que incluye penalidad 
 
 *   Cantidad de viviendas por segmento 
 *   Cantidad de manzanas por segmento
@@ -150,11 +146,11 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 
 ------------------------------------------------------------------------
 
-## Espacio factible definido por vecindario de segmentación
+# Espacio factible definido por vecindario de segmentación
 
 ::: columns
 ::: {.column width="50%"}
-### Optimización Discreta
+## Optimización Discreta
 
 ![](imagenes/optimizacion_discreta.png)
 :::
@@ -170,7 +166,7 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 
 ------------------------------------------------------------------------
 
-### Algoritmo para radios esparcidos (lados completos)
+# Algoritmo para radios esparcidos (lados completos)
 
 1. Tomar una segmentación inicial y hacer que sea la actual
 1. Calcular todas las segmentaciones vecinas a la actual y elejir una de costo mínimo
@@ -179,16 +175,16 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 
 ------------------------------------------------------------------------
 
-### Algoritmo para radios densos (manzanas independientes)
+# Algoritmo para radios densos (manzanas independientes)
 
-1. En cada manzana encontrar el número entero $d_m$ más cercano a cantidad de viviendas de la manzana dividido cantidad de viviendas deseada
-2. Hacer ese el número de segmentos en la manzana $m$
+1. En cada manzana encontrar el número entero $d_m$ más cercano a cantidad de viviendas de la manzana dividido por la cantidad de viviendas deseada
+2. Hacer ese, el número de segmentos en la manzana $m$
 3. Calcular la cantidad de viviendas por segmento en la manzana $m$, $s_m = v_m / d_m$
-4. Cortar el listado de la manzana $m$ cortando a piso enteros anavanzando con segmentos de cantidad de viviendas lo más cercano a $s_m$ posible
+4. Segmentar el listado de la manzana $m$ cortando a pisos enteros, avanzando con segmentos de cantidad de viviendas lo más cercano a $s_m$ posible
 
 ------------------------------------------------------------------------
 
-### Algoritmo para radios combinados
+# Algoritmo para radios combinados
 
 1. Aplicar el algoritmo para radios esparcidos (lados completos)
 2. Para todos los segmentos que superen un valor umbral de viviendas aplicar algoritmo de (listado) manzana independiente
@@ -221,13 +217,13 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 ![](imagenes/RU.png)
 
 ------------------------------------------------------------------------
-# Radios Sub Urbanos
+# Radios Suburbanos
 
 ![](imagenes/RSU.png)
 
 ------------------------------------------------------------------------
 
-# Estructura de Base de Dato
+# Estructura de Base de Datos
 
 ![](imagenes/BD.png)
 
@@ -243,20 +239,21 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 ![Plugin](imagenes/MF.png)
 
 ------------------------------------------------------------------------
-# Mapas de Radios 
+# Mapas de Radio
 
 ![](imagenes/MR.png)
 
 ------------------------------------------------------------------------
-# Mapas Segmentos
+# Mapas de Segmento
 
 ![](imagenes/MS.png)
 
 ------------------------------------------------------------------------
 # Optmización de recursos
 
-*  Se redujo el tiempo de armado e impresion de mapas
-*  Se utilizó el complemento atlas para automatizar el armado de los mapas para censistas, jefes de radios, fracciones, departamentos y la planilla de recorrido del censista R3 
+*  Se redujo el tiempo de armado e impresión de mapas
+*  Se utilizó el complemento atlas para automatizar el armado de los mapas para censistas, 
+jefes de radio, fracción, departamento y la planilla R3 de recorrido del censista
 *  Se informatizó y masificó la distribución de planos utilizando formato digital (.pdf .png)
 *  Se fomentó el uso de herramientas de software libre, QGIS
 
@@ -272,6 +269,6 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 # Conclusiones.
 
 * Pudimos resolver un problema complicado con algoritmos sencillos
-* Creamos un intarface para la carga de datos y porcesamiento de la segmentacion
+* Creamos una interface para la carga de datos y procesamiento de la segmentación
 * Creamos un plugin para la automatización de salidas gráficas y recorridos 
 * Optimizamos tiempo y recursos para el armado de material de campo 
