@@ -38,29 +38,33 @@ Para asegurar que todas las viviendas sean censadas, hay que determinar qué ár
 
 -   16 millones de domicilios.
 -   De 8 a 12 hs. de trabajo.
--   Aprox. 650 mil censistas
 -   Carga promedio en zona urbana: entre 30 y 36 viviendas (según la provincia)
 -   Carga promedio en asentamientos: 18 viviendas.
 -   Carga promedio en zona suburbana: 12 a 15 viviendas.
-
+-   Aprox. 650 mil censistas
 
 ------------------------------------------------------------------------
 
-# Tipos de Radios
+# Descripción del problema.
 
--   Urbano:
+-   Armar el recorrido de 650.000 censistas para que visiten todas las viviendas del territorio siguiendo las reglas definidas en el MANUAL del SEGMENTADOR.
 
-    población agrupada únicamente
+------------------------------------------------------------------------
 
--   Suburbano:
+# El problema
 
-    población agrupada en pequeños poblados o en bordes amanzanados
+Un problema de optimización, matemáticamente se formula como: Minimizar $f(x)$ sujeto a: $x \in S$, donde $S$ es el conjunto de los valores entre los que podemos buscar la solución, lo que se llama conjunto de soluciones factibles.
 
-::: notes
-**Urbano:** población agrupada únicamente, y conformado por manzanas y/o sectores pertenecientes a una localidad.
+En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es una segmentación y $f(x)$ es el costo de dicha segmentación.
 
-**Suburbano:** agrupada en pequeños poblados o en bordes amanzanados de localidades.
-:::
+------------------------------------------------------------------------
+
+# Función objetivo con costo que incluye penalidad 
+
+-   Cantidad de viviendas por segmento
+-   Cantidad de manzanas por segmento
+-   Tipos de ejes que se cruzan
+
 
 ------------------------------------------------------------------------
 
@@ -87,6 +91,24 @@ Para asegurar que todas las viviendas sean censadas, hay que determinar qué ár
 
 ------------------------------------------------------------------------
 
+# Tipos de Radios
+
+-   Urbano:
+
+    población agrupada únicamente
+
+-   Suburbano:
+
+    población agrupada en pequeños poblados o en bordes amanzanados
+
+::: notes
+**Urbano:** población agrupada únicamente, y conformado por manzanas y/o sectores pertenecientes a una localidad.
+
+**Suburbano:** agrupada en pequeños poblados o en bordes amanzanados de localidades.
+:::
+
+------------------------------------------------------------------------
+
 # Tipos de Radios Urbanos o parte Urbana de Radios Mixtos
 
 ## Según distribución de viviendas dada una carga deseada.
@@ -105,12 +127,6 @@ Para asegurar que todas las viviendas sean censadas, hay que determinar qué ár
 
 ------------------------------------------------------------------------
 
-# Optimización global
-
-![Espacio de soluciones](imagenes/optimizacion_global.png)
-
-------------------------------------------------------------------------
-
 # Generación de segmentaciones vecinas
 
 ![Extraer componente](imagenes/extraer.png)
@@ -125,33 +141,9 @@ Para asegurar que todas las viviendas sean censadas, hay que determinar qué ár
 
 ------------------------------------------------------------------------
 
-# Numeración de los segmentos
+# Optimización global
 
--   Cada segmento del radio urbano se identifica con un número de dos dígitos, de 01 en más, dentro del radio.
--   En el área urbana del radio mixto los segmentos se numeran del 60 en más excluyendo al 90.
--   El segmento 90 contiene las viviendas colectivas del radio.
-
-------------------------------------------------------------------------
-
-# Descripción del problema.
-
--   Armar el recorrido de 650.000 censistas para que visiten todas las viviendas del territorio siguiendo las reglas definidas en el MANUAL del SEGMENTADOR.
-
-------------------------------------------------------------------------
-
-# El problema
-
-Un problema de optimización, matemáticamente se formula como: Minimizar $f(x)$ sujeto a: $x \in S$, donde $S$ es el conjunto de los valores entre los que podemos buscar la solución, lo que se llama conjunto de soluciones factibles.
-
-En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es una segmentación y $f(x)$ es el costo de dicha segmentación.
-
-------------------------------------------------------------------------
-
-# Función objetivo con costo que incluye penalidad 
-
--   Cantidad de viviendas por segmento
--   Cantidad de manzanas por segmento
--   Tipos de ejes que se cruzan
+![Espacio de soluciones](imagenes/optimizacion_global.png)
 
 ------------------------------------------------------------------------
 
@@ -198,6 +190,14 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 1.  Aplicar el algoritmo para radios esparcidos (lados completos)
 2.  Para todos los segmentos que superen un valor umbral de viviendas aplicar algoritmo de (listado) manzana independiente
 3.  Juntar segmentos con cero o pocas viviendas
+
+------------------------------------------------------------------------
+
+# Numeración de los segmentos
+
+-   Cada segmento del radio urbano se identifica con un número de dos dígitos, de 01 en más, dentro del radio.
+-   En el área urbana del radio mixto los segmentos se numeran del 60 en más excluyendo al 90.
+-   El segmento 90 contiene las viviendas colectivas del radio.
 
 ------------------------------------------------------------------------
 
