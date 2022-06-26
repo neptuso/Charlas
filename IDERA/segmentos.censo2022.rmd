@@ -174,7 +174,7 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 
 1. Tomar una segmentación inicial y hacer que sea la actual
 1. Calcular todas las segmentaciones vecinas a la actual y elejir una de costo mínimo
-2. Si su costo es menor que el costo de la segmentación actual, hacer ésta la nueva segmentación actual
+2. Si su costo es menor que el costo de la segmentación actual, hacer ésta la nueva segmentación actual e iterar
 3. Si no, la segmentación actual es un mínimo local, terminar.
 
 ------------------------------------------------------------------------
