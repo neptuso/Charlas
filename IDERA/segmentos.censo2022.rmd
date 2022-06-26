@@ -245,6 +245,17 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 
 ------------------------------------------------------------------------
 
+# Segmentación de 1 Radio que compartido con 5 localidades 
+
+![](imagenes/S5L.png){width=90%}
+
+-----------------------------------------------------------------------
+# Previsualización de la segmentación y de grafo
+
+![](imagenes/SegG.png){width=90%}
+
+-----------------------------------------------------------------------
+
 # Salidas Gráficas.
 
 ![](imagenes/plugin.png){width=90%}
@@ -277,6 +288,8 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 ![Mapa Fracción](imagenes/SG_fraccion.png){width=90%}
 
 ------------------------------------------------------------------------
+
+
 
 # Conclusiones.
 
