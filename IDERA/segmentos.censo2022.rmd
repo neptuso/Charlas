@@ -220,7 +220,7 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 |                           |
 |:--------------------------|
 | \# Software utilizado     |
-| ![L](imagenes/amigos.png){width=90%} |
+| ![](imagenes/amigos.png){width=90%} |
 
 # Segmentación.
 
