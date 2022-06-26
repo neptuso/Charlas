@@ -10,6 +10,9 @@ date: "June, 2022"
 output:
   revealjs::revealjs_presentation:
     incremental: true
+    fig_caption: true
+    reveal_options:
+      slideNumber: true
   powerpoint_presentation: 
     reference_doc: cac-custom-reference.pptx
     keep_md: true
