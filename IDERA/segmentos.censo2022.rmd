@@ -232,6 +232,8 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 
 ![Resumen R3](imagenes/R3.png){width=90%}
 
+--------------------------------------------------------------------------
+
 | \# Radios Urbanos     |
 |:----------------------|
 | \# Radios Suburbanos  |
@@ -250,6 +252,7 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 ------------------------------------------------------------------------
 
 | \# Mapas de Fracción |
+| ![](imagenes/MF.png){width=90%} |
 |:---------------------|
 | \# Mapas de Radio    |
 | ![](imagenes/MR.png){width=90%} |
