@@ -270,3 +270,8 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 -------------------------------------------------------------------------
 
 # Conclusiones.
+
+* Pudimos resolver un problema complicado con algoritmos sencillos
+* Creamos un intarface para la carga de datos y porcesamiento de la segmentacion
+* Creamos un plugin para la automatización de salidas gráficas y recorridos 
+* Optimizamos tiempo y recursos para el armado de material de campo 
