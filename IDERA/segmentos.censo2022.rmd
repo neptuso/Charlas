@@ -68,7 +68,7 @@ Para asegurar que todas las viviendas sean censadas, hay que determinar qué ár
 
 ------------------------------------------------------------------------
 
-# El problema
+## El problema
 
 Un problema de optimización, matemáticamente se formula como: Minimizar $f(x)$ sujeto a: $x \in S$, donde $S$ es el conjunto de los valores entre los que podemos buscar la solución, lo que se llama conjunto de soluciones factibles.
 
@@ -76,7 +76,7 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 
 ------------------------------------------------------------------------
 
-# Función objetivo con costo que incluye penalidad
+## Función objetivo con costo que incluye penalidad
 
 -   Cantidad de viviendas por segmento
 -   Cantidad de manzanas por segmento
@@ -84,14 +84,14 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 
 ------------------------------------------------------------------------
 
-# Delimitación del segmento
+## Delimitación del segmento
 
 -   Todo espacio (con o sin viviendas) debe estar asignado a un segmento.
 -   Identificar claramente Inicio y Fin de cada segmento.
 
 ------------------------------------------------------------------------
 
-# Facilitar el recorrido del censista
+## Facilitar el recorrido del censista
 
 ## Evitar
 
@@ -163,17 +163,17 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 
 ------------------------------------------------------------------------
 
-# Espacio factible definido por vecindario de segmentación
+## Espacio factible definido por vecindario de segmentación
 
 ::: columns
 ::: {.column width="50%"}
-## Optimización Discreta
+ Optimización Discreta
 
 ![](imagenes/optimizacion_discreta.png){width=45%}
 :::
 
 ::: {.column width="50%"}
-##   Vecinos se calculan con operaciones elementales
+  Vecinos se calculan con operaciones elementales
 
 1.  Extraer componente (manzana o lado) de segmento
 2.  Transferir componente de un segmento a otro
@@ -183,7 +183,11 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 
 ------------------------------------------------------------------------
 
-# Algoritmo para radios esparcidos (lados completos)
+# Algoritmos
+
+------------------------------------------------------------------------
+
+## Algoritmo para radios esparcidos (lados completos)
 
 1.  Tomar una segmentación inicial y hacer que sea la actual
 2.  Calcular todas las segmentaciones vecinas a la actual y elejir una de costo mínimo
@@ -192,7 +196,7 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 
 ------------------------------------------------------------------------
 
-# Algoritmo para radios densos (manzanas independientes)
+## Algoritmo para radios densos (manzanas independientes)
 
 1.  En cada manzana encontrar el número entero $d_m$ más cercano a cantidad de viviendas de la manzana dividido por la cantidad de viviendas deseada
 2.  Hacer ese, el número de segmentos en la manzana $m$
@@ -201,7 +205,7 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 
 ------------------------------------------------------------------------
 
-# Algoritmo para radios combinados
+## Algoritmo para radios combinados
 
 1.  Aplicar el algoritmo para radios esparcidos (lados completos)
 2.  Para todos los segmentos que superen un valor umbral de viviendas aplicar algoritmo de (listado) manzana independiente
@@ -227,7 +231,7 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 | \# Software utilizado     |
 | ![](imagenes/amigos.png){width=90%} |
 
-# Segmentación.
+## Segmentación.
 
 ![Parámetros](imagenes/SP.png){width=90%}
 
