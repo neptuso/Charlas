@@ -3,7 +3,8 @@ title: "Segmentación Censo 2022"
 author: "Hernán Alperin, Verónica Heredia, Manuel Retamozo"
 date: "June, 2022"
 output:
-  beamer_presentation: default
+  powerpoint_presentation:
+    reference_doc: idera-styles.pptx
   html_document:
     toc: yes
     toc_depth: 2
@@ -12,8 +13,9 @@ output:
       in_header: header.html
       before_body: doc_prefix.html
       after_body: doc_suffix.html
-  powerpoint_presentation:
-    reference_doc: idera-styles.pptx
+  beamer_presentation: 
+    toc: yes
+    incremental: yes
   pdf_document: default
   slidy_presentation: default
   ioslides_presentation: default
@@ -34,31 +36,37 @@ Para asegurar que todas las viviendas sean censadas, hay que determinar qué ár
 
 # Tareas: Generar mapas, recorridos, planillas.
 
-*   16 millones de domicilios.
-*   Carga promedio en zona urbana: entre 30 y 36 viviendas (según la provincia)
-*   Carga promedio en asentamientos: 18 viviendas.
-*   Carga promedio en zona suburbana: 12 a 15 viviendas.
-*   De 8 a 12 hs. de trabajo.
-*   Aprox. 650 mil censistas
+-   16 millones de domicilios.
+-   Carga promedio en zona urbana: entre 30 y 36 viviendas (según la provincia)
+-   Carga promedio en asentamientos: 18 viviendas.
+-   Carga promedio en zona suburbana: 12 a 15 viviendas.
+-   De 8 a 12 hs. de trabajo.
+-   Aprox. 650 mil censistas
 
 ------------------------------------------------------------------------
 
 # Tipos de Radios
 
-*   Urbano
+-   Urbano:
 
---- población agrupada únicamente, y conformado por manzanas y/o sectores pertenecientes a una localidad. ---
+    población agrupada únicamente
 
-*   Suburbano
+-   Suburbano:
 
---- agrupada en pequeños poblados o en bordes amanzanados de localidades. ---
+    población agrupada en pequeños poblados o en bordes amanzanados
+
+::: notes
+**Urbano:** población agrupada únicamente, y conformado por manzanas y/o sectores pertenecientes a una localidad.
+
+**Suburbano:** agrupada en pequeños poblados o en bordes amanzanados de localidades.
+:::
 
 ------------------------------------------------------------------------
 
 # Delimitación del segmento
 
-*   Todo espacio (con o sin viviendas) debe estar asignado a un segmento.
-*   Identificar claramente Inicio y Fin de cada segmento.
+-   Todo espacio (con o sin viviendas) debe estar asignado a un segmento.
+-   Identificar claramente Inicio y Fin de cada segmento.
 
 ------------------------------------------------------------------------
 
@@ -66,9 +74,9 @@ Para asegurar que todas las viviendas sean censadas, hay que determinar qué ár
 
 ## Evitar
 
-*   Recorrido discontinuo
-*   Cruce en diagonal
-*   "En lo posible" cruce de avenidas, rutas, vías de ferrocarril o cursos de agua.
+-   Recorrido discontinuo
+-   Cruce en diagonal
+-   "En lo posible" cruce de avenidas, rutas, vías de ferrocarril o cursos de agua.
 
 ------------------------------------------------------------------------
 
@@ -118,15 +126,15 @@ Para asegurar que todas las viviendas sean censadas, hay que determinar qué ár
 
 # Numeración de los segmentos
 
-*   Cada segmento del radio urbano se identifica con un número de dos dígitos, de 01 en más, dentro del radio.
-*   En el área urbana del radio mixto los segmentos se numeran del 60 en más excluyendo al 90.
-*   El segmento 90 contiene las viviendas colectivas del radio.
+-   Cada segmento del radio urbano se identifica con un número de dos dígitos, de 01 en más, dentro del radio.
+-   En el área urbana del radio mixto los segmentos se numeran del 60 en más excluyendo al 90.
+-   El segmento 90 contiene las viviendas colectivas del radio.
 
 ------------------------------------------------------------------------
 
 # Descripción del problema.
 
-*   Armar el recorrido de 650.000 censistas para que visiten todas las viviendas del territorio siguiendo las reglas definidas en el MANUAL del SEGMENTADOR.
+-   Armar el recorrido de 650.000 censistas para que visiten todas las viviendas del territorio siguiendo las reglas definidas en el MANUAL del SEGMENTADOR.
 
 ------------------------------------------------------------------------
 
@@ -140,9 +148,9 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 
 # Función objetivo con costo que incluye penalidad 
 
-*   Cantidad de viviendas por segmento 
-*   Cantidad de manzanas por segmento
-*   Tipos de ejes que se cruzan 
+-   Cantidad de viviendas por segmento
+-   Cantidad de manzanas por segmento
+-   Tipos de ejes que se cruzan
 
 ------------------------------------------------------------------------
 
@@ -156,7 +164,7 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 :::
 
 ::: {.column width="50%"}
-*   Vecinos se calculan con operaciones elementales
+-   Vecinos se calculan con operaciones elementales
 
 1.  Extraer componente (manzana o lado) de segmento
 2.  Transferir componente de un segmento a otro
@@ -186,9 +194,9 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 
 # Algoritmo para radios combinados
 
-1. Aplicar el algoritmo para radios esparcidos (lados completos)
-2. Para todos los segmentos que superen un valor umbral de viviendas aplicar algoritmo de (listado) manzana independiente
-3. Juntar segmentos con cero o pocas viviendas
+1.  Aplicar el algoritmo para radios esparcidos (lados completos)
+2.  Para todos los segmentos que superen un valor umbral de viviendas aplicar algoritmo de (listado) manzana independiente
+3.  Juntar segmentos con cero o pocas viviendas
 
 ------------------------------------------------------------------------
 
@@ -249,6 +257,7 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 ![](imagenes/MS.png)
 
 ------------------------------------------------------------------------
+
 # Optmización de recursos
 
 *  Se redujo el tiempo de armado e impresión de mapas
@@ -262,7 +271,6 @@ jefes de radio, fracción, departamento y la planilla R3 de recorrido del censis
 # Espacio de trabajo QGIS
 
 ![Mapa Fracción](imagenes/SG_fraccion.png)
-
 
 -------------------------------------------------------------------------
 
