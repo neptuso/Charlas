@@ -231,6 +231,12 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 
 ![](imagenes/plugin.png){width="100%"}
 
+## QGIS Buenos Aires 
+
+[Descargar QGIS](https://www.qgis.org)
+
+![Nueva versión](imagenes/QGIS.png){width="100%"}
+
 ## Espacio de trabajo QGIS
 
 ![Mapa Fracción](imagenes/SG_fraccion.png){width="100%"}
