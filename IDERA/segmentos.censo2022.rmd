@@ -1,7 +1,6 @@
 ---
 title: |
-  ![](imagenes/logocenso.png)
-  Segmentación Censo 2022
+  ![Segmentación Censo 2022](imagenes/logocensox100.png) 
 author: 
   - "Hernán Alperin"
   - "Verónica Heredia"
@@ -9,6 +8,7 @@ author:
 date: "June, 2022"
 output:
   revealjs::revealjs_presentation:
+    theme: sky
     incremental: true
     fig_caption: true
     reveal_options:
@@ -37,15 +37,13 @@ output:
   beamer_presentation: 
     toc: yes
     incremental: yes
-subtitle: "Generación de Segmentos Geográficos para el Censo 2022 en áreas urbanas
-  y suburbanas"
+subtitle: "Generación de Segmentos Geográficos en áreas urbanas y suburbanas"
 encoding: utf8
 ---
 
 <!-- por acá empieza Vero la resentación -->
 
-# Introducción {style="class: center, inverse; background-image: url('imagenes/cac-logo.png'); background-opacity:70%"}
-
+# Introducción {data-background-image="imagenes/cac-logo.png"}
 ## ¿Que es la segmentación?
 
 Son las tareas que permiten subdividir el radio censal en segmentos.
@@ -261,10 +259,9 @@ Vecinos se calculan con operaciones elementales
 
 ![](imagenes/colaboradores.png){width="100%"}
 
-## Preguntas
+## Preguntas {data-background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)"}
 
-
-?
+### ?
 
 ## Contacto
 
