@@ -138,23 +138,15 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 
 ## Espacio factible definido por vecindario de segmentación
 
-::: columns
-::: {.column width="50%"}
-Optimización Discreta
+![Optimización Discreta](imagenes/optimizacion_discreta.png){width="75%"}
 
-![](imagenes/optimizacion_discreta.png){width="50%"}
-:::
-
-::: {.column width="50%"}
-Vecinos se calculan con operaciones elementales
+## Vecinos se calculan con operaciones elementales
 
 1.  Extraer componente (manzana o lado) de segmento
 
 2.  Transferir componente de un segmento a otro
 
 3.  Fusionar 2 segmentos
-:::
-:::
 
 # Algoritmos
 
