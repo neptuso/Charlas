@@ -40,10 +40,8 @@ output:
 encoding: utf8
 ---
 
-<!-- por acá empieza Vero la resentación -->
-
 # Introducción {data-background-image="imagenes/fondo.png"}
-
+<!-- por acá empieza Vero la resentación -->
 "Generación de Segmentos Geográficos en áreas urbanas y suburbanas"
 
 ## ¿Que es la segmentación?
@@ -178,7 +176,7 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 
 # Carga de datos y procesamiento de datos.
 
-![DTL](imagenes/DTL.png){height="90%"}
+![DTL](imagenes/DTL.png){height="70%"}
 
 ---
 
@@ -202,35 +200,39 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 
 ![Resumen R3](imagenes/R3.png){width="90%"}
 
-# Estructura de Base de Datos
+## Estructura de Base de Datos
 
 ![](imagenes/BD.png){width="90%"}
 
-## Tipos de radios
+# Tipos de radios
 
-### Radios Urbanos
+## Radios Urbanos
 
-![](imagenes/RU.png){width="90%"} \|
+![](imagenes/RU.png){width="90%"}
 
-### Radios Suburbanos
+## Radios Suburbanos
 
 ![](imagenes/RSU.png){width="90%"}
 
-# Segmentación de 1 Radio que compartido con 5 localidades
+## Segmentación de 1 Radio que compartido con 5 localidades
 
 ![](imagenes/R5L.png){width="90%"}
-
-# Previsualización de la segmentación y de grafo
-
-![](imagenes/SegG.png){width="90%"}
 
 # Resumen de la segmentación
 
 ![](imagenes/resumen.png){width="90%"}
 
+## Previsualización de la segmentación y de grafo
+
+![](imagenes/SegG.png){width="90%"}
+
 # Salidas Gráficas.
 
 ![](imagenes/plugin.png){width="100%"}
+
+## Espacio de trabajo QGIS
+
+![Mapa Fracción](imagenes/SG_fraccion.png){width="100%"}
 
 ## Mapas de Fracción
 
@@ -243,11 +245,6 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 ## Mapas de Segmento
 
 ![](imagenes/MS.png){width="100%"}
-
-# Espacio de trabajo QGIS
-
-![Mapa Fracción](imagenes/SG_fraccion.png){width="100%"}
-
 # Conclusiones.
 
 -   Pudimos resolver un problema complicado con algoritmos sencillos
