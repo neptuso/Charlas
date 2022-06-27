@@ -263,10 +263,13 @@ Vecinos se calculan con operaciones elementales
 
 ## Preguntas
 
+
 ?
 
 ## Contacto
 
 Hernán halperin@indec.gob.ar
+
 Verónica vheredia@indec.gob.ar 
+
 Manuel @cyberoliverio
