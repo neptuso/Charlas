@@ -37,13 +37,15 @@ output:
   beamer_presentation: 
     toc: yes
     incremental: yes
-subtitle: "Generación de Segmentos Geográficos en áreas urbanas y suburbanas"
 encoding: utf8
 ---
 
 <!-- por acá empieza Vero la resentación -->
 
-# Introducción {data-background-image="imagenes/cac-logo.png"}
+# Introducción {data-background-image="imagenes/fondo.png"}
+
+"Generación de Segmentos Geográficos en áreas urbanas y suburbanas"
+
 ## ¿Que es la segmentación?
 
 Son las tareas que permiten subdividir el radio censal en segmentos.
@@ -80,7 +82,6 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 -   Todo espacio (con o sin viviendas) debe estar asignado a un segmento.
 -   Identificar claramente Inicio y Fin de cada segmento.
 
-
 ## Facilitar el recorrido del censista
 
 ## Evitar
@@ -89,7 +90,7 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 -   Cruce en diagonal
 -   "En lo posible" cruce de avenidas, rutas, vías de ferrocarril o cursos de agua.
 
-# Segmentos
+## Segmentos
 
 ![Mapas de análisis](imagenes/mapa.png){width="90%"}
 
@@ -109,7 +110,7 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 **Suburbano:** agrupada en pequeños poblados o en bordes amanzanados de localidades.
 :::
 
-# Radios Urbanos o parte Urbana de Radios Mixtos
+## Radios Urbanos o parte Urbana de Radios Mixtos
 
 ## Según distribución de viviendas dada una carga deseada.
 
@@ -119,10 +120,15 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 
 # Generación de segmentaciones vecinas
 
+------------------------------------------------------------------------
+
 ![Extraer componente](imagenes/extraer.png){width="90%"}
+
+------------------------------------------------------------------------
 
 ![Transferir componente](imagenes/transferir.png){width="90%"}
 
+------------------------------------------------------------------------
 
 ![Fusionar componente](imagenes/fusionar.png){width="90%"}
 
@@ -133,16 +139,19 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 ## Espacio factible definido por vecindario de segmentación
 
 ::: columns
-::: {.column width="45%"}
+::: {.column width="50%"}
 Optimización Discreta
 
-![](imagenes/optimizacion_discreta.png){width="45%"}
+![](imagenes/optimizacion_discreta.png){width="50%"}
 :::
-::: {.column width="45%"}
+
+::: {.column width="50%"}
 Vecinos se calculan con operaciones elementales
 
 1.  Extraer componente (manzana o lado) de segmento
+
 2.  Transferir componente de un segmento a otro
+
 3.  Fusionar 2 segmentos
 :::
 :::
@@ -177,7 +186,11 @@ Vecinos se calculan con operaciones elementales
 
 # Carga de datos y procesamiento de datos.
 
-![DTL](imagenes/DTL.png){width="90%"}
+![DTL](imagenes/DTL.png){height="90%"}
+
+---
+
+![ETL](imagenes/ETL.png){height="90%"}
 
 # Elementos disponibles, o agrupación elemental.
 
@@ -185,7 +198,8 @@ Vecinos se calculan con operaciones elementales
 -   Listados: direcciones, pisos (no puede haber más de 1 segmento por piso) recorridos o manzanas independientes
 -   Varias combinaciones de ambos.
 
-# Software utilizado                 |
+# Software utilizado
+
 ![](imagenes/amigos.png){width="90%"}
 
 ## Segmentación.
@@ -204,10 +218,11 @@ Vecinos se calculan con operaciones elementales
 
 ### Radios Urbanos
 
- ![](imagenes/RU.png){width="90%"} |
- 
-### Radios Suburbanos 
- ![](imagenes/RSU.png){width="90%"}
+![](imagenes/RU.png){width="90%"} \|
+
+### Radios Suburbanos
+
+![](imagenes/RSU.png){width="90%"}
 
 # Segmentación de 1 Radio que compartido con 5 localidades
 
@@ -215,7 +230,7 @@ Vecinos se calculan con operaciones elementales
 
 # Previsualización de la segmentación y de grafo
 
- ![](imagenes/SegG.png){width="90%"}
+![](imagenes/SegG.png){width="90%"}
 
 # Resumen de la segmentación
 
@@ -225,11 +240,11 @@ Vecinos se calculan con operaciones elementales
 
 ![](imagenes/plugin.png){width="100%"}
 
-## Mapas de Fracción 
+## Mapas de Fracción
 
 ![](imagenes/MF.png){width="100%"}
 
-## Mapas de Radio 
+## Mapas de Radio
 
 ![](imagenes/MR.png){width="100%"}
 
@@ -259,14 +274,14 @@ Vecinos se calculan con operaciones elementales
 
 ![](imagenes/colaboradores.png){width="100%"}
 
-## Preguntas {data-background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)"}
+## Preguntas {data-background-image="imagenes/fondo.png"}
 
 ### ?
 
-## Contacto
+## Contacto {data-background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)"}
 
-Hernán halperin@indec.gob.ar
+Hernán [halperin\@indec.gob.ar](mailto:halperin@indec.gob.ar){.email}
 
-Verónica vheredia@indec.gob.ar 
+Verónica [vheredia\@indec.gob.ar](mailto:vheredia@indec.gob.ar){.email}
 
 Manuel @cyberoliverio
