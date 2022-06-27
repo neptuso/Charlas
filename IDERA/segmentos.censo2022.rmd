@@ -174,11 +174,12 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 -   En el área urbana del radio mixto los segmentos se numeran del 60 en más excluyendo al 90.
 -   El segmento 90 contiene las viviendas colectivas del radio.
 
-# Carga de datos y procesamiento de datos.
+# Carga de datos
 
-![DTL](imagenes/DTL.png){height="70%"}
+![Carga de Datos](imagenes/DTL.png){height="70%"}
 
----
+
+## Procesamiento de Datos
 
 ![ETL](imagenes/ETL.png){height="90%"}
 
@@ -245,6 +246,7 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 ## Mapas de Segmento
 
 ![](imagenes/MS.png){width="100%"}
+
 # Conclusiones.
 
 -   Pudimos resolver un problema complicado con algoritmos sencillos
