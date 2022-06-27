@@ -1,5 +1,7 @@
 ---
-title: Segmentación Censo 2022
+title: |
+  ![](imagenes/logo_censo2022.png)
+  Segmentación Censo 2022
 author: 
   - "Hernán Alperin"
   - "Verónica Heredia"
@@ -12,6 +14,15 @@ output:
     fig_width: 7
     fig_height: 4
     fig_caption: yes
+  revealjs::revealjs_presentation:
+    incremental: true
+    fig_caption: true
+    reveal_options:
+      slideNumber: true
+    includes:
+      in_header: header.html
+      before_body: doc_prefix.html
+      after_body: doc_suffix.html      
   html_document:
     toc: yes
     toc_depth: 2
@@ -32,7 +43,8 @@ encoding: utf8
 ---
 
 <!-- por acá empieza Vero la resentación -->
-# Introducción al problema. {style="class: center, inverse; background-image: url('plantilla_idera_html/img0.png');"}
+
+# Introducción {style="class: center, inverse; background-image: url('imagenes/cac-logo.png'); background-opacity:70%"}
 
 ## ¿Que es la segmentación?
 
@@ -42,7 +54,7 @@ Para asegurar que todas las viviendas sean censadas, hay que determinar qué ár
 
 ------------------------------------------------------------------------
 
-# Tareas: Generar mapas, recorridos, planillas. {.unlisted .unnumbered}
+## Tareas: Generar mapas, recorridos, planillas. {.unlisted .unnumbered}
 
 -   16 millones de domicilios.
 -   De 8 a 12 hs. de trabajo.
@@ -53,13 +65,13 @@ Para asegurar que todas las viviendas sean censadas, hay que determinar qué ár
 
 ------------------------------------------------------------------------
 
-# Descripción del problema.
+## Descripción del problema.
 
 -   Armar el recorrido de 650.000 censistas para que visiten todas las viviendas del territorio siguiendo las reglas definidas en el MANUAL del SEGMENTADOR.
 
 ------------------------------------------------------------------------
 
-# El problema
+## El problema
 
 Un problema de optimización, matemáticamente se formula como: Minimizar $f(x)$ sujeto a: $x \in S$, donde $S$ es el conjunto de los valores entre los que podemos buscar la solución, lo que se llama conjunto de soluciones factibles.
 
@@ -67,7 +79,7 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 
 ------------------------------------------------------------------------
 
-# Función objetivo con costo que incluye penalidad
+## Función objetivo con costo que incluye penalidad
 
 -   Cantidad de viviendas por segmento
 -   Cantidad de manzanas por segmento
@@ -75,14 +87,14 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 
 ------------------------------------------------------------------------
 
-# Delimitación del segmento
+## Delimitación del segmento
 
 -   Todo espacio (con o sin viviendas) debe estar asignado a un segmento.
 -   Identificar claramente Inicio y Fin de cada segmento.
 
 ------------------------------------------------------------------------
 
-# Facilitar el recorrido del censista
+## Facilitar el recorrido del censista
 
 ## Evitar
 
@@ -94,7 +106,7 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 
 # Segmentos
 
-![Mapas de análisis](imagenes/mapa.png){width=90%}
+![Mapas de análisis](imagenes/mapa.png){width="90%"}
 
 ------------------------------------------------------------------------
 
@@ -136,35 +148,35 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 
 # Generación de segmentaciones vecinas
 
-![Extraer componente](imagenes/extraer.png){width=90%}
+![Extraer componente](imagenes/extraer.png){width="90%"}
 
 ------------------------------------------------------------------------
 
-![Transferir componente](imagenes/transferir.png){width=90%}
+![Transferir componente](imagenes/transferir.png){width="90%"}
 
 ------------------------------------------------------------------------
 
-![Fusionar componente](imagenes/fusionar.png){width=90%}
+![Fusionar componente](imagenes/fusionar.png){width="90%"}
 
 ------------------------------------------------------------------------
 
 # Optimización global
 
-![Espacio de soluciones](imagenes/optimizacion_global.png){width=90%}
+![Espacio de soluciones](imagenes/optimizacion_global.png){width="90%"}
 
 ------------------------------------------------------------------------
 
-# Espacio factible definido por vecindario de segmentación
+## Espacio factible definido por vecindario de segmentación
 
 ::: columns
 ::: {.column width="50%"}
-## Optimización Discreta
+Optimización Discreta
 
-![](imagenes/optimizacion_discreta.png){width=45%}
+![](imagenes/optimizacion_discreta.png){width="45%"}
 :::
 
 ::: {.column width="50%"}
-##   Vecinos se calculan con operaciones elementales
+Vecinos se calculan con operaciones elementales
 
 1.  Extraer componente (manzana o lado) de segmento
 2.  Transferir componente de un segmento a otro
@@ -174,7 +186,11 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 
 ------------------------------------------------------------------------
 
-# Algoritmo para radios esparcidos (lados completos)
+# Algoritmos
+
+------------------------------------------------------------------------
+
+## Algoritmo para radios esparcidos (lados completos)
 
 1.  Tomar una segmentación inicial y hacer que sea la actual
 2.  Calcular todas las segmentaciones vecinas a la actual y elejir una de costo mínimo
@@ -183,7 +199,7 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 
 ------------------------------------------------------------------------
 
-# Algoritmo para radios densos (manzanas independientes)
+## Algoritmo para radios densos (manzanas independientes)
 
 1.  En cada manzana encontrar el número entero $d_m$ más cercano a cantidad de viviendas de la manzana dividido por la cantidad de viviendas deseada
 2.  Hacer ese, el número de segmentos en la manzana $m$
@@ -192,7 +208,7 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 
 ------------------------------------------------------------------------
 
-# Algoritmo para radios combinados
+## Algoritmo para radios combinados
 
 1.  Aplicar el algoritmo para radios esparcidos (lados completos)
 2.  Para todos los segmentos que superen un valor umbral de viviendas aplicar algoritmo de (listado) manzana independiente
@@ -209,50 +225,70 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 ------------------------------------------------------------------------
 
 \newpage
+
 # Carga de datos y procesamiento de datos.
 
-![DTL](imagenes/DTL.png){width=90%}
+![DTL](imagenes/DTL.png){width="90%"}
 
-|                           |
-|:--------------------------|
-| \# Software utilizado     |
-| ![L](imagenes/amigos.png){width=90%} |
+|                                       |
+|:--------------------------------------|
+| \# Software utilizado                 |
+| ![](imagenes/amigos.png){width="90%"} |
 
-# Segmentación.
+## Segmentación.
 
-![Parámetros](imagenes/SP.png){width=90%}
+![Parámetros](imagenes/SP.png){width="90%"}
 
 ------------------------------------------------------------------------
 
 # Generación de resumenes.
 
-![Resumen R3](imagenes/R3.png){width=90%}
+![Resumen R3](imagenes/R3.png){width="90%"}
 
-| \# Radios Urbanos     |
-|:----------------------|
-| \# Radios Suburbanos  |
-| ![](imagenes/RSU.png){width=90%} |
+------------------------------------------------------------------------
+
+| \# Radios Urbanos                  |
+|:-----------------------------------|
+| \# Radios Suburbanos               |
+| ![](imagenes/RSU.png){width="90%"} |
+
+------------------------------------------------------------------------
 
 # Estructura de Base de Datos
 
-![](imagenes/BD.png){width=90%}
+![](imagenes/BD.png){width="90%"}
+
+------------------------------------------------------------------------
+
+# Segmentación de 1 Radio que compartido con 5 localidades
+
+![](imagenes/R5L.png){width="90%"}
+
+|                                                   |
+|:--------------------------------------------------|
+| \# Previsualización de la segmentación y de grafo |
+| ![](imagenes/SegG.png){width="90%"}               |
+
+# Resumen de la segmentación
+
+![](imagenes/resumen.png){width="90%"}
 
 ------------------------------------------------------------------------
 
 # Salidas Gráficas.
 
-![](imagenes/plugin.png){width=90%}
+![](imagenes/plugin.png){width="90%"}
 
 ------------------------------------------------------------------------
 
-| \# Mapas de Fracción |
-|:---------------------|
-| \# Mapas de Radio    |
-| ![](imagenes/MR.png){width=90%} |
+| \# Mapas de Fracción \|
+| ![](imagenes/MF.png){width="90%"} \|
+
+\|:---------------------\| \| \# Mapas de Radio \| \| ![](imagenes/MR.png){width="90%"} \|
 
 # Mapas de Segmento
 
-![](imagenes/MS.png){width=90%}
+![](imagenes/MS.png){width="90%"}
 
 ------------------------------------------------------------------------
 
@@ -267,7 +303,7 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 
 # Espacio de trabajo QGIS
 
-![Mapa Fracción](imagenes/SG_fraccion.png){width=90%}
+![Mapa Fracción](imagenes/SG_fraccion.png){width="90%"}
 
 ------------------------------------------------------------------------
 

@@ -1,6 +1,6 @@
 ---
 title: |
-  ![](imagenes/logo_censo2022.png)
+  ![](imagenes/logocenso.png)
   Segmentación Censo 2022
 author: 
   - "Hernán Alperin"
@@ -41,8 +41,10 @@ subtitle: "Generación de Segmentos Geográficos para el Censo 2022 en áreas ur
   y suburbanas"
 encoding: utf8
 ---
+
 <!-- por acá empieza Vero la resentación -->
-# Introducción{style="class: center, inverse; background-image: url('imagenes/cac-logo.png'); background-opacity:70%"}
+
+# Introducción {style="class: center, inverse; background-image: url('imagenes/cac-logo.png'); background-opacity:70%"}
 
 ## ¿Que es la segmentación?
 
@@ -104,7 +106,7 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 
 # Segmentos
 
-![Mapas de análisis](imagenes/mapa.png){width=90%}
+![Mapas de análisis](imagenes/mapa.png){width="90%"}
 
 ------------------------------------------------------------------------
 
@@ -146,21 +148,21 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 
 # Generación de segmentaciones vecinas
 
-![Extraer componente](imagenes/extraer.png){width=90%}
+![Extraer componente](imagenes/extraer.png){width="90%"}
 
 ------------------------------------------------------------------------
 
-![Transferir componente](imagenes/transferir.png){width=90%}
+![Transferir componente](imagenes/transferir.png){width="90%"}
 
 ------------------------------------------------------------------------
 
-![Fusionar componente](imagenes/fusionar.png){width=90%}
+![Fusionar componente](imagenes/fusionar.png){width="90%"}
 
 ------------------------------------------------------------------------
 
 # Optimización global
 
-![Espacio de soluciones](imagenes/optimizacion_global.png){width=90%}
+![Espacio de soluciones](imagenes/optimizacion_global.png){width="90%"}
 
 ------------------------------------------------------------------------
 
@@ -168,13 +170,13 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 
 ::: columns
 ::: {.column width="50%"}
- Optimización Discreta
+Optimización Discreta
 
-![](imagenes/optimizacion_discreta.png){width=45%}
+![](imagenes/optimizacion_discreta.png){width="45%"}
 :::
 
 ::: {.column width="50%"}
-  Vecinos se calculan con operaciones elementales
+Vecinos se calculan con operaciones elementales
 
 1.  Extraer componente (manzana o lado) de segmento
 2.  Transferir componente de un segmento a otro
@@ -223,72 +225,70 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 ------------------------------------------------------------------------
 
 \newpage
+
 # Carga de datos y procesamiento de datos.
 
-![DTL](imagenes/DTL.png){width=90%}
+![DTL](imagenes/DTL.png){width="90%"}
 
-|                           |
-|:--------------------------|
-| \# Software utilizado     |
-| ![](imagenes/amigos.png){width=90%} |
+|                                       |
+|:--------------------------------------|
+| \# Software utilizado                 |
+| ![](imagenes/amigos.png){width="90%"} |
 
 ## Segmentación.
 
-![Parámetros](imagenes/SP.png){width=90%}
+![Parámetros](imagenes/SP.png){width="90%"}
 
 ------------------------------------------------------------------------
 
 # Generación de resumenes.
 
-![Resumen R3](imagenes/R3.png){width=90%}
+![Resumen R3](imagenes/R3.png){width="90%"}
 
---------------------------------------------------------------------------
+------------------------------------------------------------------------
 
-| \# Radios Urbanos     |
-|:----------------------|
-| \# Radios Suburbanos  |
-| ![](imagenes/RSU.png){width=90%} |
+| \# Radios Urbanos                  |
+|:-----------------------------------|
+| \# Radios Suburbanos               |
+| ![](imagenes/RSU.png){width="90%"} |
 
---------------------------------------------------------------------------
+------------------------------------------------------------------------
 
 # Estructura de Base de Datos
 
-![](imagenes/BD.png){width=90%}
+![](imagenes/BD.png){width="90%"}
 
 ------------------------------------------------------------------------
 
-# Segmentación de 1 Radio que compartido con 5 localidades 
+# Segmentación de 1 Radio que compartido con 5 localidades
 
-![](imagenes/R5L.png){width=90%}
+![](imagenes/R5L.png){width="90%"}
 
------------------------------------------------------------------------
-# Previsualización de la segmentación y de grafo
+|                                                   |
+|:--------------------------------------------------|
+| \# Previsualización de la segmentación y de grafo |
+| ![](imagenes/SegG.png){width="90%"}               |
 
-![](imagenes/SegG.png){width=90%}
+# Resumen de la segmentación
 
------------------------------------------------------------------------
+![](imagenes/resumen.png){width="90%"}
 
-# Resumen de la segmentación 
-
-![](imagenes/resumen.png){width=90%}
-
------------------------------------------------------------------------
+------------------------------------------------------------------------
 
 # Salidas Gráficas.
 
-![](imagenes/plugin.png){width=90%}
+![](imagenes/plugin.png){width="90%"}
 
 ------------------------------------------------------------------------
 
-| \# Mapas de Fracción |
-| ![](imagenes/MF.png){width=90%} |
-|:---------------------|
-| \# Mapas de Radio    |
-| ![](imagenes/MR.png){width=90%} |
+| \# Mapas de Fracción \|
+| ![](imagenes/MF.png){width="90%"} \|
+
+\|:---------------------\| \| \# Mapas de Radio \| \| ![](imagenes/MR.png){width="90%"} \|
 
 # Mapas de Segmento
 
-![](imagenes/MS.png){width=90%}
+![](imagenes/MS.png){width="90%"}
 
 ------------------------------------------------------------------------
 
@@ -303,11 +303,9 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 
 # Espacio de trabajo QGIS
 
-![Mapa Fracción](imagenes/SG_fraccion.png){width=90%}
+![Mapa Fracción](imagenes/SG_fraccion.png){width="90%"}
 
 ------------------------------------------------------------------------
-
-
 
 # Conclusiones.
 
