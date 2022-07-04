@@ -5,7 +5,9 @@ author:
   - "Hernán Alperin"
   - "Verónica Heredia"
   - "Manuel Retamozo"
-date: "June, 2022"
+date: "Junio, 2022"
+fontsize: 12pt
+geometry: margin=1in
 output:
   revealjs::revealjs_presentation:
     theme: sky
@@ -14,18 +16,14 @@ output:
     center: true
     transition: convex 
     background_transition: concave
-    reveal_options:
-      slideNumber: true
+    slideNumber: true
     includes:
       in_header: header.html
       before_body: doc_prefix.html
       after_body: doc_suffix.html      
-  powerpoint_presentation: 
-    reference_doc: cac-custom-reference.pptx
-    keep_md: true
-    fig_width: 7
-    fig_height: 4
-    fig_caption: yes
+  beamer_presentation: 
+    toc: yes
+    incremental: yes
   html_document:
     toc: yes
     toc_depth: 2
@@ -35,19 +33,24 @@ output:
       before_body: doc_prefix.html
       after_body: doc_suffix.html
   slidy_presentation: default
-  pdf_document: default
+  powerpoint_presentation: 
+    reference_doc: cac-custom-reference.pptx
+    keep_md: true
+    fig_width: 7
+    fig_height: 4
+    fig_caption: yes
   ioslides_presentation: default
-  beamer_presentation: 
-    toc: yes
-    incremental: yes
+  pdf_document: default
 encoding: utf8
 ---
 
-# Introducción {data-background-image="imagenes/fondo.idera.png"}
+# Introducción 😁 {data-background-image="imagenes/fondo.idera.png"}
+
 <!-- por acá empieza Vero la resentación -->
+
 "Generación de Segmentos Geográficos en áreas urbanas y suburbanas"
 
-## ¿Qué es la segmentación? {data-background-image="imagenes/fondo.idera.png"}
+## ¿Qué es la segmentación? 🤔 {data-background-image="imagenes/fondo.idera.png"}
 
 Son las tareas que permiten subdividir el radio censal en segmentos.
 
@@ -85,7 +88,8 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 
 ## Facilitar el recorrido del censista {data-background-image="imagenes/fondo.idera.png"}
 
-    Evitar 
+Evitar
+
 -   Recorrido discontinuo
 -   Cruce en diagonal
 -   "En lo posible" cruce de avenidas, rutas, vías de ferrocarril o cursos de agua.
@@ -107,12 +111,12 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 ::: notes
 **Urbano:** población agrupada únicamente, y conformado por manzanas y/o sectores pertenecientes a una localidad.
 
-**Suburbano:** agrupada en pequeños poblados o en bordes amanzanados de localidades.
+**Suburbano:** agrupada en pequeños poblados, barrios residenciales grandes o bordes amanzanados del area periurbana de algúnas localidades.
 :::
 
 ## Radios Urbanos o parte Urbana de Radios Mixtos {data-background-image="imagenes/fondo.idera.png"}
 
-## Según distribución de viviendas dada una carga deseada. {data-background-image="imagenes/fondo.idera.png"}
+### Según distribución de viviendas dada una carga deseada. {data-background-image="imagenes/fondo.idera.png"}
 
 -   Esparcidos: todos los lados con pocas viviendas.
 -   Densos: todas las manzanas con muchas viviendas.
@@ -164,8 +168,7 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 2.  Para todos los segmentos que superen un valor umbral de viviendas aplicar algoritmo de (listado) manzana independiente
 3.  Juntar segmentos con cero o pocas viviendas
 
-
-# Otras funcióndes en el core
+# Otras funciónes en el core
 
 ## Numeración de los segmentos {data-background-image="imagenes/fondo.idera.png"}
 
@@ -175,29 +178,27 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 
 ## Descripción de domicilios {data-background-image="imagenes/fondo.idera.png"}
 
-- Calle: Cod - Nombre
-- Nro Catastral: #
-- Piso
-- Sin Nombre
-- Sin Número
+-   Calle Cod - Nombre
+-   Nro Catastral
+-   Piso
+-   Sin Nombre
+-   Sin Número
 
 ## Descripción de colectivas {data-background-image="imagenes/fondo.idera.png"}
 
-- Domicilio +
-- Tipo de Colectiva
+-   Domicilio +
+-   Tipo de Colectiva
 
 ## Descripción de segmentos {data-background-image="imagenes/fondo.idera.png"}
 
-- Manzana completa
-- Lado, Lado Completo
-- Domicilio
-- Excluyendo
-
+-   Manzna completa
+-   Lado
+-   Domicilio
+-   Excluyendo
 
 # Carga de datos {data-background-image="imagenes/fondo.idera.png"}
 
 ![Carga de Datos](imagenes/DTL.png){height="70%"}
-
 
 ## Procesamiento de Datos {data-background-image="imagenes/fondo.idera.png"}
 
@@ -300,3 +301,10 @@ Hernán [halperin\@indec.gob.ar](mailto:halperin@indec.gob.ar){.email}
 Verónica [vheredia\@indec.gob.ar](mailto:vheredia@indec.gob.ar){.email}
 
 Manuel @cyberoliverio
+
+Cuándo y donde:
+
+```{bash}
+date
+pwd
+```
