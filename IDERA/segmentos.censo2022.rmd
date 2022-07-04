@@ -211,7 +211,7 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 
 ![](imagenes/RU.png){width="90%"}
 
-## Radios Suburbanos {data-background-image="imagenes/fondo.idera.png"}
+## Radios SubUrbanos {data-background-image="imagenes/fondo.idera.png"}
 
 ![](imagenes/RSU.png){width="90%"}
 
@@ -227,15 +227,13 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 
 ![](imagenes/SegG.png){width="90%"}
 
+# Proceso Completo. {data-background-image="imagenes/fondo.idera.png"}
+
+![](imagenes/proceso_completo.png){width="100%"}
+
 # Salidas Gráficas. {data-background-image="imagenes/fondo.idera.png"}
 
 ![](imagenes/plugin.png){width="100%"}
-
-## QGIS Buenos Aires {data-background-image="imagenes/fondo.idera.png"}
-
-[Descargar QGIS](https://www.qgis.org)
-
-![Nueva versión](imagenes/QGIS.png){width="100%"}
 
 ## Espacio de trabajo QGIS {data-background-image="imagenes/fondo.idera.png"}
 
