@@ -12,6 +12,8 @@ output:
     incremental: true
     fig_caption: true
     center: true
+    transition: convex 
+    background_transition: concave
     reveal_options:
       slideNumber: true
     includes:
@@ -116,20 +118,6 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 -   Densos: todas las manzanas con muchas viviendas.
 -   Combinados: situaciones intermedias, algunas manzanas con pocas viviendas o algunos lados con muchas viviendas.
 
-# Generación de segmentaciones vecinas {data-background-image="imagenes/fondo.idera.png"}
-
-------------------------------------------------------------------------
-{data-background-image="imagenes/fondo.idera.png"}
-![Extraer componente](imagenes/extraer.png){width="90%"}
-
-------------------------------------------------------------------------
-{data-background-image="imagenes/fondo.idera.png"}
-![Transferir componente](imagenes/transferir.png){width="90%"}
-
-------------------------------------------------------------------------
-{data-background-image="imagenes/fondo.idera.png"}
-![Fusionar componente](imagenes/fusionar.png){width="90%"}
-
 # Optimización global {data-background-image="imagenes/fondo.idera.png"}
 
 ![Espacio de soluciones](imagenes/optimizacion_global.png){width="90%"}
@@ -145,6 +133,14 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 2.  Transferir componente de un segmento a otro
 
 3.  Fusionar 2 segmentos
+
+## Generación de segmentaciones vecinas {data-background-image="imagenes/fondo.idera.png"}
+
+## ![Extraer componente](imagenes/extraer.png){width="100%"}
+
+## ![Transferir componente](imagenes/transferir.png){width="100%"}
+
+## ![Fusionar componente](imagenes/fusionar.png){width="100%"}
 
 # Algoritmos {data-background-image="imagenes/fondo.idera.png"}
 
@@ -168,11 +164,35 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 2.  Para todos los segmentos que superen un valor umbral de viviendas aplicar algoritmo de (listado) manzana independiente
 3.  Juntar segmentos con cero o pocas viviendas
 
-# Numeración de los segmentos {data-background-image="imagenes/fondo.idera.png"}
+
+# Otras funcióndes en el core
+
+## Numeración de los segmentos {data-background-image="imagenes/fondo.idera.png"}
 
 -   Cada segmento del radio urbano se identifica con un número de dos dígitos, de 01 en más, dentro del radio.
 -   En el área urbana del radio mixto los segmentos se numeran del 60 en más excluyendo al 90.
 -   El segmento 90 contiene las viviendas colectivas del radio.
+
+## Descripción de domicilios {data-background-image="imagenes/fondo.idera.png"}
+
+- Calle: Cod - Nombre
+- Nro Catastral: #
+- Piso
+- Sin Nombre
+- Sin Número
+
+## Descripción de colectivas {data-background-image="imagenes/fondo.idera.png"}
+
+- Domicilio +
+- Tipo de Colectiva
+
+## Descripción de segmentos {data-background-image="imagenes/fondo.idera.png"}
+
+- Manzana completa
+- Lado, Lado Completo
+- Domicilio
+- Excluyendo
+
 
 # Carga de datos {data-background-image="imagenes/fondo.idera.png"}
 
