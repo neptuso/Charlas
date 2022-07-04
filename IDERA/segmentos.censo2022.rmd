@@ -82,8 +82,7 @@ En este caso, $S$ es el conjunto de todas las segmentaciones posibles, $x$ es un
 
 ## Facilitar el recorrido del censista {data-background-image="imagenes/fondo.idera.png"}
 
-## Evitar {data-background-image="imagenes/fondo.idera.png"}
-
+    Evitar 
 -   Recorrido discontinuo
 -   Cruce en diagonal
 -   "En lo posible" cruce de avenidas, rutas, vías de ferrocarril o cursos de agua.
