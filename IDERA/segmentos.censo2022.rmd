@@ -1,6 +1,6 @@
 ---
 title: |
-  ![Segmentación Censo 2022](imagenes/logocensox100.png) 
+ ![Segmentación Censo 2022](imagenes/logocensox100.png)
 author: 
   - "Hernán Alperin"
   - "Verónica Heredia"
@@ -9,6 +9,27 @@ date: "Junio, 2022"
 fontsize: 12pt
 geometry: margin=1in
 output:
+  pdf_document: 
+    fig_caption: yes
+    keep_tex: yes
+    df_print: paged
+  powerpoint_presentation: 
+    reference_doc: cac-custom-reference.pptx
+    keep_md: true
+    fig_width: 7
+    fig_height: 4
+    fig_caption: yes
+  html_document:
+    toc: yes
+    toc_depth: 3
+    dev: svg
+    includes:
+      in_header: header.html
+      before_body: doc_prefix.html
+      after_body: doc_suffix.html
+  beamer_presentation: 
+    toc: yes
+    incremental: yes
   revealjs::revealjs_presentation:
     theme: sky
     incremental: true
@@ -16,41 +37,26 @@ output:
     center: true
     transition: convex 
     background_transition: concave
-    slideNumber: true
+    toc: yes
+    toc_depth: 3
+    dev: svg
+    reveal_options:
+      hash: true
+      progress: true
     includes:
       in_header: header.html
       before_body: doc_prefix.html
       after_body: doc_suffix.html      
-  beamer_presentation: 
-    toc: yes
-    incremental: yes
-  html_document:
-    toc: yes
-    toc_depth: 2
-    dev: svg
-    includes:
-      in_header: header.html
-      before_body: doc_prefix.html
-      after_body: doc_suffix.html
-  slidy_presentation: default
-  powerpoint_presentation: 
-    reference_doc: cac-custom-reference.pptx
-    keep_md: true
-    fig_width: 7
-    fig_height: 4
-    fig_caption: yes
   ioslides_presentation: default
-  pdf_document: default
+  slidy_presentation: default
 encoding: utf8
 ---
-
-# Introducción 😁 {data-background-image="imagenes/fondo.idera.png"}
+# Introducción  {data-background-image="imagenes/fondo.idera.png"}
 
 <!-- por acá empieza Vero la resentación -->
-
 "Generación de Segmentos Geográficos en áreas urbanas y suburbanas"
 
-## ¿Qué es la segmentación? 🤔 {data-background-image="imagenes/fondo.idera.png"}
+## ¿Qué es la segmentación?  {data-background-image="imagenes/fondo.idera.png"}
 
 Son las tareas que permiten subdividir el radio censal en segmentos.
 
