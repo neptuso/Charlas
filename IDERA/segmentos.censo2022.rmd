@@ -45,7 +45,7 @@ encoding: utf8
 <!-- por acá empieza Vero la resentación -->
 "Generación de Segmentos Geográficos en áreas urbanas y suburbanas"
 
-## ¿Que es la segmentación? {data-background-image="imagenes/fondo.idera.png"}
+## ¿Qué es la segmentación? {data-background-image="imagenes/fondo.idera.png"}
 
 Son las tareas que permiten subdividir el radio censal en segmentos.
 
