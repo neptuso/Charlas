@@ -9,27 +9,6 @@ date: "Junio, 2022"
 fontsize: 12pt
 geometry: margin=1in
 output:
-  pdf_document: 
-    fig_caption: yes
-    keep_tex: yes
-    df_print: paged
-  powerpoint_presentation: 
-    reference_doc: cac-custom-reference.pptx
-    keep_md: true
-    fig_width: 7
-    fig_height: 4
-    fig_caption: yes
-  html_document:
-    toc: yes
-    toc_depth: 3
-    dev: svg
-    includes:
-      in_header: header.html
-      before_body: doc_prefix.html
-      after_body: doc_suffix.html
-  beamer_presentation: 
-    toc: yes
-    incremental: yes
   revealjs::revealjs_presentation:
     theme: sky
     incremental: true
@@ -47,6 +26,27 @@ output:
       in_header: header.html
       before_body: doc_prefix.html
       after_body: doc_suffix.html      
+  powerpoint_presentation: 
+    reference_doc: cac-custom-reference.pptx
+    keep_md: true
+    fig_width: 7
+    fig_height: 4
+    fig_caption: yes
+  html_document:
+    toc: yes
+    toc_depth: 3
+    dev: svg
+    includes:
+      in_header: header.html
+      before_body: doc_prefix.html
+      after_body: doc_suffix.html
+  beamer_presentation: 
+    toc: yes
+    incremental: yes
+  pdf_document: 
+    fig_caption: yes
+    keep_tex: yes
+    df_print: paged
   ioslides_presentation: default
   slidy_presentation: default
 encoding: utf8
@@ -146,11 +146,9 @@ Evitar
 
 ## Generación de segmentaciones vecinas {data-background-image="imagenes/fondo.idera.png"}
 
-## ![Extraer componente](imagenes/extraer.png){width="100%"}
-
-## ![Transferir componente](imagenes/transferir.png){width="100%"}
-
-## ![Fusionar componente](imagenes/fusionar.png){width="100%"}
+1.  Extraer componente    | 2.  Transferir componente | 3.  Fusionar 2 segmentos
+------------------------- | ------------------------- | -------------------------
+![Extraer componente](imagenes/extraer.png){width="100%"} | ![Transferir componente](imagenes/transferir.png){width="100%"} | ![Fusionar componente](imagenes/fusionar.png){width="100%"}
 
 # Algoritmos {data-background-image="imagenes/fondo.idera.png"}
 
