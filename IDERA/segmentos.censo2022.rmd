@@ -11,6 +11,7 @@ output:
     theme: sky
     incremental: true
     fig_caption: true
+    center: true
     reveal_options:
       slideNumber: true
     includes:
