@@ -1,0 +1,38 @@
+Para la parte de la carga de datos
+se desarrollo un sistema web,
+
+hecho en PHP sobre Laravel,
+
+a través del sistema se cargaron los datos de los arcos
+y etiquetas de polígonos de manzanas,
+
+Los listados de viviendas del precenso (ADRA)
+
+Y una tabla de relación entre radios y localidades, departamentos, aglomerados con la estructura formal.
+
+A medida esos datos se cargan en el servidor web
+se procesaron los datos para que entren 
+en la base de datos.
+
+Se completan campos, de trata de ordenar las tablas,
+se hacen arreglos en algunos campos y generar validaciones
+en cuanto a los listados de viviendas y su correspondencia 
+con la cartografía, para luego pasar a 
+la segmentación desde el sistema web.
+
+---
+Los elemento disponibles a partir de los cuales
+se pensó la carga de datos fueron:
+ Conteos: _Cantidad de viviendas_ por lados de manzana
+ o Listado de direcciones según tipo de vivienda donde estaba el orden del recorrido dentro del lado de la manzana.
+ 
+ 
+ ---
+ 
+ Para todo el desarrollo se utilizó software libre
+ sobre linux,
+ las bases de datos Postgresql con Postgis
+ y postgis_topology, dónde se cargaron los datos
+ espaciales y los tabulares.
+ 
+ 
