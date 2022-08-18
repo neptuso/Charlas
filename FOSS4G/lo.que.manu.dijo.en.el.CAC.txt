@@ -29,10 +29,24 @@ se pensó la carga de datos fueron:
  
  ---
  
- Para todo el desarrollo se utilizó software libre
+Para todo el desarrollo se utilizó software libre
  sobre linux,
  las bases de datos Postgresql con Postgis
  y postgis_topology, dónde se cargaron los datos
  espaciales y los tabulares.
+ 
+El sistema web se desarrollo con Laravel
+ en su mayor parte con varios plugins de Laravel
+ 
+Utilizamos 3 servidores, uno de Desarrollo,
+ uno de Testing y uno de Producción,
+ todos con GNU/Linux CentOS, Apache
+
+En la parte web se utilizó Html5, css3, boostrap,
+svg, jquery, webpack y otras herrameintas disponbiles.
+
+Se utilizó mucho GDAL, ya que muchos de los archivos que
+teníamos eran E00 que son de exportación de ARC/Info
+ 
  
  
