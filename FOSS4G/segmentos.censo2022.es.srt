@@ -36,21 +36,21 @@ Bien, está en Argentina, un país escondido en el Sur
 del mundo en el hemisfério Oeste.
 
 10
-00:00:16,259 --> 00:00:16,959
-El INDEC es el Instituto Nacional de Censos,
-
-11
-00:00:17,059 --> 00:00:17,759
-y una de sus principales tareas es
-contar cuantas Argentinos somos.
-
-12
 00:00:19,370 --> 00:00:25,070
 Argentina
 
-13
+11
 00:00:29,772 --> 00:00:31,272
 (Bombos )
+
+12
+00:00:37,259 --> 00:00:40,959
+El INDEC es el Instituto Nacional de Censos,
+
+13
+00:00:41,059 --> 00:00:44,759
+y una de sus principales tareas es
+contar cuantas Argentinos somos.
 
 14
 00:00:44,646 --> 00:00:46,146
