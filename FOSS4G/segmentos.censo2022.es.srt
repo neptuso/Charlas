@@ -15,35 +15,48 @@
 Hola! Mi nombre es Hernán Alperin
 
 5
-00:00:06,856 --> 00:00:10,856
-soy un tipo dificl de llevar, y estoy aquí porque
-desarrollé el núcleo del segmentdor para el INDEC.
+00:00:06,856 --> 00:00:08,122
+soy un tipo dificl de llevar,
 
 6
-00:00:13,159 --> 00:00:14,759
-Uds se preguntarán qué es el INDEC.
+00:00:08,622 --> 00:00:09,688
+y estoy aquí porque
 
 7
-00:00:14,859 --> 00:00:16,159
-
+00:00:10,388 --> 00:00:12,754
+desarrollé el núcleo del segmentdor para el INDEC.
 
 8
-00:00:16,259 --> 00:00:17,759
-
+00:00:14,759 --> 00:00:15,759
+Uds se preguntarán qué es el INDEC.
 
 9
+00:00:15,459 --> 00:00:16,759
+Bien, está en Argentina, un país escondido en el Sur
+del mundo en el hemisfério Oeste.
+
+10
+00:00:16,259 --> 00:00:16,959
+El INDEC es el Instituto Nacional de Censos,
+
+11
+00:00:17,059 --> 00:00:17,759
+y una de sus principales tareas es
+contar cuantas Argentinos somos.
+
+12
 00:00:19,370 --> 00:00:25,070
 Argentina
 
-10
+13
 00:00:29,772 --> 00:00:31,272
 (Bombos )
 
-11
+14
 00:00:44,646 --> 00:00:46,146
 
 
-12
+15
 00:19:30,246 --> 00:20:00,746
 Gracias.
 @mandarines

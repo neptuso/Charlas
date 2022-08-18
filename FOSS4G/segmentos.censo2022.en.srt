@@ -15,35 +15,48 @@
 Hi! My name is Hernán Alperin.
 
 5
-00:00:06,856 --> 00:00:10,856
-a very difficult guy to get by, and I'm here because
-I developed the Core of the segmenter at the INDEC.
+00:00:06,856 --> 00:00:08,122
+a very difficult guy to get by,
 
 6
-00:00:13,159 --> 00:00:14,759
-You may ask what the INDEC is.
+00:00:08,622 --> 00:00:09,688
+and I'm here because
 
 7
-00:00:14,859 --> 00:00:16,159
-The INDEC is the National Bureau of Census, and one of its main tasks is to count how many Argentinians we are.
+00:00:10,388 --> 00:00:12,754
+I developed the Core of the segmenter at the INDEC.
 
 8
-00:00:16,259 --> 00:00:17,759
-Well, It's in Argentina, a country lost in the end south of the World in the Western hemisfer.
+00:00:14,759 --> 00:00:15,759
+You may ask what the INDEC is.
 
 9
+00:00:15,459 --> 00:00:16,759
+Well, It's in Argentina, a country lost in the end south
+of the World in the Western hemisfer.
+
+10
+00:00:16,259 --> 00:00:16,959
+The INDEC is the National Bureau of Census,
+
+11
+00:00:17,059 --> 00:00:17,759
+and one of its main tasks is to
+count how many Argentinians we are.
+
+12
 00:00:19,370 --> 00:00:25,070
 Argentine
 
-10
+13
 00:00:29,772 --> 00:00:31,272
 (Drums)
 
-11
+14
 00:00:44,646 --> 00:00:46,146
 
 
-12
+15
 00:19:30,246 --> 00:20:00,746
 Thanks!
 @mandarines
