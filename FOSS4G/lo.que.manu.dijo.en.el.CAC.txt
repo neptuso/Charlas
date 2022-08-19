@@ -47,6 +47,13 @@ svg, jquery, webpack y otras herrameintas disponbiles.
 
 Se utilizó mucho GDAL, ya que muchos de los archivos que
 teníamos eran E00 que son de exportación de ARC/Info
- 
- 
+y shapes, éstpo depende de cada provincia, algunas trabajan con e00 
+y otras trabjan con shapes.
+
+Todo el repositorio del código del desarrollo, nosotros lo dividimos en 3 partes, una parte del Core principalmente, una parte web y una parte correspondiente al PLUGIN de QGis.
+Todos los desarrollos se manejaron con un repositrio de GitHub, un repositorio para cada una de las partes del proyecto integradas en la parte web, todo eso se encuentra disponible en Git
+Se utilizó Open Street Map como capa base para todas las pruebas que hicimos, aunque no salió todavía en ninguna de las publicaciones.
+Todo software basado sobre OSGeo, OSGeo es el paraguas que agrupa todos los sistemas de software libre y código bierto del sistema geoespacial, entre ellas PostGis, Gdal, OGR, QGis.
+La parte del sistema del CORE, algoritmos de intercambio, mutaciones de segmentaciones y cáculos, se hicieron mayormente con Python, GeoJson se utilizó para el intercambio de datos en los sistemas, New Linux para todo tipo de imagenes y demas. QGis principalmente para el plugin final de Salida Gráfica. Seguramente se habrá utilizado otro software libre adicional.
+Después de la carga de datos,  
  
