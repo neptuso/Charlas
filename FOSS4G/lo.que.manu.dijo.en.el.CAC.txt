@@ -56,7 +56,7 @@ El código desarrollado, lo dividimos en 3 partes,
 - una parte correspondiente al PLUGIN de QGis.
 
 Todos los desarrollos se manejaron 
-un repositrio de Git i(en gitlab institucional y GitHub)
+un repositrio de Git (en gitlab institucional y GitHub)
 
 Se utilizó OpenStreetMap como capa base 
 para todas las pruebas que hicimos.
@@ -70,13 +70,12 @@ GNU/Linux para todo tipo de imagenes y demas.
 QGis principalmente para el 
 plugin final de Salida Gráfica. 
 
-Seguramente se habrá utilizado otro software libre adicional.
 Después de la carga de datos de localidades y de aglomerados,
 se puede navegar por el sistema web, acceder a una localidad 
-e ir a segmentar un radio determinado de ésa localidad con 
-éste formulario que se ve, donde le deja elegir el radio a segmentar,
-previsualiza la cantidad de viviendas que se han encontrado para ése radio, 
-permite seleccionar los 3 métodos de:
+e ir a segmentar un radio de una determinada localidad.
+Con éste formulario que se ve, se permite segmentar un radio,
+previsualiza la cantidad de viviendas que se han encontrado para ése radio y
+permite seleccionar los 3 métodos de segmntación:
 - Manzanas independientes
 - Lados completos
 - Combinados
