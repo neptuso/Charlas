@@ -71,5 +71,15 @@ QGis principalmente para el
 plugin final de Salida Gráfica. 
 
 Seguramente se habrá utilizado otro software libre adicional.
-Después de la carga de datos,  
+Después de la carga de datos de localidades y de aglomerados,
+se puede navegar por el sistema web, acceder a una localidad 
+e ir a segmentar un radio determinado de ésa localidad con 
+éste formulario que se ve, donde le deja elegir el radio a segmentar,
+previsualiza la cantidad de viviendas que se han encontrado para ése radio, 
+permite seleccionar los 3 métodos de:
+- Manzanas independientes
+- Lados completos
+- Combinados
+
+
  
