@@ -1,110 +1,54 @@
-El objetivo fue 
+Introducción
+Los censos de población, hogares y viviendas constituyen uno de los operativos estadísticos de mayor envergadura e importancia que realizan los países.
 
-Automatizar el  proceso manual de segmentación generando los insumos necesarios (recorridos y sus respectivos mapas), para el trabajo de campo de toda la estructura censal. Ahora bien ¿Qué es la segmentación? Es la tarea de subdividir la unidad mínima utilizada en los censos (el radio), en partes operativas menores llamadas segmentos. Cada segmento corresponde a la carga de trabajo del censista.
+En Argentina, en mayo del presente año se realizó, por primera vez, un censo de derecho, es decir que las personas se contabilizaron según su lugar de residencia habitual. 
 
-Para tal fin se desarrolló un algoritmo que permite armar estos recorridos, generando los mapas de todo el territorio argentino (con o sin viviendas), asegurando su barrido total. Asimismo, se definieron reglas específicas para evitar recorridos discontinuos de vías de circulación, cruces en diagonal para en lo posible, utilizar cruces de avenidas, rutas, vías de ferrocarril o cursos de agua. 
+El Censo 2022 se realizó en dos instancias. En la primera se habilitó un cuestionario digital que estuvo disponible dos meses antes del día del Censo. Y el 18 de mayo se realizó el operativo en forma presencial, durante un único día. 
+
+Para tener una cabal dimensión de la envergadura de este operativo presencial urbano,  y que debimos resolver con las aplicaciones que desarrollamos, les presentamos algunos datos aproximados: 3332 áreas censales, subdivididas en 36238 áreas urbanizadas, de entre 200 y 400 viviendas, subdivididos en 353000 segmentos urbanos; carga de trabajo del censista, un promedio 32 viviendas para ser recorridas en 8 horas de trabajo.
+
+
+El objetivo de nuestro trabajo fue
+Automatizar el  proceso manual de segmentación generando los insumos necesarios (recorridos y sus respectivos mapas), para el trabajo de campo de toda la estructura censal.
+
+Ahora bien ¿Qué es la segmentación? Es la tarea de subdividir la unidad mínima utilizada en los censos (el radio), en partes operativas menores llamadas segmentos, cada segmento corresponde a la carga de trabajo del censista.
+
+Para tal fin se desarrolló un algoritmo que permite armar estos recorridos, generando los mapas de todo el territorio argentino (con o sin viviendas), asegurando su barrido total.
+
+Asimismo, se definieron reglas específicas para evitar recorridos discontinuos de vías de circulación, cruces en diagonal para en lo posible, utilizar cruces de avenidas, rutas, vías de ferrocarril o cursos de agua. 
+
+Gráfico 1
 
 Técnicamente, se planteó un problema de optimización, que busca minimizar una función, f(x) sujeto a: x ∈ S, donde S es el conjunto de los valores entre los que podemos buscar la solución. En este caso, S es el conjunto de todas las segmentaciones posibles, x es una segmentación y f(x) es el costo de dicha segmentación. La función objetivo tiene un costo que incluye penalidad, analizando un posible vecindario y utilizando operaciones elementales para elegir la mejor opción. Los segmentos se construyen utilizando operaciones esenciales, tales como,  Extraer componente (manzana o lado) de segmento, Transferir componente de un segmento a otro, Fusionar 2 segmentos.
 
+Dentro del espacio de estudio identificamos que una población se puede distribuir de distintas formas:  en una zona de crecimiento, en pequeños poblados o en bordes amanzanados. 
 
-
-
-
-
-
-
-
-
-
-Dentro del espacio de estudio identificamos que una población se puede distribuir de distintas formas:  en una zona de crecimiento, en pequeños poblados o en bordes amanzanados. Además, dicha distribución tiene diferentes comportamientos, por ejemplo a) esparcidos: todos los lados con pocas viviendas, b) densos: todas las manzanas con muchas viviendas, c) combinados: situaciones intermedias como ser, algunas manzanas con pocas viviendas o algunos lados con muchas viviendas.
+Además, dicha distribución tiene diferentes comportamientos, por ejemplo a)esparcidos: todos los lados con pocas viviendas, b)densos: todas las manzanas con muchas viviendas, c)combinados: situaciones intermedias como ser, algunas manzanas con pocas viviendas o algunos lados con muchas viviendas.
 
 Tal diversidad de espacios de trabajo implicó el desarrollo de 2 algoritmos, a saber; distribución tomando lados completos, manzanas completas y una combinación de ambos.
 
-Se desarrolló un sistema web para la carga de los insumos principales: 1  listado de domicilios en formato .dbf, la cobertura de arcos y polígonos, esto es, un archivo de objetos de tipo líneas que representaban un espacio del territorio en particular (el mapa en sí) y su respectiva tabla de atributos. Estos dos archivos permiten visualizar los resultados de la segmentación y está destinado a los usuarios especializados ubicados en diferentes puntos del país.
+Se desarrolló un sistema web para la carga de los insumos principales: 1  listado de domicilios en formato .dbf, la cobertura de arcos y polígonos, esto es, un archivo de objetos de tipo líneas que representaban un espacio del territorio en particular (el mapa en sí) y su respectiva tabla de atributos.
 
-Todo esto dio lugar a la creación de la Base de Datos del Censo, completa, unificada y consistida  que implicó un cambio tecnológico innovador con futuro prometedor y exitoso ya que colabora en la organización y manejo de los, aproximadamente,  650 mil censistas que formaron parte del operativo censal para visitar más de 16 millones de domicilios identificados antes de comenzar el operativo. 
+Estos dos archivos permiten visualizar los resultados de la segmentación y está destinado a los usuarios especializados ubicados en diferentes puntos del país.
 
+Todo esto dio lugar a la creación de la Base de Datos Geográfica del Censo, completa, unificada y consistida que implicó un cambio tecnológico innovador con futuro prometedor y exitoso ya que colabora en la organización y manejo de los, aproximadamente,  408 mil censistas que formaron parte del operativo censal para visitar más de 10 millones de domicilios identificados antes de comenzar el operativo. 
 
-
-
-
-
-
-
-
-
-
+gráfico 2
 
 Los software utilizados ( manu escribí sobre de los software que usaste si queres)
 
-Para la salida gráfica de los planos de campo, se desarrolló un plugin para Qgis que se conectaba automáticamente, a la Base de Datos,  cuya principal característica era la utilización de la herramienta “Atlas” para automatizar los procesos de confección de mapas para toda la estructura del operativo de campo. Con este plugin, el usuario lograba completar el circuito operativo, en muy pocos pasos, reduciendo el tiempo de armado e impresión de mapas.
+Para la salida gráfica de los planos de campo, se desarrolló un plugin para Qgis que se conecta automáticamente a la Base de Datos,  cuya principal característica era la utilización de la herramienta “Atlas” para automatizar los procesos de confección de mapas para toda la estructura del operativo de campo. Con este plugin, el usuario lograba completar el circuito operativo, en muy pocos pasos, reduciendo el tiempo de armado e impresión de mapas.
 
-
-
-
-
-
-
-
-
-
-
-
+gráfico 3
 
 Conclusiones: 
 
-Pudimos resolver un problema complejo con algoritmos sencillos y software libre.
-Creamos una interfaz sencilla para la carga de datos y procesamiento de la segmentación.
-Generamos la base de datos geográficos para el censo 2022.
-Creamos un plugin para la automatización de salidas gráficas y recorridos, optimizando tiempo y recursos para el armado de material de campo.
+Todos los censos previos al operativo del año 2022 fueron segmentados de manera manual, descentralizando de esa forma la tarea a cada dependencia provincial.
 
-Lo más importante es que se logró el objetivo de dividir el territorio argentino en 650 mil segmentos para ser recorrido de manera organizada por aproximadamente 650 mil censistas. 
+A partir del desarrollo de este segmentador automático, y mediante una interfaz sencilla para la carga de datos y el procesamiento de la información, se unificó la información en una única base de datos geográficos destinada al censo 2022, en la que se dividió el territorio argentino en 408 mil segmentos para ser recorrido de manera organizada por aproximadamente 408 mil censistas. 
 
+Y a través del plugin se automatizó y optimizó el tiempo y los recursos para el armado del material cartográfico de campo.
 
+De esta forma, se logró dar una solución tecnológica al INDEC, resolviendo un problema complejo e histórico con algoritmos sencillos, empleando software libre y apostando únicamente a los recursos humanos del Estado Nacional en todas las etapas del proyecto.
 
-Our goal was to develop an algorithm that allows us to assemble routes and generate maps of all areas, with or without houses, ensuring that all addresses in the territory are visited. 
-
-Specific rules were defined to avoid discontinuous routes, diagonal crossings and, as far as possible, crossing avenues, routes, railway tracks or water courses. 
-
-The distribution of housing in each block has different behaviors depending on the type of urbanization. We distinguished these types.
-
-scattered: where all block sides have few addresses, 
-dense: where all blocks have too many houses or buildings, and
-combined: intermediate situations with some blocks with few dwellings or some sides with too many houses or buildings. 
-
-We, therefore developed 2 algorithms, 
-
-the one for the scattered areas, which were the vast majority of cases, involved posing an optimization problem
-
-In this problem, we seek to minimize a function, f(x) subject to: x ∈ S, where S is the set of values among which we can look for the solution, what is called a set of feasible solutions. 
-
-In this case, S is the set of all possible segmentations, x is a segmentation and f(x) is the cost of such segmentation. A segmentation is a set of routes that cover an entire Radio. And the Radio is the minimal area used to give grouped DATA. It contains between 200 and 500 addresses.
-
-The objective function has a cost that combines a penalty regarding the unbalanced load distribution, number of blocks and types of crossing within every route.
-
-A neighborhood of a segmentation is built using elementary operations
-Extract a component (a block or a block side) from a route, 
-Transfer component from one segment to another, and 
-Merge 2 routes
-
-In the case of dense areas the Algorithm is much simpler. It was just segmenting the list of addresses going around the block.
-
-A web system was developed for the loading of the main inputs, a list of addresses, a file of objects of type lines that represents a space of the territory in particular and its respective table of attributes, which allows to preview the results, destined to the specialized users located in different parts of the country. 
-
-All this led to the creation of the Census Database, complete and unified, which implies an innovative technological change with a promising future.
-
-The software used (manu: please write about the software you used) 
-
-A plugin was developed for Qgis that connected to the Database, whose main feature was the use of the Atlas tools to automate the processes of making maps for the entire structure of the field operation. 
-
-This plugin allowed the user to complete the operational process in very few steps, reducing the time of assembling and printing of the maps.
-Approximately 650,000 census takers were part of the census operation that visited at least 16 million identified addresses.
-
-
-To Conclude: 
-
-We were able to solve a complicated problem with simple algorithms.  
-
-We created an interface for the loading of data and processing of segmentation. 
-
-We developed a plugin for the automation of graphic outputs and routes optimizing time and resources for the assembly of field material.
+Y, finalmente, cabe mencionar que el segmentador desarrollado pudo dar respuesta a la complejidad de nuestro territorio, caracterizado por su alto grado de urbanización y una distribución heterogénea de su población debido a factores geográficos, económicos y sociales, y a la existencia de expansiones urbanas sobre áreas rurales que aumenta la complejidad de los algoritmos para la asignación de números de segmento.
