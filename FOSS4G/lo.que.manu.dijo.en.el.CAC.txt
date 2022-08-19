@@ -80,6 +80,41 @@ permite seleccionar los 3 métodos de:
 - Manzanas independientes
 - Lados completos
 - Combinados
+que se usa para los radios mixtos esos mezclados en donde las viviendas 
+no estan distribuídas y no están agrupadas, y se setean los parámetros de cantidad de 
+viviendas deseadas, una cantidad maxima de viviendas deseadas, una  mínima 
+y un parámetro mas que es Manzanas Indivisibles que lo que hace es mantener 
+las manzanas unidas cuando tienen menos de cierta cantidad de viviendas
+Son parámetros con los cuales el operador puede jugar e ir segmentando
+un radio hasta encontrar una segmentación que le parezca adecuada.
+
+Cada vez que se corren estos algoritmos de segmentación se producen un 
+momtón de procesos además de generar la segmentación se hace una versión textual,
+resumen textual de la segmentación que es una R3 donde para cada segmento
+se describe de manera compacta y legible por humanos el segmento generado
+con las cantidad de manzanas o lados o pedacitos de lados que haya que recorrer.
+
+En todos estos procesos lo que se termina generando en un esquema 
+que nosotros definimos para localidades, un aglomerado puede tener 
+muchas localidades como tenemos definido nosotros tenemos provincia, 
+departamento y un codigo de localidad, dividimos esa estructura
+en esquemas dentro de Postgres y generamos un momtón de tablas, 
+la información que se ha cargado serían los arcos, la tabla arc la tabla lav que 
+son las etiquetas y una tabla listado con las viviendas de la C1
+Todas las otras tablas son productos de procesos, que se fueron generando 
+se carga los arcos en la topología, se usan las etiquetas para generar las 
+manzanas los radios y las fracciones como sumatoria de manzanas se generan 
+los radios, como sumatoria de radios se generan las fracciones.
+Se hace una georeferenciación de ése listado con los arcos, 
+se genera una tabla del listado ya georeferenciado para utilizar, 
+se genera una tabla de segmentación y una tabla de R3 con éste resumen 
+que tenemos.
+
+
+
+
+
+
 
 
  
